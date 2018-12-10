@@ -1,0 +1,208 @@
+[14:51:06:664] [INFO] - com.hsgene.elasticsearch.sync.SyncElasticsearchApp.main(SyncElasticsearchApp.java:36) - 正在加载配置信息...
+[14:51:06:679] [INFO] - com.hsgene.elasticsearch.sync.SyncElasticsearchApp.main(SyncElasticsearchApp.java:39) - 加载配置信息成功
+[14:51:06:694] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:199) - 开始从172.30.10.160的mysql数据库new_gene索引数据到AI-Cluster的yinzigene_test索引
+[14:51:06:700] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:201) - 开始初始化mysql连接池...
+[14:51:06:787] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:204) - 初始mysql连接池完成
+[14:51:06:863] [INFO] - com.alibaba.druid.support.logging.Log4j2Impl.info(Log4j2Impl.java:106) - {dataSource-1} inited
+[14:51:07:163] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:206) - 开始初始化elasticsearch连接池...
+[14:51:07:184] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:208) - 初始化elasticsearch连接池完成
+[14:51:07:218] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:214) - mysql数据总量为：20
+[14:51:13:745] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSyncEverySend.call(MysqlToEsSync.java:329) - ******同步完第1至20条数据******
+[14:51:13:746] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:234) - 正在关闭mysql连接池...
+[14:51:13:752] [INFO] - com.alibaba.druid.support.logging.Log4j2Impl.info(Log4j2Impl.java:106) - {dataSource-1} closed
+[14:51:13:752] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:236) - mysql连接池关闭成功
+[14:51:13:752] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:237) - 正在关闭elasticsearch连接池...
+[14:51:15:302] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:239) - elasticsearch连接池关闭成功
+[14:51:15:303] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.printSpeed(MysqlToEsSync.java:259) - ******同步完成******
+数量：20;
+时间：8.118秒;
+每秒：2.46条;
+
+[15:43:18:807] [INFO] - com.hsgene.elasticsearch.sync.SyncElasticsearchApp.main(SyncElasticsearchApp.java:36) - 正在加载配置信息...
+[15:43:18:819] [INFO] - com.hsgene.elasticsearch.sync.SyncElasticsearchApp.main(SyncElasticsearchApp.java:39) - 加载配置信息成功
+[15:43:18:834] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:199) - 开始从172.30.10.160的mysql数据库new_gene索引数据到AI-Cluster的yinzigene_test索引
+[15:43:18:835] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:201) - 开始初始化mysql连接池...
+[15:43:18:929] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:204) - 初始话mysql连接池完成
+[15:43:19:000] [INFO] - com.alibaba.druid.support.logging.Log4j2Impl.info(Log4j2Impl.java:106) - {dataSource-1} inited
+[15:43:19:453] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:206) - 开始初始化elasticsearch连接池...
+[15:43:19:487] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:208) - 初始化elasticsearch连接池完成
+[15:43:19:534] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:214) - mysql数据总量为：20
+[15:43:28:449] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSyncEverySend.call(MysqlToEsSync.java:334) - ******同步完第1至20条数据******
+[15:43:28:450] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:234) - 正在关闭mysql连接池...
+[15:43:28:461] [INFO] - com.alibaba.druid.support.logging.Log4j2Impl.info(Log4j2Impl.java:106) - {dataSource-1} closed
+[15:43:28:462] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:236) - mysql连接池关闭成功
+[15:43:28:462] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:237) - 正在关闭elasticsearch连接池...
+[15:43:29:663] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:239) - elasticsearch连接池关闭成功
+[15:43:29:735] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.printSpeed(MysqlToEsSync.java:259) - ******同步完成******
+数量：20;
+时间：10.175秒;
+每秒：1.97条;
+
+[15:44:02:109] [INFO] - com.hsgene.elasticsearch.sync.SyncElasticsearchApp.main(SyncElasticsearchApp.java:36) - 正在加载配置信息...
+[15:44:02:112] [INFO] - com.hsgene.elasticsearch.sync.SyncElasticsearchApp.main(SyncElasticsearchApp.java:39) - 加载配置信息成功
+[15:44:02:119] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:199) - 开始从172.30.10.160的mysql数据库new_gene索引数据到AI-Cluster的yinzigene_test索引
+[15:44:02:120] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:201) - 开始初始化mysql连接池...
+[15:44:02:218] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:204) - 初始话mysql连接池完成
+[15:44:02:285] [INFO] - com.alibaba.druid.support.logging.Log4j2Impl.info(Log4j2Impl.java:106) - {dataSource-1} inited
+[15:44:05:248] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:206) - 开始初始化elasticsearch连接池...
+[15:44:05:266] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:208) - 初始化elasticsearch连接池完成
+[15:44:05:585] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:214) - mysql数据总量为：20
+[15:44:12:975] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSyncEverySend.call(MysqlToEsSync.java:334) - ******同步完第1至20条数据******
+[15:44:12:975] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:234) - 正在关闭mysql连接池...
+[15:44:12:986] [INFO] - com.alibaba.druid.support.logging.Log4j2Impl.info(Log4j2Impl.java:106) - {dataSource-1} closed
+[15:44:12:986] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:236) - mysql连接池关闭成功
+[15:44:12:987] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:237) - 正在关闭elasticsearch连接池...
+[15:44:14:079] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:239) - elasticsearch连接池关闭成功
+[15:44:14:081] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.printSpeed(MysqlToEsSync.java:259) - 
+******同步完成******
+数量：20;
+时间：8.813秒;
+每秒：2.27条;
+
+[15:55:04:881] [INFO] - com.hsgene.elasticsearch.sync.SyncElasticsearchApp.main(SyncElasticsearchApp.java:36) - 正在加载配置信息...
+[15:55:04:885] [INFO] - com.hsgene.elasticsearch.sync.SyncElasticsearchApp.main(SyncElasticsearchApp.java:39) - 加载配置信息成功
+[15:55:04:893] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:199) - 开始从172.30.10.160的mysql数据库new_gene索引数据到AI-Cluster的yinzigene_test索引
+[15:55:04:895] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:201) - 开始初始化mysql连接池...
+[15:55:04:999] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:204) - 初始话mysql连接池完成
+[15:55:05:101] [INFO] - com.alibaba.druid.support.logging.Log4j2Impl.info(Log4j2Impl.java:106) - {dataSource-1} inited
+[15:55:05:512] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:206) - 开始初始化elasticsearch连接池...
+[15:55:05:528] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:208) - 初始化elasticsearch连接池完成
+[15:55:05:593] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:214) - mysql数据总量为：20
+[15:55:12:757] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSyncEverySend.call(MysqlToEsSync.java:336) - ******同步完第1至20条数据******
+[15:55:12:758] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:234) - 正在关闭mysql连接池...
+[15:55:12:763] [INFO] - com.alibaba.druid.support.logging.Log4j2Impl.info(Log4j2Impl.java:106) - {dataSource-1} closed
+[15:55:12:763] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:236) - mysql连接池关闭成功
+[15:55:12:763] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:237) - 正在关闭elasticsearch连接池...
+[15:55:14:681] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:239) - elasticsearch连接池关闭成功
+[15:55:14:683] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.printSpeed(MysqlToEsSync.java:259) - 
+******同步完成******
+数量：20;
+时间：9.154秒;
+每秒：2.18条;
+
+[15:58:47:775] [INFO] - com.hsgene.elasticsearch.sync.SyncElasticsearchApp.main(SyncElasticsearchApp.java:37) - 正在加载配置信息...
+[15:58:47:781] [INFO] - com.hsgene.elasticsearch.sync.SyncElasticsearchApp.main(SyncElasticsearchApp.java:40) - 加载配置信息成功
+[15:58:47:806] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:199) - 开始从172.30.10.160的mysql数据库new_gene索引数据到AI-Cluster的yinzigene_test索引
+[15:58:47:807] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:201) - 开始初始化mysql连接池...
+[15:58:47:896] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:204) - 初始话mysql连接池完成
+[15:58:47:981] [INFO] - com.alibaba.druid.support.logging.Log4j2Impl.info(Log4j2Impl.java:106) - {dataSource-1} inited
+[15:58:48:373] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:206) - 开始初始化elasticsearch连接池...
+[15:58:48:432] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:208) - 初始化elasticsearch连接池完成
+[15:58:48:515] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:214) - mysql数据总量为：20
+[15:58:55:414] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSyncEverySend.call(MysqlToEsSync.java:336) - ******同步完第1至20条数据******
+[15:58:55:415] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:234) - 正在关闭mysql连接池...
+[15:58:55:421] [INFO] - com.alibaba.druid.support.logging.Log4j2Impl.info(Log4j2Impl.java:106) - {dataSource-1} closed
+[15:58:55:421] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:236) - mysql连接池关闭成功
+[15:58:55:422] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:237) - 正在关闭elasticsearch连接池...
+[15:58:56:532] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:239) - elasticsearch连接池关闭成功
+[15:58:56:534] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.printSpeed(MysqlToEsSync.java:259) - 
+******同步完成******
+数量：20;
+时间：8.101秒;
+每秒：2.47条;
+
+[16:00:17:187] [INFO] - com.hsgene.elasticsearch.sync.SyncElasticsearchApp.main(SyncElasticsearchApp.java:37) - 正在加载配置信息...
+[16:00:17:190] [INFO] - com.hsgene.elasticsearch.sync.SyncElasticsearchApp.main(SyncElasticsearchApp.java:40) - 加载配置信息成功
+[16:00:17:197] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:199) - 开始从172.30.10.160的mysql数据库new_gene索引数据到AI-Cluster的yinzigene_test索引
+[16:00:17:197] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:201) - 开始初始化mysql连接池...
+[16:00:17:259] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:204) - 初始话mysql连接池完成
+[16:00:17:325] [INFO] - com.alibaba.druid.support.logging.Log4j2Impl.info(Log4j2Impl.java:106) - {dataSource-1} inited
+[16:00:17:723] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:206) - 开始初始化elasticsearch连接池...
+[16:00:17:742] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:208) - 初始化elasticsearch连接池完成
+[16:00:17:843] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:214) - mysql数据总量为：20
+[16:00:24:501] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSyncEverySend.call(MysqlToEsSync.java:336) - ******同步完第1至20条数据******
+[16:00:24:502] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:234) - 正在关闭mysql连接池...
+[16:00:24:507] [INFO] - com.alibaba.druid.support.logging.Log4j2Impl.info(Log4j2Impl.java:106) - {dataSource-1} closed
+[16:00:24:507] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:236) - mysql连接池关闭成功
+[16:00:24:508] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:237) - 正在关闭elasticsearch连接池...
+[16:00:25:867] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:239) - elasticsearch连接池关闭成功
+[16:00:25:869] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.printSpeed(MysqlToEsSync.java:259) - 
+******同步完成******
+数量：20;
+时间：8.125秒;
+每秒：2.46条;
+
+[16:01:20:793] [INFO] - com.hsgene.elasticsearch.sync.SyncElasticsearchApp.main(SyncElasticsearchApp.java:37) - 正在加载配置信息...
+[16:01:20:796] [INFO] - com.hsgene.elasticsearch.sync.SyncElasticsearchApp.main(SyncElasticsearchApp.java:40) - 加载配置信息成功
+[16:01:20:805] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:199) - 开始从172.30.10.160的mysql数据库new_gene索引数据到AI-Cluster的yinzigene_test索引
+[16:01:20:806] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:201) - 开始初始化mysql连接池...
+[16:01:20:928] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:204) - 初始话mysql连接池完成
+[16:01:21:015] [INFO] - com.alibaba.druid.support.logging.Log4j2Impl.info(Log4j2Impl.java:106) - {dataSource-1} inited
+[16:01:21:385] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:206) - 开始初始化elasticsearch连接池...
+[16:01:21:422] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:208) - 初始化elasticsearch连接池完成
+[16:01:21:451] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:214) - mysql数据总量为：20
+[16:01:28:801] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSyncEverySend.call(MysqlToEsSync.java:336) - ******同步完第1至20条数据******
+[16:01:28:802] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:234) - 正在关闭mysql连接池...
+[16:01:28:808] [INFO] - com.alibaba.druid.support.logging.Log4j2Impl.info(Log4j2Impl.java:106) - {dataSource-1} closed
+[16:01:28:808] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:236) - mysql连接池关闭成功
+[16:01:28:809] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:237) - 正在关闭elasticsearch连接池...
+[16:01:30:426] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:239) - elasticsearch连接池关闭成功
+[16:01:30:427] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.printSpeed(MysqlToEsSync.java:259) - 
+******同步完成******
+数量：20;
+时间：9.003秒;
+每秒：2.22条;
+
+[16:03:04:958] [INFO] - com.hsgene.elasticsearch.sync.SyncElasticsearchApp.main(SyncElasticsearchApp.java:37) - 正在加载配置信息...
+[16:03:04:961] [INFO] - com.hsgene.elasticsearch.sync.SyncElasticsearchApp.main(SyncElasticsearchApp.java:40) - 加载配置信息成功
+[16:03:04:967] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:199) - 开始从172.30.10.160的mysql数据库new_gene索引数据到AI-Cluster的yinzigene_test索引
+[16:03:04:967] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:201) - 开始初始化mysql连接池...
+[16:03:05:031] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:204) - 初始话mysql连接池完成
+[16:03:05:087] [INFO] - com.alibaba.druid.support.logging.Log4j2Impl.info(Log4j2Impl.java:106) - {dataSource-1} inited
+[16:03:06:310] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:206) - 开始初始化elasticsearch连接池...
+[16:03:06:326] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:208) - 初始化elasticsearch连接池完成
+[16:03:06:421] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:214) - mysql数据总量为：20
+[16:03:18:302] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSyncEverySend.call(MysqlToEsSync.java:336) - ******同步完第1至20条数据******
+[16:03:18:303] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:234) - 正在关闭mysql连接池...
+[16:03:18:308] [INFO] - com.alibaba.druid.support.logging.Log4j2Impl.info(Log4j2Impl.java:106) - {dataSource-1} closed
+[16:03:18:309] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:236) - mysql连接池关闭成功
+[16:03:18:309] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:237) - 正在关闭elasticsearch连接池...
+[16:03:19:671] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:239) - elasticsearch连接池关闭成功
+[16:03:19:672] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.printSpeed(MysqlToEsSync.java:259) - 
+******同步完成******
+数量：20;
+时间：13.344秒;
+每秒：1.50条;
+
+[16:40:43:622] [INFO] - com.hsgene.elasticsearch.sync.SyncElasticsearchApp.main(SyncElasticsearchApp.java:37) - 正在加载配置信息...
+[16:40:43:625] [INFO] - com.hsgene.elasticsearch.sync.SyncElasticsearchApp.main(SyncElasticsearchApp.java:40) - 加载配置信息成功
+[16:40:43:633] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:199) - 开始从172.30.10.160的mysql数据库new_gene索引数据到AI-Cluster的yinzigene_test索引
+[16:40:43:634] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:201) - 开始初始化mysql连接池...
+[16:40:43:752] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:204) - 初始话mysql连接池完成
+[16:40:43:855] [INFO] - com.alibaba.druid.support.logging.Log4j2Impl.info(Log4j2Impl.java:106) - {dataSource-1} inited
+[16:40:44:195] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:206) - 开始初始化elasticsearch连接池...
+[16:40:44:214] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:208) - 初始化elasticsearch连接池完成
+[16:40:44:248] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:214) - ******mysql数据总量为：[20]******
+[16:40:51:031] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSyncEverySend.call(MysqlToEsSync.java:336) - ******同步完第1至20条数据******
+[16:40:51:031] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:234) - 正在关闭mysql连接池...
+[16:40:51:036] [INFO] - com.alibaba.druid.support.logging.Log4j2Impl.info(Log4j2Impl.java:106) - {dataSource-1} closed
+[16:40:51:037] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:236) - mysql连接池关闭成功
+[16:40:51:037] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:237) - 正在关闭elasticsearch连接池...
+[16:40:52:268] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:239) - elasticsearch连接池关闭成功
+[16:40:52:269] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.printSpeed(MysqlToEsSync.java:259) - 
+******同步完成******
+数量：20;
+时间：8.054秒;
+每秒：2.48条;
+
+[16:49:19:909] [INFO] - com.hsgene.elasticsearch.sync.SyncElasticsearchApp.main(SyncElasticsearchApp.java:36) - 正在加载配置信息...
+[16:49:19:915] [INFO] - com.hsgene.elasticsearch.sync.SyncElasticsearchApp.main(SyncElasticsearchApp.java:39) - 加载配置信息成功
+[16:49:19:927] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:199) - 开始从172.30.10.160的mysql数据库new_gene同步数据到AI-Cluster的yinzigene_test索引
+[16:49:19:929] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:201) - 开始初始化mysql连接池...
+[16:49:20:035] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:204) - 初始话mysql连接池完成
+[16:49:20:113] [INFO] - com.alibaba.druid.support.logging.Log4j2Impl.info(Log4j2Impl.java:106) - {dataSource-1} inited
+[16:49:20:401] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:206) - 开始初始化elasticsearch连接池...
+[16:49:20:418] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:208) - 初始化elasticsearch连接池完成
+[16:49:20:451] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:214) - mysql数据总量为：20
+[16:49:26:997] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSyncEverySend.call(MysqlToEsSync.java:336) - ******同步完第1至20条数据******
+[16:49:26:997] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:234) - 正在关闭mysql连接池...
+[16:49:27:002] [INFO] - com.alibaba.druid.support.logging.Log4j2Impl.info(Log4j2Impl.java:106) - {dataSource-1} closed
+[16:49:27:002] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:236) - mysql连接池关闭成功
+[16:49:27:003] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:237) - 正在关闭elasticsearch连接池...
+[16:49:28:401] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.syncData(MysqlToEsSync.java:239) - elasticsearch连接池关闭成功
+[16:49:28:403] [INFO] - com.hsgene.elasticsearch.sync.client.impl.MysqlToEsSync.printSpeed(MysqlToEsSync.java:259) - 
+******同步完成******
+数量：20;
+时间：7.984秒;
+每秒：2.51条;
+
