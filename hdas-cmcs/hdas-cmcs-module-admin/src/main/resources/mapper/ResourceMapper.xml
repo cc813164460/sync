@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hsgene.hdas.cmcs.modules.admin.mapper.ResourceMapper">
+    <resultMap id="ResourceMnMap" type="java.util.Map">
+        <result column="product_name" property="product_name" jdbcType="VARCHAR"/>
+        <result column="module_name" property="module_name" jdbcType="VARCHAR"/>
+        <result column="env_names" property="env_names" jdbcType="VARCHAR"/>
+        <result column="ids" property="ids" jdbcType="VARCHAR"/>
+        <result column="env_ids" property="env_ids" jdbcType="VARCHAR"/>
+        <result column="product_id" property="product_id" jdbcType="BIGINT"/>
+    </resultMap>
+    <resultMap id="ResourceMap" type="java.util.Map">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="product_id" property="product_id" jdbcType="VARCHAR"/>
+        <result column="module_id" property="module_id" jdbcType="VARCHAR"/>
+        <result column="env_id" property="env_id" jdbcType="VARCHAR"/>
+        <result column="version_id" property="version_id" jdbcType="TIMESTAMP"/>
+        <result column="is_delete" property="is_delete" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="ResourceList">
+        id,product_id,module_id,env_id,version_id,is_delete
+    </sql>
+    <sql id="ResourceGetList">
+        id,product_id as productId,module_id as moduleId,env_id as envId,version_id as versionId,is_delete as isDelete
+    </sql>
+    <select id="get" resultType="com.hsgene.hdas.cmcs.modules.admin.domain.Resource" parameterType="java.lang.Long">
+        select
+        <include refid="ResourceGetList"/>
+        from resource where id = #{id,jdbcType=BIGINT} and is_delete=0
+    </select>
+    <select id="getResource" resultMap="ResourceMnMap">
+       select product_name,module_name,GROUP_CONCAT(env_name) as env_names,GROUP_CONCAT(id) as ids,product_id,GROUP_CONCAT(env_id) as
+       env_ids,module_id from (select r.id,p.name as product_name,m.name as module_name,e.name as env_name,r.product_id,r
+       .env_id,r.module_id from resource r,product p,module m,env e where r.product_id = p.id and r.env_id = e.id and
+       r.module_id = m.id and r.is_delete = 0 group by product_name,m.name,e.name) temp group by product_name,module_name
+    </select>
+    <select id="getIdByProductModuleEnvVersionId" resultType="java.lang.Long" parameterType="java.util.Map">
+        select ifnull(sum(id), -1) from resource where is_delete = 0
+        <if test="productId != null">
+            and product_id = #{productId,jdbcType=BIGINT}
+        </if>
+        <if test="moduleId != null">
+            and module_id = #{moduleId,jdbcType=BIGINT}
+        </if>
+        <if test="envId != null">
+            and env_id = #{envId,jdbcType=BIGINT}
+        </if>
+        <if test="versionId != null">
+            and version_id = #{versionId,jdbcType=BIGINT}
+        </if>
+    </select>
+    <insert id="save" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.Resource">
+        insert into resource
+        (<include refid="ResourceList"/>)
+        values
+        (#{id,jdbcType=BIGINT},#{productId,jdbcType=BIGINT},#{moduleId,jdbcType=BIGINT},#{envId,jdbcType=BIGINT},
+        #{versionId,jdbcType=BIGINT},0)
+    </insert>
+    <update id="update" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.Resource">
+        update resource
+        <set>
+            <if test="productId != null">
+                product_id = #{productId,jdbcType=BIGINT},
+            </if>
+            <if test="moduleId != null">
+                env_id = #{moduleId,jdbcType=BIGINT},
+            </if>
+            <if test="envId != null">
+                env_id = #{envId,jdbcType=BIGINT},
+            </if>
+            <if test="versionId != null">
+                version_id = #{versionId,jdbcType=BIGINT}
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="deleteByIds">
+        update resource
+        <set>
+            is_delete = 1
+        </set>
+        where id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </update>
+    <update id="deleteByProductIds">
+        update resource
+        <set>
+            is_delete = 1
+        </set>
+        where product_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </update>
+    <update id="deleteByModuleIdAndNotInProductIds">
+        update resource
+        <set>
+            is_delete = 1
+        </set>
+        where module_id = #{moduleId,jdbcType=BIGINT} and product_id not in
+        <foreach collection="productIds" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </update>
+    <update id="deleteByModuleIds">
+        update resource
+        <set>
+            is_delete = 1
+        </set>
+        where module_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </update>
+    <update id="deleteByEnvIds">
+        update resource
+        <set>
+            is_delete = 1
+        </set>
+        where env_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </update>
+    <update id="deleteByVersionIds">
+        update resource
+        <set>
+            is_delete = 1
+        </set>
+        where version_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </update>
+</mapper>

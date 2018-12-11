@@ -1,0 +1,57 @@
+<div class="main-div">
+    <div class="copy-env-div" id="env_div">
+        <span>环境：</span>
+        <select id="env_select" class="env-select"></select>
+    </div>
+    <div class="item-div">
+        <div>
+            <h4 class="h4-label">配置</h4>
+        </div>
+        <div id="config_div" class="config-list">
+            <table id="config_table" class="config-table" border="1">
+                <thead>
+                <tr>
+                    <th><input id="config_select_all" type="checkbox" class="select-all-checkbox"/>全选</th>
+                    <th style="display: none">版本号</th>
+                    <th style="display: none">安全级别</th>
+                    <th style="display: none">行号</th>
+                    <th>键</th>
+                    <th>值</th>
+                    <th>注释</th>
+                    <th style="display: none">是否必改</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <span id="config_info" class="info"></span>
+    </div>
+    <div class="btm-btn-div">
+        <div>
+            <span class="save-btn" id="save">保存</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="cancel-btn" id="cancel">取消</span>
+        </div>
+    </div>
+</div>
+<script src="/scripts/instance_action.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var productModuleEnvId = getItem("productModuleEnvId");
+        var versionId = 0;
+        setItem("versionId", versionId);
+        loadEnvSelect("env_select", "/env/env_data", function () {
+            var envId = getSelectVal("env_select");
+            loadConfigData(productModuleEnvId, versionId, envId);
+        });
+        envSelectChange(productModuleEnvId, versionId);
+        loadItem(getItem("left_product_name"), getItem("left_module_name"), getItem("left_env_name"), NAV.MAIN_COPY_CONFIG_PAGE, HTML.INSTANCE_COPY_CONFIG + "?productModuleEnvId=" + productModuleEnvId);
+        clickSetMainHeight();
+        var ids = productModuleEnvId.split("_");
+        setInstanceLeftLi(ids[0], ids[1], ids[2]);
+        selectAll("config_select_all", "config-input");
+        addCopyConfig(productModuleEnvId, versionId, 0);
+    });
+</script>
+<link rel="stylesheet" href="/styles/copy_config.css"/>

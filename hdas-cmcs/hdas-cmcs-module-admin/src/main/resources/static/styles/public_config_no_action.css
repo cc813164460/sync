@@ -1,0 +1,354 @@
+.public-main-table-no-action > thead > tr > th:nth-of-type(1) {
+    width: 4% !important;
+}
+
+.public-main-table-no-action > thead > tr > th:nth-of-type(2) {
+    width: 4% !important;
+}
+
+.public-main-table-no-action > thead > tr > th:nth-of-type(3) {
+    width: 9% !important;
+}
+
+.public-main-table-no-action > thead > tr > th:nth-of-type(4) {
+    width: 28% !important;
+}
+
+.public-main-table-no-action > thead > tr > th:nth-of-type(5) {
+    width: 29% !important;
+}
+
+.public-main-table-no-action > thead > tr > th:nth-of-type(6) {
+    width: 4% !important;
+}
+
+.public-main-table-no-action > thead > tr > th:nth-of-type(7) {
+    width: 4% !important;
+}
+
+.public-main-table-no-action > thead > tr > th:nth-of-type(8) {
+    width: 4% !important;
+}
+
+.public-main-table-no-action > thead > tr > th:nth-of-type(9) {
+    width: 5% !important;
+}
+
+.public-main-table-no-action > thead > tr > th:nth-of-type(10) {
+    width: 11% !important;
+}
+
+.public-main-table-no-action > tbody > tr > td:nth-of-type(1) {
+    width: 4%;
+}
+
+.public-main-table-no-action > tbody > tr > td:nth-of-type(2) {
+    width: 4%;
+}
+
+.public-main-table-no-action > tbody > tr > td:nth-of-type(2) div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.public-main-table-no-action > tbody > tr > td:nth-of-type(3) {
+    width: 9%;
+}
+
+.public-main-table-no-action > tbody > tr > td:nth-of-type(3) div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.public-main-table-no-action > tbody > tr > td:nth-of-type(4) {
+    width: 28%;
+}
+
+.public-main-table-no-action > tbody > tr > td:nth-of-type(4) div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.public-main-table-no-action > tbody > tr > td:nth-of-type(5) {
+    width: 29%;
+}
+
+.public-main-table-no-action > tbody > tr > td:nth-of-type(5) div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.public-main-table-no-action > tbody > tr > td:nth-of-type(6) {
+    width: 4%;
+}
+
+.public-main-table-no-action > tbody > tr > td:nth-of-type(7) {
+    width: 4%;
+}
+
+.public-main-table-no-action > tbody > tr > td:nth-of-type(7) div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.public-main-table-no-action > tbody > tr > td:nth-of-type(8) {
+    width: 4%;
+}
+
+.public-main-table-no-action > tbody > tr > td:nth-of-type(8) div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.public-main-table-no-action > tbody > tr > td:nth-of-type(9) {
+    width: 5%;
+}
+
+.public-main-table-no-action > tbody > tr > td:nth-of-type(9) div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.public-main-table-no-action > tbody > tr > td:nth-of-type(10) {
+    width: 11%;
+}
+
+.public-main-table-no-action > tbody > tr > td:nth-of-type(10) div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.public-gray-table-no-action > thead > tr > th:nth-of-type(1) {
+    width: 4% !important;
+}
+
+.public-gray-table-no-action > thead > tr > th:nth-of-type(2) {
+    width: 4% !important;
+}
+
+.public-gray-table-no-action > thead > tr > th:nth-of-type(3) {
+    width: 4% !important;
+}
+
+.public-gray-table-no-action > thead > tr > th:nth-of-type(4) {
+    width: 15% !important;
+}
+
+.public-gray-table-no-action > thead > tr > th:nth-of-type(5) {
+    width: 15% !important;
+}
+
+.public-gray-table-no-action > thead > tr > th:nth-of-type(6) {
+    width: 15% !important;
+}
+
+.public-gray-table-no-action > thead > tr > th:nth-of-type(7) {
+    width: 4% !important;
+}
+
+.public-gray-table-no-action > thead > tr > th:nth-of-type(8) {
+    width: 4% !important;
+}
+
+.public-gray-table-no-action > thead > tr > th:nth-of-type(9) {
+    width: 4% !important;
+}
+
+.public-gray-table-no-action > thead > tr > th:nth-of-type(10) {
+    width: 5% !important;
+}
+
+.public-gray-table-no-action > thead > tr > th:nth-of-type(11) {
+    width: 6% !important;
+}
+
+.public-gray-table-no-action > tbody > tr > td:nth-of-type(1) {
+    width: 4%;
+}
+
+.public-gray-table-no-action > tbody > tr > td:nth-of-type(2) {
+    width: 4%;
+}
+
+.public-gray-table-no-action > tbody > tr > td:nth-of-type(2) div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.public-gray-table-no-action > tbody > tr > td:nth-of-type(3) {
+    width: 4%;
+}
+
+.public-gray-table-no-action > tbody > tr > td:nth-of-type(3) div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.public-gray-table-no-action > tbody > tr > td:nth-of-type(4) {
+    width: 15%;
+}
+
+.public-gray-table-no-action > tbody > tr > td:nth-of-type(4) div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.public-gray-table-no-action > tbody > tr > td:nth-of-type(5) {
+    width: 15%;
+}
+
+.public-gray-table-no-action > tbody > tr > td:nth-of-type(5) div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.public-gray-table-no-action > tbody > tr > td:nth-of-type(6) {
+    width: 15%;
+}
+
+.public-gray-table-no-action > tbody > tr > td:nth-of-type(6) div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.public-gray-table-no-action > tbody > tr > td:nth-of-type(7) {
+    width: 4%;
+}
+
+.public-gray-table-no-action > tbody > tr > td:nth-of-type(7) div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.public-gray-table-no-action > tbody > tr > td:nth-of-type(8) {
+    width: 4%;
+}
+
+.public-gray-table-no-action > tbody > tr > td:nth-of-type(8) div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.public-gray-table-no-action > tbody > tr > td:nth-of-type(9) {
+    width: 4%;
+}
+
+.public-gray-table-no-action > tbody > tr > td:nth-of-type(9) div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.public-gray-table-no-action > tbody > tr > td:nth-of-type(10) {
+    width: 5%;
+}
+
+.public-gray-table-no-action > tbody > tr > td:nth-of-type(10) div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.public-gray-table-no-action > tbody > tr > td:nth-of-type(11) {
+    width: 6%;
+}
+
+.public-gray-table-no-action > tbody > tr > td:nth-of-type(11) div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.env-div {
+    text-align: center;
+}
+
+.env-select {
+    width: 20%;
+    background: #F9F9F9;
+    border: 1px solid #EEEEEE;
+    border-radius: 0.5em;
+    height: 2.5em;
+    line-height: 2.5em;
+    display: inline-block;
+}
+
+.public-exclude-properties-table > thead > tr {
+    display: flex;
+}
+
+.public-exclude-properties-table > tbody > tr {
+    display: flex;
+    align-items: center;
+}
+
+.public-exclude-properties-table > thead > tr > th:nth-of-type(1) {
+    width: 10% !important;
+}
+
+.public-exclude-properties-table > thead > tr > th:nth-of-type(2) {
+    width: 45% !important;
+}
+
+.public-exclude-properties-table > thead > tr > th:nth-of-type(3) {
+    width: 45% !important;
+}
+
+.public-exclude-properties-table > tbody > tr > td:nth-of-type(1) {
+    width: 10%;
+}
+
+.public-exclude-properties-table > tbody > tr > td:nth-of-type(2) {
+    width: 45%;
+}
+
+.public-exclude-properties-table > tbody > tr > td:nth-of-type(2) div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.public-exclude-properties-table > tbody > tr > td:nth-of-type(3) {
+    width: 45%;
+}
+
+.public-exclude-properties-table > tbody > tr > td:nth-of-type(3) div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}

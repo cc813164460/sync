@@ -1,0 +1,99 @@
+<div class="main-div">
+    <div>
+        <div class="select-div item-div">
+            <h4 class="h4-label">选择级别</h4>
+        </div>
+        <div class="item-div">
+            <div id="confidential_div" class="class-input" style="margin-left: 0">
+                <input id="confidential" type="radio" name="class"></input><span>机密</span>
+            </div>
+            <div id="secrecy_div" class="class-input">
+                <input id="secrecy" type="radio" name="class"></input><span>保密</span>
+            </div>
+            <div id="normal_div" class="class-input">
+                <input id="normal" type="radio" name="class" checked="checked"></input><span>一般</span>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="select-div item-div">
+            <h4 class="h4-label">选择必改</h4>
+        </div>
+        <div class="item-div">
+            <div id="must_change_div" class="class-input" style="margin-left: 0">
+                <input id="must_change" type="radio" name="change"></input><span>必改</span>
+            </div>
+            <div id="not_must_change_div" class="class-input">
+                <input id="not_must_change" type="radio" name="change" checked="checked"></input><span>非必改</span>
+            </div>
+        </div>
+    </div>
+    <div class="item-div">
+        <h4 class="h4-label">键</h4>
+        <input id="key" class="page-input" autocomplete="off" value="pub."/>
+        <span id="key_info" class="info"></span>
+        <input id="resource_id" style="display: none"/>
+        <input id="release_status" value="0" style="display: none"/>
+        <input id="version_id" value="0" style="display: none"/>
+    </div>
+    <div class="item-div">
+        <h4 class="h4-label">值</h4>
+        <textarea id="value" class="instance-textarea"/>
+        <span id="value_info" class="info"></span>
+    </div>
+    <div class="item-div">
+        <h4 class="h4-label">版本号</h4>
+        <input id="version_num" class="page-input" autocomplete="off" disabled="disabled"/>
+    </div>
+    <div class="item-div">
+        <h4 class="h4-label">应用范围</h4>
+        <table id="product_module_table" class="display">
+            <thead>
+            <tr>
+                <th><input type="checkbox" id="apply_select_all" class="select-all-checkbox no-margin"/>全选</th>
+                <th>项目名</th>
+                <th>模块名</th>
+                <th>id</th>
+            </tr>
+            </thead>
+        </table>
+        <span id="apply_info" class="info"></span>
+    </div>
+    <div class="item-div">
+        <div>
+            <h4 class="h4-label app-h4">实例</h4>
+            全选<input id="app_select_all" type="checkbox" class="select-all-checkbox"/>
+        </div>
+        <div id="app" class="app-list">
+        </div>
+        <span id="app_info" class="info"></span>
+    </div>
+    <div class="item-div">
+        <h4 class="h4-label">注释</h4>
+        <textarea id="comment" class="instance-textarea"/>
+        <span id="comment_info" class="info"></span>
+    </div>
+    <div class="btm-btn-div">
+        <div>
+            <span class="save-btn" id="save">保存</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="cancel-btn" id="cancel">取消</span>
+        </div>
+    </div>
+</div>
+<script src="/scripts/public_config_action.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        setItem("versionId", 0);
+        loadApp();
+        loadApplyDataTable("-1", "product_module_table", 0, getItem("properties_envId"));
+        setPublicMainVersionNum();
+        loadItem(NAV.PUBLIC_CONFIG, null, NAV.MAIN_ADD_PAGE, null, HTML.PUBLIC_CONFIG_ADD);
+        clickSetMainHeight();
+        addPropertiesInstance();
+        keyUpCheckKey("key");
+        getMaxClassIdAndSetClassDisplay();
+        selectAll("app_select_all", "app-input");
+        selectAll("apply_select_all", "select");
+    });
+</script>

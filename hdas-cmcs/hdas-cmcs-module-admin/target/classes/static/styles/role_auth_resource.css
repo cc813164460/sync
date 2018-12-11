@@ -1,0 +1,54 @@
+.role-auth-resource-table > thead > tr {
+    display: flex;
+}
+
+.role-auth-resource-table > tbody > tr {
+    display: flex;
+    align-items: center;
+}
+
+.role-auth-resource-table > thead > tr > th:nth-of-type(1) {
+    width: 10% !important;
+}
+
+.role-auth-resource-table > thead > tr > th:nth-of-type(2) {
+    width: 20% !important;
+}
+
+.role-auth-resource-table > thead > tr > th:nth-of-type(3) {
+    width: 50% !important;
+}
+
+.role-auth-resource-table > thead > tr > th:nth-of-type(4) {
+    width: 20% !important;
+}
+
+.role-auth-resource-table > tbody > tr > td:nth-of-type(1) {
+    width: 10%;
+}
+
+.role-auth-resource-table > tbody > tr > td:nth-of-type(2) {
+    width: 20%;
+}
+
+.role-auth-resource-table > tbody > tr > td:nth-of-type(2) div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.role-auth-resource-table > tbody > tr > td:nth-of-type(3) {
+    width: 50%;
+}
+
+.role-auth-resource-table > tbody > tr > td:nth-of-type(3) div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.role-auth-resource-table > tbody > tr > td:nth-of-type(4) {
+    width: 20%;
+}

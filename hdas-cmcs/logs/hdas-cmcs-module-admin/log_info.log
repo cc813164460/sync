@@ -1,0 +1,520 @@
+===2018-10-10 14:25:47.748 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:48  - Starting AdminApplication on DESKTOP-8RT6NG5 with PID 32900 (D:\github\hdas-cmcs\hdas-cmcs-module-admin\target\classes started by zgh in D:\github\hdas-cmcs)
+===2018-10-10 14:25:47.759 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:641 - The following profiles are active: dev
+===2018-10-10 14:25:48.218 INFO  org.hibernate.validator.internal.util.Version Line:30  - HV000001: Hibernate Validator 5.3.5.Final
+===2018-10-10 14:25:51.050 INFO  com.hsgene.hdas.cmcs.modules.common.datasource.DynamicDataSourceRegister Line:65  - Dynamic DataSource Registry
+===2018-10-10 14:25:54.306 INFO  org.eclipse.jetty.util.log Line:192 - Logging initialized @10566ms to org.eclipse.jetty.util.log.Slf4jLog
+===2018-10-10 14:25:55.169 INFO  org.eclipse.jetty.server.Server Line:372 - jetty-9.4.4.v20170414
+===2018-10-10 14:25:55.373 INFO  org.eclipse.jetty.server.session Line:364 - DefaultSessionIdManager workerName=node0
+===2018-10-10 14:25:55.374 INFO  org.eclipse.jetty.server.session Line:369 - No SessionScavenger set, using defaults
+===2018-10-10 14:25:55.399 INFO  org.eclipse.jetty.server.session Line:149 - Scavenging every 600000ms
+===2018-10-10 14:25:55.416 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring embedded WebApplicationContext
+===2018-10-10 14:25:57.242 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:788 - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@2260326c{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.475889497564410609.80/],AVAILABLE}
+===2018-10-10 14:25:57.242 INFO  org.eclipse.jetty.server.Server Line:444 - Started @13502ms
+===2018-10-10 14:26:02.444 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+===2018-10-10 14:26:02.554 INFO  org.eclipse.jetty.server.AbstractConnector Line:280 - Started ServerConnector@1e1b7808{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+===2018-10-10 14:26:02.574 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:57  - Started AdminApplication in 15.991 seconds (JVM running for 18.834)
+===2018-10-10 14:26:12.145 INFO  org.thymeleaf.TemplateEngine Line:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+===2018-10-10 14:26:12.231 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:99  - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+===2018-10-10 14:26:12.232 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+===2018-10-10 14:26:12.234 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:72  - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+===2018-10-10 14:26:12.236 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:78  - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+===2018-10-10 14:26:12.243 INFO  org.thymeleaf.TemplateEngine.CONFIG Line:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * XML
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * XHTML
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+===2018-10-10 14:26:12.243 INFO  org.thymeleaf.TemplateEngine Line:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+===2018-10-10 14:26:21.787 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-1} inited
+===2018-10-10 14:44:27.292 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:48  - Starting AdminApplication on DESKTOP-8RT6NG5 with PID 28776 (D:\github\hdas-cmcs\hdas-cmcs-module-admin\target\classes started by zgh in D:\github\hdas-cmcs)
+===2018-10-10 14:44:27.308 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:641 - The following profiles are active: dev
+===2018-10-10 14:44:27.767 INFO  org.hibernate.validator.internal.util.Version Line:30  - HV000001: Hibernate Validator 5.3.5.Final
+===2018-10-10 14:44:29.638 INFO  com.hsgene.hdas.cmcs.modules.common.datasource.DynamicDataSourceRegister Line:65  - Dynamic DataSource Registry
+===2018-10-10 14:44:31.415 INFO  org.eclipse.jetty.util.log Line:192 - Logging initialized @7533ms to org.eclipse.jetty.util.log.Slf4jLog
+===2018-10-10 14:44:32.096 INFO  org.eclipse.jetty.server.Server Line:372 - jetty-9.4.4.v20170414
+===2018-10-10 14:44:32.305 INFO  org.eclipse.jetty.server.session Line:364 - DefaultSessionIdManager workerName=node0
+===2018-10-10 14:44:32.305 INFO  org.eclipse.jetty.server.session Line:369 - No SessionScavenger set, using defaults
+===2018-10-10 14:44:32.310 INFO  org.eclipse.jetty.server.session Line:149 - Scavenging every 600000ms
+===2018-10-10 14:44:32.318 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring embedded WebApplicationContext
+===2018-10-10 14:44:33.566 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:788 - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@4c9b1e86{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.4218798066591576127.80/],AVAILABLE}
+===2018-10-10 14:44:33.566 INFO  org.eclipse.jetty.server.Server Line:444 - Started @9685ms
+===2018-10-10 14:44:39.188 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+===2018-10-10 14:44:39.277 INFO  org.eclipse.jetty.server.AbstractConnector Line:280 - Started ServerConnector@4200570f{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+===2018-10-10 14:44:39.291 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:57  - Started AdminApplication in 13.351 seconds (JVM running for 15.41)
+===2018-10-10 14:44:41.908 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-1} inited
+===2018-10-10 14:44:42.126 INFO  org.thymeleaf.TemplateEngine Line:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+===2018-10-10 14:44:42.197 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:99  - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+===2018-10-10 14:44:42.197 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+===2018-10-10 14:44:42.197 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:72  - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+===2018-10-10 14:44:42.198 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:78  - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+===2018-10-10 14:44:42.202 INFO  org.thymeleaf.TemplateEngine.CONFIG Line:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * XML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * VALIDXML
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+===2018-10-10 14:44:42.203 INFO  org.thymeleaf.TemplateEngine Line:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+===2018-10-10 14:46:51.179 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:48  - Starting AdminApplication on DESKTOP-8RT6NG5 with PID 17616 (D:\github\hdas-cmcs\hdas-cmcs-module-admin\target\classes started by zgh in D:\github\hdas-cmcs)
+===2018-10-10 14:46:51.182 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:641 - The following profiles are active: dev
+===2018-10-10 14:46:51.345 INFO  org.hibernate.validator.internal.util.Version Line:30  - HV000001: Hibernate Validator 5.3.5.Final
+===2018-10-10 14:46:53.255 INFO  com.hsgene.hdas.cmcs.modules.common.datasource.DynamicDataSourceRegister Line:65  - Dynamic DataSource Registry
+===2018-10-10 14:46:55.574 INFO  org.eclipse.jetty.util.log Line:192 - Logging initialized @6893ms to org.eclipse.jetty.util.log.Slf4jLog
+===2018-10-10 14:46:56.170 INFO  org.eclipse.jetty.server.Server Line:372 - jetty-9.4.4.v20170414
+===2018-10-10 14:46:56.300 INFO  org.eclipse.jetty.server.session Line:364 - DefaultSessionIdManager workerName=node0
+===2018-10-10 14:46:56.301 INFO  org.eclipse.jetty.server.session Line:369 - No SessionScavenger set, using defaults
+===2018-10-10 14:46:56.315 INFO  org.eclipse.jetty.server.session Line:149 - Scavenging every 600000ms
+===2018-10-10 14:46:56.321 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring embedded WebApplicationContext
+===2018-10-10 14:46:57.217 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:788 - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@18904547{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.3812225399566538491.80/],AVAILABLE}
+===2018-10-10 14:46:57.218 INFO  org.eclipse.jetty.server.Server Line:444 - Started @8537ms
+===2018-10-10 14:47:02.091 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+===2018-10-10 14:47:02.133 INFO  org.eclipse.jetty.server.AbstractConnector Line:280 - Started ServerConnector@70ac386f{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+===2018-10-10 14:47:02.139 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:57  - Started AdminApplication in 11.688 seconds (JVM running for 13.457)
+===2018-10-10 14:47:30.803 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-1} inited
+===2018-10-10 14:47:30.912 INFO  org.thymeleaf.TemplateEngine Line:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+===2018-10-10 14:47:30.973 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:99  - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+===2018-10-10 14:47:30.974 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+===2018-10-10 14:47:30.974 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:72  - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+===2018-10-10 14:47:30.974 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:78  - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+===2018-10-10 14:47:30.980 INFO  org.thymeleaf.TemplateEngine.CONFIG Line:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * XML
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+===2018-10-10 14:47:30.981 INFO  org.thymeleaf.TemplateEngine Line:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+===2018-10-10 14:52:39.273 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:48  - Starting AdminApplication on DESKTOP-8RT6NG5 with PID 8028 (D:\github\hdas-cmcs\hdas-cmcs-module-admin\target\classes started by zgh in D:\github\hdas-cmcs)
+===2018-10-10 14:52:39.277 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:641 - The following profiles are active: dev
+===2018-10-10 14:52:39.542 INFO  org.hibernate.validator.internal.util.Version Line:30  - HV000001: Hibernate Validator 5.3.5.Final
+===2018-10-10 14:52:41.739 INFO  com.hsgene.hdas.cmcs.modules.common.datasource.DynamicDataSourceRegister Line:65  - Dynamic DataSource Registry
+===2018-10-10 14:52:43.465 INFO  org.eclipse.jetty.util.log Line:192 - Logging initialized @6183ms to org.eclipse.jetty.util.log.Slf4jLog
+===2018-10-10 14:52:43.964 INFO  org.eclipse.jetty.server.Server Line:372 - jetty-9.4.4.v20170414
+===2018-10-10 14:52:44.100 INFO  org.eclipse.jetty.server.session Line:364 - DefaultSessionIdManager workerName=node0
+===2018-10-10 14:52:44.100 INFO  org.eclipse.jetty.server.session Line:369 - No SessionScavenger set, using defaults
+===2018-10-10 14:52:44.103 INFO  org.eclipse.jetty.server.session Line:149 - Scavenging every 600000ms
+===2018-10-10 14:52:44.108 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring embedded WebApplicationContext
+===2018-10-10 14:52:44.968 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:788 - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@1d1989ac{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.393474065120811479.80/],AVAILABLE}
+===2018-10-10 14:52:44.968 INFO  org.eclipse.jetty.server.Server Line:444 - Started @7686ms
+===2018-10-10 14:52:49.596 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+===2018-10-10 14:52:49.635 INFO  org.eclipse.jetty.server.AbstractConnector Line:280 - Started ServerConnector@20f0c70{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+===2018-10-10 14:52:49.642 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:57  - Started AdminApplication in 11.172 seconds (JVM running for 12.36)
+===2018-10-10 14:53:01.031 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-1} inited
+===2018-10-10 14:53:01.118 INFO  org.thymeleaf.TemplateEngine Line:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+===2018-10-10 14:53:01.184 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:99  - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+===2018-10-10 14:53:01.185 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+===2018-10-10 14:53:01.185 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:72  - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+===2018-10-10 14:53:01.185 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:78  - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+===2018-10-10 14:53:01.195 INFO  org.thymeleaf.TemplateEngine.CONFIG Line:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * XML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * VALIDXML
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+===2018-10-10 14:53:01.196 INFO  org.thymeleaf.TemplateEngine Line:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+===2018-10-10 14:55:58.699 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:48  - Starting AdminApplication on DESKTOP-8RT6NG5 with PID 11088 (D:\github\hdas-cmcs\hdas-cmcs-module-admin\target\classes started by zgh in D:\github\hdas-cmcs)
+===2018-10-10 14:55:58.703 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:641 - The following profiles are active: dev
+===2018-10-10 14:55:58.986 INFO  org.hibernate.validator.internal.util.Version Line:30  - HV000001: Hibernate Validator 5.3.5.Final
+===2018-10-10 14:56:01.163 INFO  com.hsgene.hdas.cmcs.modules.common.datasource.DynamicDataSourceRegister Line:65  - Dynamic DataSource Registry
+===2018-10-10 14:56:02.916 INFO  org.eclipse.jetty.util.log Line:192 - Logging initialized @6162ms to org.eclipse.jetty.util.log.Slf4jLog
+===2018-10-10 14:56:03.418 INFO  org.eclipse.jetty.server.Server Line:372 - jetty-9.4.4.v20170414
+===2018-10-10 14:56:03.554 INFO  org.eclipse.jetty.server.session Line:364 - DefaultSessionIdManager workerName=node0
+===2018-10-10 14:56:03.555 INFO  org.eclipse.jetty.server.session Line:369 - No SessionScavenger set, using defaults
+===2018-10-10 14:56:03.559 INFO  org.eclipse.jetty.server.session Line:149 - Scavenging every 660000ms
+===2018-10-10 14:56:03.567 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring embedded WebApplicationContext
+===2018-10-10 14:56:04.600 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:788 - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@6e1bb68f{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.3736714920443519314.80/],AVAILABLE}
+===2018-10-10 14:56:04.600 INFO  org.eclipse.jetty.server.Server Line:444 - Started @7847ms
+===2018-10-10 14:56:08.987 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+===2018-10-10 14:56:09.025 INFO  org.eclipse.jetty.server.AbstractConnector Line:280 - Started ServerConnector@5722f19d{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+===2018-10-10 14:56:09.036 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:57  - Started AdminApplication in 11.119 seconds (JVM running for 12.283)
+===2018-10-10 14:56:33.498 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-1} inited
+===2018-10-10 14:56:33.556 INFO  org.thymeleaf.TemplateEngine Line:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+===2018-10-10 14:56:33.613 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:99  - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+===2018-10-10 14:56:33.613 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+===2018-10-10 14:56:33.614 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:72  - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+===2018-10-10 14:56:33.614 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:78  - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+===2018-10-10 14:56:33.618 INFO  org.thymeleaf.TemplateEngine.CONFIG Line:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * XML
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+===2018-10-10 14:56:33.619 INFO  org.thymeleaf.TemplateEngine Line:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+===2018-10-10 15:00:13.059 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:48  - Starting AdminApplication on DESKTOP-8RT6NG5 with PID 27116 (D:\github\hdas-cmcs\hdas-cmcs-module-admin\target\classes started by zgh in D:\github\hdas-cmcs)
+===2018-10-10 15:00:13.064 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:641 - The following profiles are active: dev
+===2018-10-10 15:00:13.327 INFO  org.hibernate.validator.internal.util.Version Line:30  - HV000001: Hibernate Validator 5.3.5.Final
+===2018-10-10 15:00:15.438 INFO  com.hsgene.hdas.cmcs.modules.common.datasource.DynamicDataSourceRegister Line:65  - Dynamic DataSource Registry
+===2018-10-10 15:00:17.112 INFO  org.eclipse.jetty.util.log Line:192 - Logging initialized @6072ms to org.eclipse.jetty.util.log.Slf4jLog
+===2018-10-10 15:00:17.617 INFO  org.eclipse.jetty.server.Server Line:372 - jetty-9.4.4.v20170414
+===2018-10-10 15:00:17.751 INFO  org.eclipse.jetty.server.session Line:364 - DefaultSessionIdManager workerName=node0
+===2018-10-10 15:00:17.752 INFO  org.eclipse.jetty.server.session Line:369 - No SessionScavenger set, using defaults
+===2018-10-10 15:00:17.755 INFO  org.eclipse.jetty.server.session Line:149 - Scavenging every 660000ms
+===2018-10-10 15:00:17.761 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring embedded WebApplicationContext
+===2018-10-10 15:00:18.624 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:788 - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@41aa97ef{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.1763861961545370632.80/],AVAILABLE}
+===2018-10-10 15:00:18.625 INFO  org.eclipse.jetty.server.Server Line:444 - Started @7585ms
+===2018-10-10 15:00:22.985 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+===2018-10-10 15:00:23.024 INFO  org.eclipse.jetty.server.AbstractConnector Line:280 - Started ServerConnector@4e474629{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+===2018-10-10 15:00:23.033 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:57  - Started AdminApplication in 10.59 seconds (JVM running for 11.992)
+===2018-10-10 15:00:29.558 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-1} inited
+===2018-10-10 15:00:29.636 INFO  org.thymeleaf.TemplateEngine Line:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+===2018-10-10 15:00:29.695 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:99  - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+===2018-10-10 15:00:29.698 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+===2018-10-10 15:00:29.698 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:72  - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+===2018-10-10 15:00:29.699 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:78  - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+===2018-10-10 15:00:29.708 INFO  org.thymeleaf.TemplateEngine.CONFIG Line:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * XML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+===2018-10-10 15:00:29.709 INFO  org.thymeleaf.TemplateEngine Line:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+===2018-10-10 15:06:47.104 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:48  - Starting AdminApplication on DESKTOP-8RT6NG5 with PID 33300 (D:\github\hdas-cmcs\hdas-cmcs-module-admin\target\classes started by zgh in D:\github\hdas-cmcs)
+===2018-10-10 15:06:47.115 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:641 - The following profiles are active: dev
+===2018-10-10 15:06:47.431 INFO  org.hibernate.validator.internal.util.Version Line:30  - HV000001: Hibernate Validator 5.3.5.Final
+===2018-10-10 15:06:49.209 INFO  com.hsgene.hdas.cmcs.modules.common.datasource.DynamicDataSourceRegister Line:65  - Dynamic DataSource Registry
+===2018-10-10 15:06:50.806 INFO  org.eclipse.jetty.util.log Line:192 - Logging initialized @5828ms to org.eclipse.jetty.util.log.Slf4jLog
+===2018-10-10 15:06:51.320 INFO  org.eclipse.jetty.server.Server Line:372 - jetty-9.4.4.v20170414
+===2018-10-10 15:06:51.449 INFO  org.eclipse.jetty.server.session Line:364 - DefaultSessionIdManager workerName=node0
+===2018-10-10 15:06:51.450 INFO  org.eclipse.jetty.server.session Line:369 - No SessionScavenger set, using defaults
+===2018-10-10 15:06:51.453 INFO  org.eclipse.jetty.server.session Line:149 - Scavenging every 600000ms
+===2018-10-10 15:06:51.460 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring embedded WebApplicationContext
+===2018-10-10 15:06:52.341 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:788 - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@a133947{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.5112994376278526322.80/],AVAILABLE}
+===2018-10-10 15:06:52.342 INFO  org.eclipse.jetty.server.Server Line:444 - Started @7364ms
+===2018-10-10 15:06:56.568 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+===2018-10-10 15:06:56.606 INFO  org.eclipse.jetty.server.AbstractConnector Line:280 - Started ServerConnector@74cf9ffe{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+===2018-10-10 15:06:56.614 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:57  - Started AdminApplication in 10.29 seconds (JVM running for 11.636)
+===2018-10-10 15:07:13.228 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-1} inited
+===2018-10-10 15:07:13.285 INFO  org.thymeleaf.TemplateEngine Line:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+===2018-10-10 15:07:13.344 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:99  - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+===2018-10-10 15:07:13.344 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+===2018-10-10 15:07:13.344 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:72  - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+===2018-10-10 15:07:13.345 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:78  - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+===2018-10-10 15:07:13.350 INFO  org.thymeleaf.TemplateEngine.CONFIG Line:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * XML
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * VALIDXML
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+===2018-10-10 15:07:13.350 INFO  org.thymeleaf.TemplateEngine Line:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+===2018-10-10 15:20:30.674 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:48  - Starting AdminApplication on DESKTOP-8RT6NG5 with PID 34364 (D:\github\hdas-cmcs\hdas-cmcs-module-admin\target\classes started by zgh in D:\github\hdas-cmcs)
+===2018-10-10 15:20:30.677 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:641 - The following profiles are active: dev
+===2018-10-10 15:20:31.026 INFO  org.hibernate.validator.internal.util.Version Line:30  - HV000001: Hibernate Validator 5.3.5.Final
+===2018-10-10 15:20:33.372 INFO  com.hsgene.hdas.cmcs.modules.common.datasource.DynamicDataSourceRegister Line:65  - Dynamic DataSource Registry
+===2018-10-10 15:20:35.480 INFO  org.eclipse.jetty.util.log Line:192 - Logging initialized @7021ms to org.eclipse.jetty.util.log.Slf4jLog
+===2018-10-10 15:20:36.021 INFO  org.eclipse.jetty.server.Server Line:372 - jetty-9.4.4.v20170414
+===2018-10-10 15:20:36.163 INFO  org.eclipse.jetty.server.session Line:364 - DefaultSessionIdManager workerName=node0
+===2018-10-10 15:20:36.164 INFO  org.eclipse.jetty.server.session Line:369 - No SessionScavenger set, using defaults
+===2018-10-10 15:20:36.168 INFO  org.eclipse.jetty.server.session Line:149 - Scavenging every 600000ms
+===2018-10-10 15:20:36.178 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring embedded WebApplicationContext
+===2018-10-10 15:20:37.441 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:788 - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@4ee6dd0e{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.2956255281457249899.80/],AVAILABLE}
+===2018-10-10 15:20:37.442 INFO  org.eclipse.jetty.server.Server Line:444 - Started @8984ms
+===2018-10-10 15:20:42.388 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+===2018-10-10 15:20:42.429 INFO  org.eclipse.jetty.server.AbstractConnector Line:280 - Started ServerConnector@314822cb{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+===2018-10-10 15:20:42.438 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:57  - Started AdminApplication in 12.308 seconds (JVM running for 13.981)
+===2018-10-10 15:21:56.527 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-1} inited
+===2018-10-10 15:21:56.589 INFO  org.thymeleaf.TemplateEngine Line:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+===2018-10-10 15:21:56.667 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:99  - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+===2018-10-10 15:21:56.669 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+===2018-10-10 15:21:56.669 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:72  - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+===2018-10-10 15:21:56.669 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:78  - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+===2018-10-10 15:21:56.678 INFO  org.thymeleaf.TemplateEngine.CONFIG Line:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * XML
+[THYMELEAF]     * XHTML
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+===2018-10-10 15:21:56.679 INFO  org.thymeleaf.TemplateEngine Line:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+===2018-10-10 15:36:14.291 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:48  - Starting AdminApplication on DESKTOP-8RT6NG5 with PID 10540 (D:\github\hdas-cmcs\hdas-cmcs-module-admin\target\classes started by zgh in D:\github\hdas-cmcs)
+===2018-10-10 15:36:14.294 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:641 - The following profiles are active: dev
+===2018-10-10 15:36:14.445 INFO  org.hibernate.validator.internal.util.Version Line:30  - HV000001: Hibernate Validator 5.3.5.Final
+===2018-10-10 15:36:16.336 INFO  com.hsgene.hdas.cmcs.modules.common.datasource.DynamicDataSourceRegister Line:65  - Dynamic DataSource Registry
+===2018-10-10 15:36:18.055 INFO  org.eclipse.jetty.util.log Line:192 - Logging initialized @5809ms to org.eclipse.jetty.util.log.Slf4jLog
+===2018-10-10 15:36:18.584 INFO  org.eclipse.jetty.server.Server Line:372 - jetty-9.4.4.v20170414
+===2018-10-10 15:36:18.716 INFO  org.eclipse.jetty.server.session Line:364 - DefaultSessionIdManager workerName=node0
+===2018-10-10 15:36:18.717 INFO  org.eclipse.jetty.server.session Line:369 - No SessionScavenger set, using defaults
+===2018-10-10 15:36:18.721 INFO  org.eclipse.jetty.server.session Line:149 - Scavenging every 600000ms
+===2018-10-10 15:36:18.729 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring embedded WebApplicationContext
+===2018-10-10 15:36:19.625 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:788 - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@3493fcf8{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.1397458381896028905.80/],AVAILABLE}
+===2018-10-10 15:36:19.625 INFO  org.eclipse.jetty.server.Server Line:444 - Started @7379ms
+===2018-10-10 15:36:23.817 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+===2018-10-10 15:36:23.855 INFO  org.eclipse.jetty.server.AbstractConnector Line:280 - Started ServerConnector@6832235b{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+===2018-10-10 15:36:23.865 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:57  - Started AdminApplication in 10.139 seconds (JVM running for 11.62)
+===2018-10-10 15:36:32.231 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-1} inited
+===2018-10-10 15:36:32.293 INFO  org.thymeleaf.TemplateEngine Line:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+===2018-10-10 15:36:32.361 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:99  - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+===2018-10-10 15:36:32.362 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+===2018-10-10 15:36:32.362 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:72  - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+===2018-10-10 15:36:32.363 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:78  - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+===2018-10-10 15:36:32.369 INFO  org.thymeleaf.TemplateEngine.CONFIG Line:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * XML
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * XHTML
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+===2018-10-10 15:36:32.369 INFO  org.thymeleaf.TemplateEngine Line:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+===2018-10-10 15:52:24.465 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:48  - Starting AdminApplication on DESKTOP-8RT6NG5 with PID 3956 (D:\github\hdas-cmcs\hdas-cmcs-module-admin\target\classes started by zgh in D:\github\hdas-cmcs)
+===2018-10-10 15:52:24.470 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:641 - The following profiles are active: dev
+===2018-10-10 15:52:24.838 INFO  org.hibernate.validator.internal.util.Version Line:30  - HV000001: Hibernate Validator 5.3.5.Final
+===2018-10-10 15:52:27.009 INFO  com.hsgene.hdas.cmcs.modules.common.datasource.DynamicDataSourceRegister Line:65  - Dynamic DataSource Registry
+===2018-10-10 15:52:28.687 INFO  org.eclipse.jetty.util.log Line:192 - Logging initialized @6176ms to org.eclipse.jetty.util.log.Slf4jLog
+===2018-10-10 15:52:29.246 INFO  org.eclipse.jetty.server.Server Line:372 - jetty-9.4.4.v20170414
+===2018-10-10 15:52:29.374 INFO  org.eclipse.jetty.server.session Line:364 - DefaultSessionIdManager workerName=node0
+===2018-10-10 15:52:29.375 INFO  org.eclipse.jetty.server.session Line:369 - No SessionScavenger set, using defaults
+===2018-10-10 15:52:29.379 INFO  org.eclipse.jetty.server.session Line:149 - Scavenging every 660000ms
+===2018-10-10 15:52:29.386 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring embedded WebApplicationContext
+===2018-10-10 15:52:30.271 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:788 - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@18d583e{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.775068004649575678.80/],AVAILABLE}
+===2018-10-10 15:52:30.272 INFO  org.eclipse.jetty.server.Server Line:444 - Started @7760ms
+===2018-10-10 15:52:34.588 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+===2018-10-10 15:52:34.625 INFO  org.eclipse.jetty.server.AbstractConnector Line:280 - Started ServerConnector@11a19002{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+===2018-10-10 15:52:34.632 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:57  - Started AdminApplication in 10.891 seconds (JVM running for 12.12)
+===2018-10-10 15:53:45.109 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-1} inited
+===2018-10-10 15:53:45.183 INFO  org.thymeleaf.TemplateEngine Line:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+===2018-10-10 15:53:45.244 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:99  - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+===2018-10-10 15:53:45.244 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+===2018-10-10 15:53:45.245 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:72  - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+===2018-10-10 15:53:45.245 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:78  - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+===2018-10-10 15:53:45.251 INFO  org.thymeleaf.TemplateEngine.CONFIG Line:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * XML
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * HTML5
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+===2018-10-10 15:53:45.252 INFO  org.thymeleaf.TemplateEngine Line:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+===2018-10-10 17:07:41.992 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:48  - Starting AdminApplication on DESKTOP-8RT6NG5 with PID 27600 (D:\github\hdas-cmcs\hdas-cmcs-module-admin\target\classes started by zgh in D:\github\hdas-cmcs)
+===2018-10-10 17:07:41.996 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:641 - The following profiles are active: dev
+===2018-10-10 17:07:42.462 INFO  org.hibernate.validator.internal.util.Version Line:30  - HV000001: Hibernate Validator 5.3.5.Final
+===2018-10-10 17:07:44.533 INFO  com.hsgene.hdas.cmcs.modules.common.datasource.DynamicDataSourceRegister Line:65  - Dynamic DataSource Registry
+===2018-10-10 17:07:46.553 INFO  org.eclipse.jetty.util.log Line:192 - Logging initialized @7469ms to org.eclipse.jetty.util.log.Slf4jLog
+===2018-10-10 17:07:47.272 INFO  org.eclipse.jetty.server.Server Line:372 - jetty-9.4.4.v20170414
+===2018-10-10 17:07:47.493 INFO  org.eclipse.jetty.server.session Line:364 - DefaultSessionIdManager workerName=node0
+===2018-10-10 17:07:47.493 INFO  org.eclipse.jetty.server.session Line:369 - No SessionScavenger set, using defaults
+===2018-10-10 17:07:47.516 INFO  org.eclipse.jetty.server.session Line:149 - Scavenging every 660000ms
+===2018-10-10 17:07:47.522 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring embedded WebApplicationContext
+===2018-10-10 17:07:50.398 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:788 - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@7185b62{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.3053784849050218387.80/],AVAILABLE}
+===2018-10-10 17:07:50.399 INFO  org.eclipse.jetty.server.Server Line:444 - Started @11314ms
+===2018-10-10 17:07:54.216 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+===2018-10-10 17:07:54.358 INFO  org.eclipse.jetty.server.AbstractConnector Line:280 - Started ServerConnector@5da6f77f{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+===2018-10-10 17:07:54.380 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:57  - Started AdminApplication in 13.097 seconds (JVM running for 15.295)
+===2018-10-10 17:08:07.735 INFO  org.thymeleaf.TemplateEngine Line:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+===2018-10-10 17:08:07.817 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:99  - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+===2018-10-10 17:08:07.818 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+===2018-10-10 17:08:07.818 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:72  - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+===2018-10-10 17:08:07.818 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:78  - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+===2018-10-10 17:08:07.823 INFO  org.thymeleaf.TemplateEngine.CONFIG Line:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * XML
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * VALIDXML
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+===2018-10-10 17:08:07.824 INFO  org.thymeleaf.TemplateEngine Line:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+===2018-10-10 17:08:14.992 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-1} inited
+===2018-10-10 17:36:47.596 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:48  - Starting AdminApplication on DESKTOP-8RT6NG5 with PID 31136 (D:\github\hdas-cmcs\hdas-cmcs-module-admin\target\classes started by zgh in D:\github\hdas-cmcs)
+===2018-10-10 17:36:47.599 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:641 - The following profiles are active: dev
+===2018-10-10 17:36:47.773 INFO  org.hibernate.validator.internal.util.Version Line:30  - HV000001: Hibernate Validator 5.3.5.Final
+===2018-10-10 17:36:49.444 INFO  com.hsgene.hdas.cmcs.modules.common.datasource.DynamicDataSourceRegister Line:65  - Dynamic DataSource Registry
+===2018-10-10 17:36:51.113 INFO  org.eclipse.jetty.util.log Line:192 - Logging initialized @5225ms to org.eclipse.jetty.util.log.Slf4jLog
+===2018-10-10 17:36:53.368 INFO  org.eclipse.jetty.server.Server Line:372 - jetty-9.4.4.v20170414
+===2018-10-10 17:36:53.786 INFO  org.eclipse.jetty.server.session Line:364 - DefaultSessionIdManager workerName=node0
+===2018-10-10 17:36:53.787 INFO  org.eclipse.jetty.server.session Line:369 - No SessionScavenger set, using defaults
+===2018-10-10 17:36:54.093 INFO  org.eclipse.jetty.server.session Line:149 - Scavenging every 660000ms
+===2018-10-10 17:36:54.098 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring embedded WebApplicationContext
+===2018-10-10 17:37:08.213 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:788 - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@6c5dc08b{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.6202313435125953761.80/],AVAILABLE}
+===2018-10-10 17:37:08.213 INFO  org.eclipse.jetty.server.Server Line:444 - Started @22325ms
+===2018-10-10 17:37:40.635 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+===2018-10-10 17:37:41.804 INFO  org.eclipse.jetty.server.AbstractConnector Line:280 - Started ServerConnector@4b1d6b9e{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+===2018-10-10 17:37:41.930 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:57  - Started AdminApplication in 54.683 seconds (JVM running for 56.042)
+===2018-10-10 17:37:51.815 INFO  org.thymeleaf.TemplateEngine Line:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+===2018-10-10 17:37:53.396 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:99  - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+===2018-10-10 17:37:53.396 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+===2018-10-10 17:37:53.397 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:72  - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+===2018-10-10 17:37:53.397 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:78  - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+===2018-10-10 17:37:53.485 INFO  org.thymeleaf.TemplateEngine.CONFIG Line:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * XML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * XHTML
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+===2018-10-10 17:37:53.485 INFO  org.thymeleaf.TemplateEngine Line:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+===2018-10-10 17:39:00.459 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-1} inited
+===2018-10-10 17:41:42.798 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:48  - Starting AdminApplication on DESKTOP-8RT6NG5 with PID 28812 (D:\github\hdas-cmcs\hdas-cmcs-module-admin\target\classes started by zgh in D:\github\hdas-cmcs)
+===2018-10-10 17:41:42.801 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:641 - The following profiles are active: dev
+===2018-10-10 17:41:43.015 INFO  org.hibernate.validator.internal.util.Version Line:30  - HV000001: Hibernate Validator 5.3.5.Final
+===2018-10-10 17:41:45.182 INFO  com.hsgene.hdas.cmcs.modules.common.datasource.DynamicDataSourceRegister Line:65  - Dynamic DataSource Registry
+===2018-10-10 17:41:46.961 INFO  org.eclipse.jetty.util.log Line:192 - Logging initialized @5935ms to org.eclipse.jetty.util.log.Slf4jLog
+===2018-10-10 17:41:47.457 INFO  org.eclipse.jetty.server.Server Line:372 - jetty-9.4.4.v20170414
+===2018-10-10 17:41:47.806 INFO  org.eclipse.jetty.server.session Line:364 - DefaultSessionIdManager workerName=node0
+===2018-10-10 17:41:47.806 INFO  org.eclipse.jetty.server.session Line:369 - No SessionScavenger set, using defaults
+===2018-10-10 17:41:47.810 INFO  org.eclipse.jetty.server.session Line:149 - Scavenging every 600000ms
+===2018-10-10 17:41:47.819 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring embedded WebApplicationContext
+===2018-10-10 17:41:50.049 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:788 - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@684e35f{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.8837255322034854661.80/],AVAILABLE}
+===2018-10-10 17:41:50.050 INFO  org.eclipse.jetty.server.Server Line:444 - Started @9024ms
+===2018-10-10 17:41:53.635 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+===2018-10-10 17:41:53.671 INFO  org.eclipse.jetty.server.AbstractConnector Line:280 - Started ServerConnector@b57b3dc{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+===2018-10-10 17:41:53.680 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:57  - Started AdminApplication in 11.239 seconds (JVM running for 12.654)
+===2018-10-10 17:42:16.965 INFO  org.thymeleaf.TemplateEngine Line:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+===2018-10-10 17:42:17.026 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:99  - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+===2018-10-10 17:42:17.026 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+===2018-10-10 17:42:17.027 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:72  - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+===2018-10-10 17:42:17.027 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:78  - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+===2018-10-10 17:42:17.033 INFO  org.thymeleaf.TemplateEngine.CONFIG Line:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * XML
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+===2018-10-10 17:42:17.033 INFO  org.thymeleaf.TemplateEngine Line:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+===2018-10-10 17:42:33.949 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-1} inited

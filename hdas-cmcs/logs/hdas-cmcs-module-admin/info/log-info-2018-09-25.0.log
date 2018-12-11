@@ -1,0 +1,54 @@
+===2018-09-25 09:11:21.983 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:48  - Starting AdminApplication on DESKTOP-8RT6NG5 with PID 13616 (D:\github\hdas-cmcs\hdas-cmcs-module-admin\target\classes started by zgh in D:\github\hdas-cmcs)
+===2018-09-25 09:11:21.983 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:641 - The following profiles are active: dev
+===2018-09-25 09:11:22.445 INFO  org.hibernate.validator.internal.util.Version Line:30  - HV000001: Hibernate Validator 5.3.5.Final
+===2018-09-25 09:11:26.230 INFO  com.hsgene.hdas.cmcs.modules.common.datasource.DynamicDataSourceRegister Line:65  - Dynamic DataSource Registry
+===2018-09-25 09:11:28.605 INFO  org.eclipse.jetty.util.log Line:192 - Logging initialized @13744ms to org.eclipse.jetty.util.log.Slf4jLog
+===2018-09-25 09:11:29.325 INFO  org.eclipse.jetty.server.Server Line:372 - jetty-9.4.4.v20170414
+===2018-09-25 09:11:29.585 INFO  org.eclipse.jetty.server.session Line:364 - DefaultSessionIdManager workerName=node0
+===2018-09-25 09:11:29.585 INFO  org.eclipse.jetty.server.session Line:369 - No SessionScavenger set, using defaults
+===2018-09-25 09:11:29.615 INFO  org.eclipse.jetty.server.session Line:149 - Scavenging every 600000ms
+===2018-09-25 09:11:29.645 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring embedded WebApplicationContext
+===2018-09-25 09:11:32.365 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:788 - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@3ffacc7f{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.4596376416608868715.80/],AVAILABLE}
+===2018-09-25 09:11:32.365 INFO  org.eclipse.jetty.server.Server Line:444 - Started @17502ms
+===2018-09-25 09:11:41.320 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+===2018-09-25 09:11:41.522 INFO  org.eclipse.jetty.server.AbstractConnector Line:280 - Started ServerConnector@6250f8d4{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+===2018-09-25 09:11:41.544 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:57  - Started AdminApplication in 21.658 seconds (JVM running for 26.678)
+===2018-09-25 09:11:43.330 INFO  org.thymeleaf.TemplateEngine Line:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+===2018-09-25 09:11:43.411 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:99  - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+===2018-09-25 09:11:43.411 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+===2018-09-25 09:11:43.412 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:72  - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+===2018-09-25 09:11:43.412 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:78  - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+===2018-09-25 09:11:43.420 INFO  org.thymeleaf.TemplateEngine.CONFIG Line:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * XML
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+===2018-09-25 09:11:43.421 INFO  org.thymeleaf.TemplateEngine Line:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+===2018-09-25 09:11:52.453 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-1} inited
+===2018-09-25 10:04:47.317 INFO  org.eclipse.jetty.server.AbstractConnector Line:320 - Stopped ServerConnector@6250f8d4{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+===2018-09-25 10:04:47.317 INFO  org.eclipse.jetty.server.session Line:167 - Stopped scavenging
+===2018-09-25 10:04:47.530 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Destroying Spring FrameworkServlet 'dispatcherServlet'
+===2018-09-25 10:04:47.531 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:957 - Stopped o.s.b.c.e.j.JettyEmbeddedWebAppContext@3ffacc7f{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.4596376416608868715.80/],UNAVAILABLE}
+===2018-09-25 10:04:48.418 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:48  - Starting AdminApplication on DESKTOP-8RT6NG5 with PID 13616 (D:\github\hdas-cmcs\hdas-cmcs-module-admin\target\classes started by zgh in D:\github\hdas-cmcs)
+===2018-09-25 10:04:48.420 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:641 - The following profiles are active: dev
+===2018-09-25 10:04:50.791 INFO  com.hsgene.hdas.cmcs.modules.common.datasource.DynamicDataSourceRegister Line:65  - Dynamic DataSource Registry
+===2018-09-25 10:04:51.425 INFO  org.eclipse.jetty.server.Server Line:372 - jetty-9.4.4.v20170414
+===2018-09-25 10:04:51.428 INFO  org.eclipse.jetty.server.session Line:364 - DefaultSessionIdManager workerName=node0
+===2018-09-25 10:04:51.428 INFO  org.eclipse.jetty.server.session Line:369 - No SessionScavenger set, using defaults
+===2018-09-25 10:04:51.428 INFO  org.eclipse.jetty.server.session Line:149 - Scavenging every 660000ms
+===2018-09-25 10:04:51.429 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring embedded WebApplicationContext
+===2018-09-25 10:04:51.628 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:788 - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@60157a32{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.7679032512966836159.80/],AVAILABLE}
+===2018-09-25 10:04:51.628 INFO  org.eclipse.jetty.server.Server Line:444 - Started @3216762ms

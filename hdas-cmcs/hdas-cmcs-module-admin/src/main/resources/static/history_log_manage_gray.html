@@ -1,0 +1,67 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<div class="table-main-div">
+    <div class="switch-div">
+        <span id="released_btn" class="version-btn auth-hidden">已发布</span>&nbsp;&nbsp;&nbsp;&nbsp;<span
+            id="unreleased_btn" class="version-btn auth-hidden">未发布</span>
+    </div>
+    <div class="tab-content">
+        <div id="released_tab" class="auth-hidden">
+            <div id="released_div" class="released-div">
+                <table id="released_table" class="display history-released-table">
+                    <thead>
+                    <tr>
+                        <th><input type="checkbox" id="released_select_all" class="select-all-checkbox no-margin"/>全选</th>
+                        <th>序号</th>
+                        <th>项目</th>
+                        <th>版本号</th>
+                        <th>键</th>
+                        <th>灰度的值</th>
+                        <th>实例</th>
+                        <th>备注</th>
+                        <th>属性</th>
+                        <th>修改人</th>
+                        <th>修改时间</th>
+                        <th>操作</th>
+                        <th>id</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <div id="unreleased_tab" class="auth-hidden">
+            <div id="unreleased_div" class="unreleased-div">
+                <table id="unreleased_table" class="display history-unreleased-table">
+                    <thead>
+                    <tr>
+                        <th><input type="checkbox" id="unreleased_select_all" class="select-all-checkbox no-margin"/>全选</th>
+                        <th>序号</th>
+                        <th>项目</th>
+                        <th>版本号</th>
+                        <th>键</th>
+                        <th>灰度的值</th>
+                        <th>实例</th>
+                        <th>备注</th>
+                        <th>属性</th>
+                        <th>修改人</th>
+                        <th>修改时间</th>
+                        <th>id</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/scripts/history_log_manage.js"></script>
+<script type="text/javascript" th:inline="javascript">
+    $(document).ready(function () {
+        loadData(1);
+        loadQuery("请输入键查询");
+        clickIsReleasedBtn(1);
+        loadItem(NAV.HISTORY_MANAGE, NAV.GRAY_VERSION, NAV.LIST_PAGE, null, HTML.HISTORY_LOG_MANAGE_GRAY);
+        historySelectAll("released_select_all");
+        historySelectAll("unreleased_select_all");
+    });
+</script>
+<link rel="stylesheet" href="/styles/history_log_manage_no_action.css"/>
+</html>

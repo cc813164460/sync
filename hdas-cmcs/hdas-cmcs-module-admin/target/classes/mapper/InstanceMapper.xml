@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hsgene.hdas.cmcs.modules.admin.mapper.InstanceMapper">
+    <sql id="InstanceList">
+        id,name,instance_type_id,resource_id,is_delete
+    </sql>
+    <sql id="InstanceAsList">
+        id,name,instance_type_id as instanceTypeId,resource_id as resourceId,is_delete as isDelete
+    </sql>
+    <sql id="InstancePropertiesList">
+        i.id,case when i.is_public = 0 then "私有" else "公有" end as property,i.version_num,i.`key`,ifnull(i2.value,"")
+        as main_value,i.value,ifnull(app_num,"") as app_num, ifnull(i.comment,"") as comment,case i.release_status
+        when 0 then '未发布' else '已发布' end as release_status,case i.version_id when 1 then '灰度版本' else '无'
+        end as versionName,ifnull(u.user_name,"") as last_update_by,ifnull(i.last_update_time,"") as last_update_time,
+        i.class_id,ifnull(i.update_time,"") as update_time,i.line_num,i.must_change
+    </sql>
+    <resultMap id="InstancePropertiesMap" type="java.util.Map">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="property" property="property" jdbcType="VARCHAR"/>
+        <result column="version_num" property="version_num" jdbcType="VARCHAR"/>
+        <result column="key" property="key" jdbcType="VARCHAR"/>
+        <result column="main_value" property="main_value" jdbcType="VARCHAR"/>
+        <result column="value" property="value" jdbcType="VARCHAR"/>
+        <result column="app_num" property="app_num" jdbcType="INTEGER"/>
+        <result column="comment" property="comment" jdbcType="VARCHAR"/>
+        <result column="release_status" property="release_status" jdbcType="INTEGER"/>
+        <result column="last_update_by" property="last_update_by" jdbcType="VARCHAR"/>
+        <result column="last_update_time" property="last_update_time" jdbcType="VARCHAR"/>
+        <result column="update_time" property="update_time" jdbcType="VARCHAR"/>
+        <result column="must_change" property="must_change" jdbcType="INTEGER"/>
+    </resultMap>
+    <resultMap id="KeyAndValueMap" type="java.util.Map">
+        <result column="key" property="key" jdbcType="VARCHAR"/>
+        <result column="value" property="value" jdbcType="VARCHAR"/>
+        <result column="class_id" property="class_id" jdbcType="VARCHAR"/>
+        <result column="comment" property="comment" jdbcType="VARCHAR"/>
+        <result column="line_num" property="line_num" jdbcType="VARCHAR"/>
+        <result column="must_change" property="must_change" jdbcType="INTEGER"/>
+    </resultMap>
+    <select id="selectPropertiesByKeyPage" resultMap="InstancePropertiesMap" parameterType="java.util.Map">
+        select * from(
+        select
+        <include refid="InstancePropertiesList"/>
+        from instance ins,item i left join (select group_concat(a.hostname) as app_num,item_id from item_app ia,app a
+        where ia.is_delete = 0 and ia.app_id = a.id group by ia.item_id ) temp1 on i.id = temp1.item_id left join user
+        u on last_update_by = u.id left join item i2 on i2.`key` = i.`key` and i2.instance_id =
+        #{instanceId,jdbcType=BIGINT} and i2.version_id = 0 and i2.instance_type_id = i.instance_type_id and
+        i2.is_delete = 0 where i.is_delete = 0 and i.instance_type_id = 0 and ins.resource_id =
+        #{resourceId,jdbcType=BIGINT} and ins.id = i.instance_id and i.key like concat('%',#{key,jdbcType=VARCHAR},'%')
+        and ins.instance_type_id = 0 group by i.id union select
+        <include refid="InstancePropertiesList"/>
+        from item_resource ir,item i left join (select group_concat(a.hostname) as app_num,item_id from item_app ia,app
+        a where ia.is_delete = 0 and ia.app_id = a.id group by ia.item_id ) temp1 on i.id = temp1.item_id left join
+        user u on last_update_by = u.id left join item i2 on i2.`key` = i.`key` and i2.instance_id =
+        #{instanceId,jdbcType=BIGINT} and i2.version_id = 0 and i2.instance_type_id = i.instance_type_id and
+        i2.is_delete = 0 where i.is_delete = 0 and i.instance_type_id = 0 and ir.resource_id =
+        #{resourceId,jdbcType=BIGINT} and i.key like concat('%',#{key,jdbcType=VARCHAR},'%') and ir.item_id = i.id group
+        by i.id) temp order by line_num,update_time desc
+    </select>
+    <select id="selectPropertiesByPage" resultMap="InstancePropertiesMap">
+        select * from(
+        select
+        <include refid="InstancePropertiesList"/>
+        from instance ins,item i left join (select group_concat(a.hostname) as app_num,item_id from
+        item_app ia,app a where ia.is_delete = 0 and ia.app_id = a.id group by ia.item_id ) temp1 on i.id =
+        temp1.item_id left join user u on last_update_by = u.id left join item i2 on i2.`key` = i.`key` and
+        i2.instance_id = #{instanceId,jdbcType=BIGINT} and i2.version_id = 0 and i2.instance_type_id =
+        i.instance_type_id and i2.is_delete = 0 where i.is_delete = 0 and i.instance_type_id = 0 and ins.resource_id =
+        #{resourceId,jdbcType=BIGINT} and ins.id = i.instance_id and ins.instance_type_id = 0 group by i.id union select
+        <include refid="InstancePropertiesList"/>
+        from item_resource ir,item i left join (select group_concat(a.hostname) as app_num,item_id from item_app ia,app
+        a where ia.is_delete = 0 and ia.app_id = a.id group by ia.item_id ) temp1 on i.id = temp1.item_id left join
+        user u on last_update_by = u.id left join item i2 on i2.`key` = i.`key` and i2.instance_id =
+        #{instanceId,jdbcType=BIGINT} and i2.version_id = 0 and i2.instance_type_id = i.instance_type_id and
+        i2.is_delete = 0 where i.is_delete = 0 and i.instance_type_id = 0 and ir.resource_id =
+        #{resourceId,jdbcType=BIGINT} and ir.item_id = i.id group by i.id) temp order by line_num,update_time desc
+    </select>
+    <select id="getAllKeyAndValue" resultMap="KeyAndValueMap" parameterType="java.lang.Long">
+        select `key`,value,class_id,comment,line_num,must_change from(select i.`key`,i.value,i.class_id,i.update_time,i
+        .comment,i.line_num,i.must_change from instance ins,item i left join (select group_concat(a.hostname) as
+        app_num,item_id from item_app ia,app a where ia.is_delete = 0 and ia.app_id = a.id group by ia.item_id ) temp1 on i.id = temp1.item_id
+        left join user u on last_update_by = u.id where i.is_delete = 0 and i.instance_type_id = 0 and ins.resource_id =
+        #{resourceId,jdbcType=BIGINT} and ins.id = i.instance_id and ins.instance_type_id = 0 group by i.id union
+        select i.`key`,i.value,i.class_id,i.update_time,i.comment,i.line_num,i.must_change from item_resource ir,item i
+        left join (select group_concat(a.hostname) as app_num,item_id from item_app ia,app a where ia.is_delete = 0 and
+        ia.app_id = a.id group by ia.item_id ) temp1 on i.id = temp1.item_id left join user u on last_update_by = u.id
+        where i.is_delete = 0 and i.instance_type_id = 0 and ir.resource_id = #{resourceId,jdbcType=BIGINT} and
+        ir.item_id = i.id and i.is_public = 0 group by i.id) temp order by line_num,update_time desc
+    </select>
+    <select id="getAll" resultType="com.hsgene.hdas.cmcs.modules.admin.domain.Instance">
+        select
+        <include refid="InstanceList"/>
+        from instance where is_delete = 0
+    </select>
+    <select id="getByResourceId" resultType="java.util.Map" parameterType="java.lang.Long">
+        select
+        <include refid="InstanceAsList"/>
+        from instance where is_delete = 0
+        <if test="resourceId != null">
+            and resource_id = #{resourceId,jdbcType=BIGINT}
+        </if>
+    </select>
+    <select id="getInstanceIdsByResourceIds" resultType="java.lang.Long">
+        select id from instance where resource_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </select>
+    <select id="countByMap" resultType="java.lang.Integer" parameterType="java.util.Map">
+        select count(*) from instance where is_delete = 0
+        <if test="instanceTypeId != null">
+            and instance_type_id=#{instanceTypeId,jdbcType=INTEGER}
+        </if>
+        <if test="resourceId != null">
+            and resource_id=#{resourceId,jdbcType=BIGINT}
+        </if>
+    </select>
+    <select id="getIdByResourceIdAndInstanceTypeId" resultType="java.lang.Long" parameterType="java.util.Map">
+        select ifnull(MAX(id), -1) from instance where is_delete = 0
+        <if test="resourceId != null">
+            and resource_id = #{resourceId,jdbcType=BIGINT}
+        </if>
+        <if test="instanceTypeId != null">
+            and instance_type_id = #{instanceTypeId,jdbcType=INTEGER}
+        </if>
+    </select>
+    <select id="getResourceIdByIds" resultType="java.lang.Long">
+        select resource_id from instance where is_delete = 0
+        and id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </select>
+    <select id="selectByPage" resultType="com.hsgene.hdas.cmcs.modules.admin.domain.Instance">
+        select
+        <include refid="InstanceList"/>
+        from instance where is_delete = 0
+    </select>
+    <insert id="save" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.Instance">
+        insert into instance
+        (<include refid="InstanceList"/>)
+        values
+        (#{id,jdbcType=BIGINT},#{name,jdbcType=VARCHAR},#{instanceTypeId,jdbcType=BIGINT},#{resourceId,jdbcType=VARCHAR},0)
+    </insert>
+    <update id="update" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.Instance">
+        update instance
+        <set>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="resourceId != null">
+                resource_id = #{resourceId,jdbcType=VARCHAR},
+            </if>
+            <if test="instanceTypeId != null">
+                instance_type_id = #{instanceTypeId,jdbcType=BIGINT}
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="deleteByIds">
+        update instance
+        <set>
+            is_delete = 1
+        </set>
+        where id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </update>
+</mapper>

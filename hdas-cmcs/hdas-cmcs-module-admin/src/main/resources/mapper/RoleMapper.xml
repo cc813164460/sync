@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hsgene.hdas.cmcs.modules.admin.mapper.RoleMapper">
+    <sql id="RoleList">
+        id,name,description,is_delete
+    </sql>
+    <sql id="RoleAsList">
+        id,name,description,is_delete as isDelete
+    </sql>
+    <resultMap id="RoleMnMap" type="java.util.Map">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="description" property="description" jdbcType="VARCHAR"/>
+    </resultMap>
+    <select id="getRoleNamesByIds" resultType="java.lang.String">
+        select name from role where id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </select>
+    <select id="getDescriptionById" resultType="java.lang.String">
+        select description from role where id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </select>
+    <select id="getSelectByMap" resultType="java.util.HashMap">
+        select id,name from role where is_delete = 0
+    </select>
+    <select id="countByMap" resultType="java.lang.Integer" parameterType="java.util.HashMap">
+        select count(*) from role where is_delete = 0
+        <if test="name != null">
+            and name = #{name,jdbcType=VARCHAR}
+        </if>
+        <if test="id != null">
+            and id != #{id,jdbcType=BIGINT}
+        </if>
+    </select>
+    <select id="selectByNamePage" resultMap="RoleMnMap" parameterType="java.lang.String">
+        select
+        <include refid="RoleAsList"/>
+        from role where name like concat('%',#{name,jdbcType=VARCHAR},'%') and is_delete = 0
+    </select>
+    <select id="selectByPage" resultMap="RoleMnMap">
+        select
+        <include refid="RoleAsList"/>
+        from role where is_delete = 0
+    </select>
+    <select id="getIdByName" resultType="java.lang.Long" parameterType="java.lang.String">
+        select id from role where name = #{name,jdbcType=VARCHAR} and is_delete = 0
+    </select>
+    <insert id="save" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.Role">
+        insert into role
+        (<include refid="RoleList"/>)
+        values
+        (#{id,jdbcType=BIGINT},#{name,jdbcType=VARCHAR},#{description,jdbcType=VARCHAR},0)
+    </insert>
+    <update id="update" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.Role">
+        update role
+        <set>
+            is_delete = 0,
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="description != null">
+                description = #{description,jdbcType=VARCHAR}
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="deleteByIds">
+        update role
+        <set>
+            is_delete = 1
+        </set>
+        where id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </update>
+</mapper>

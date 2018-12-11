@@ -1,0 +1,90 @@
+.login-left {
+    background-image: url(../img/login_bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    height: 100%;
+    width: 60%;
+    float: left;
+}
+
+.login-right {
+    float: right;
+    height: 100%;
+    width: 40%;
+    text-align: center;
+}
+
+#info {
+    margin-top: 15%;
+}
+
+#username, #password {
+    margin-left: 1em;
+    line-height: 2em;
+    color: #000000;
+    font-size: 1em;
+    font-family: PingFang-SC-Regular;
+    border: 0;
+    width: 80%;
+    outline: none;
+    border-bottom: 1px solid #eeeeee;
+}
+
+#username:focus, #password:focus {
+    border-bottom: 1px solid #5D87EA;
+}
+
+#login {
+    color: #ffffff;
+    background: #5D87EA;
+    border-radius: 4em;
+    width: 100%;
+    height: 3em;
+    display: inline-block;
+    font-size: 1em;
+    line-height: 3em;
+}
+
+.login-div {
+    margin-top: 30%;
+    margin-bottom: 20%;
+    width: 95%;
+    margin-left: 2.5%;
+}
+
+.top-title {
+    width: 100%;
+    margin-top: 20%;
+    font-weight: bolder;
+    font-family: PingFang-SC-Semibold;
+    font-size: 2.2em;
+    color: #000000;
+    letter-spacing: 0.05em;
+    line-height: 3em;
+}
+
+.top-title > span {
+    color: #5D87EA;
+}
+
+.login-frame {
+    width: 60%;
+    display: inline-block;
+    margin-top: 10%;
+    margin-bottom: 7%;
+    box-shadow: 4px 6px 16px 0 rgba(86, 134, 232, 0.15);
+    border-radius: 0.5em;
+}
+
+.username-div {
+    margin-left: 2.5%;
+    margin-top: 3%;
+    width: 95%;
+}
+
+.password-div {
+    margin-left: 2.5%;
+    margin-top: 10%;
+    width: 95%;
+}

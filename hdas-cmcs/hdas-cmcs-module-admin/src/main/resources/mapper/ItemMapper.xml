@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hsgene.hdas.cmcs.modules.admin.mapper.ItemMapper">
+    <sql id="ItemList">
+        id,version_num,instance_id,`key`,value,comment,line_num,is_delete,release_status,last_update_by,
+        last_update_time,version_id,is_public,instance_type_id,class_id,env_id,update_time,must_change
+    </sql>
+    <sql id="ItemAsList">
+        id,version_num as versionNum,instance_id as instanceId,`key`,value,comment,line_num as lineNum,is_delete as
+        isDelete,release_status as releaseStatus,last_update_by as lastUpdateBy,last_update_time as lastUpdateTime,
+        version_id as versionId,instance_type_id as instanceTypeId,class_id as classId,env_id as envId,update_time as
+        updateTime,must_change as mustChange
+    </sql>
+    <sql id="ItemIfNullList">
+        id,version_num,instance_id,`key`,value,ifnull(comment,"") as comment,line_num,is_delete,release_status,
+        last_update_by,last_update_time as last_update_time,version_id,class_id as classId,env_id as envId,update_time
+        as updateTime,must_change as mustChange
+    </sql>
+    <sql id="ItemMainInfoList">
+        id,`key`,value,comment,version_num,release_status
+    </sql>
+    <sql id="ItemPublicInfoList">
+        i.id,i.`key`,i.value,i.comment,i.version_num,i.release_status,1 as is_public
+    </sql>
+    <sql id="ItemPrivateInfoList">
+        i.id,i.`key`,i.value,i.comment,i.version_num,i.release_status,0 as is_public
+    </sql>
+    <resultMap id="ItemPrivateAndPublicInfoMap" type="java.util.Map">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="key" property="key" jdbcType="VARCHAR"/>
+        <result column="value" property="value" jdbcType="VARCHAR"/>
+        <result column="comment" property="comment" jdbcType="VARCHAR"/>
+        <result column="version_num" property="versionNum" jdbcType="VARCHAR"/>
+        <result column="release_status" property="releaseStatus" jdbcType="VARCHAR"/>
+        <result column="is_public" property="is_public" jdbcType="BIGINT"/>
+    </resultMap>
+    <resultMap id="ItemMainInfoMap" type="java.util.Map">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="key" property="key" jdbcType="VARCHAR"/>
+        <result column="value" property="value" jdbcType="VARCHAR"/>
+        <result column="comment" property="comment" jdbcType="VARCHAR"/>
+        <result column="version_num" property="versionNum" jdbcType="VARCHAR"/>
+        <result column="release_status" property="releaseStatus" jdbcType="VARCHAR"/>
+    </resultMap>
+    <select id="getByIdsAndIsDeleteAndLastUpdateTime" resultType="com.hsgene.hdas.cmcs.modules.admin.domain.Item">
+        select
+        <include refid="ItemAsList"/>
+        from item where last_update_time > #{lastUpdateTime,jdbcType=VARCHAR}
+        <if test="isDelete != null">
+            and is_delete = #{isDelete,jdbcType=INTEGER} and release_status in (1,2,3)
+        </if>
+        and id in
+        <foreach collection="ids" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+        order by last_update_time,is_delete desc
+    </select>
+    <select id="getClassIdById" resultType="java.lang.Long" parameterType="java.lang.Long">
+        select class_id from item where id = #{id,jdbcType=BIGINT}
+    </select>
+    <select id="getByIds" resultType="com.hsgene.hdas.cmcs.modules.admin.domain.Item">
+        select
+        <include refid="ItemAsList"/>
+        from item where id in
+        <foreach collection="ids" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </select>
+    <select id="getVersionNumBacksByIds" resultType="java.lang.String">
+        select substring(version_num, length(version_num)-15, length(version_num)) as versionBackNum from item where
+        id in
+        <foreach collection="ids" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </select>
+    <select id="getIdsByVersionNumBacks" resultType="java.lang.Long">
+        select id from item where substring(version_num, length(version_num)-15, length(version_num)) in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=VARCHAR}
+        </foreach>
+    </select>
+    <select id="getUseIdsByVersionNumBacks" resultType="java.lang.Long">
+        select id from item where is_delete = 0 and substring(version_num, length(version_num)-15, length(version_num))
+        in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=VARCHAR}
+        </foreach>
+    </select>
+    <select id="getUseByVersionNumBack" resultType="java.util.Map" parameterType="java.lang.String">
+        select `key`,value,comment,u.user_name as last_update_by,concat(last_update_time,'') as last_update_time from
+        item i left join user u on i.last_update_by = u.id where substring(version_num, length(version_num)-15,
+        length(version_num)) = #{versionNumBack,jdbcType=VARCHAR} and i.is_delete = 0
+    </select>
+    <select id="getKeysByInstanceId" resultType="java.lang.String" parameterType="java.lang.Long">
+        select `key` from item where is_delete = 0 and instance_id = #{instanceId,jdbcType=BIGINT}
+    </select>
+    <select id="getKeysByResourceId" resultType="java.lang.String" parameterType="java.lang.Long">
+        select i.`key` from item i,item_resource ir where ir.is_delete = 0
+        <if test="resourceId != null">
+            and resource_id = #{resourceId,jdbcType=BIGINT}
+        </if>
+        and i.id = ir.item_id
+    </select>
+    <select id="getIdsByInstanceIdAndKeys" resultType="java.lang.Long" parameterType="java.util.Map">
+        select id from item where is_delete!=1 and instance_id = #{instanceId,jdbcType=BIGINT} and `key` in
+        <foreach collection="keys" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </select>
+    <select id="getPublicMainKeysByInstanceTypeId" resultType="java.lang.String" parameterType="java.lang.Long">
+        select `key` from item where is_delete = 0 and instance_id = 0 and version_id = 0 and instance_type_id = #{instanceTypeId,jdbcType=INTEGER}
+    </select>
+    <select id="getPublicGrayIdsByInstanceTypeIdAndKeys" resultType="java.lang.Long" parameterType="java.util.Map">
+        select id from item where is_delete != 1 and instance_id = 0 and version_id = 1 and instance_type_id =
+        #{instanceTypeId,jdbcType=INTEGER} and `key` in
+        <foreach collection="keys" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </select>
+    <select id="getLastUpdateTimeByIds" resultType="java.sql.Timestamp">
+        select ifnull(MAX(last_update_time), "1970-01-01 08:00:00") from item where id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </select>
+    <select id="getValueByMap" resultType="java.lang.String" parameterType="java.util.Map">
+        select value from item where is_delete = 0
+        <if test="key != null">
+            and `key` = #{key,jdbcType=VARCHAR}
+        </if>
+        <if test="instanceId != null">
+            and instance_id = #{instanceId,jdbcType=BIGINT}
+        </if>
+        <if test="versionId != null">
+            and version_id = #{versionId,jdbcType=INTEGER}
+        </if>
+        <if test="isPublic != null">
+            and is_public = #{isPublic,jdbcType=INTEGER}
+        </if>
+        <if test="instanceTypeId != null">
+            and instance_type_id = #{instanceTypeId,jdbcType=INTEGER}
+        </if>
+        <if test="envId != null">
+            and env_id = #{envId,jdbcType=BIGINT}
+        </if>
+    </select>
+    <select id="getDuplicateItemByMap" resultType="com.hsgene.hdas.cmcs.modules.admin.domain.Item"
+            parameterType="java.util.Map">
+        select
+        <include refid="ItemAsList"/>
+        from item where is_delete = 0
+        <if test="key != null">
+            and `key` = #{key,jdbcType=VARCHAR}
+        </if>
+        <if test="instanceId != null">
+            and (instance_id = #{instanceId,jdbcType=BIGINT} or (instance_id = 0
+            <if test="envId != null">
+                and env_id = #{envId,jdbcType=BIGINT}
+            </if>))
+        </if>
+        <if test="id != null">
+            and id != #{id,jdbcType=BIGINT}
+        </if>
+        <if test="instanceTypeId != null">
+            and instance_type_id = #{instanceTypeId,jdbcType=INTEGER}
+        </if>
+        <if test="versionId != null">
+            and version_id = #{versionId,jdbcType=INTEGER}
+        </if>
+        <if test="envId != null and instanceId == null">
+            and env_id = #{envId,jdbcType=BIGINT}
+        </if>
+    </select>
+    <select id="countPublic" resultType="java.lang.Integer" parameterType="java.util.Map">
+        select count(*) from item i,item_resource ir where i.is_delete = 0 and ir.is_delete = 0 and i.id = ir.item_id
+        and i.is_public = 1
+        <if test="key != null">
+            and i.`key` = #{key,jdbcType=VARCHAR}
+        </if>
+        and ir.resource_id in
+        <foreach collection="resourceIds" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </select>
+    <select id="countProduct" resultType="java.lang.Integer" parameterType="java.util.Map">
+        select count(*) from item i,item_resource ir where i.is_delete = 0 and ir.is_delete = 0 and i.id = ir.item_id
+        and i.is_public = 0
+        <if test="key != null">
+            and i.`key` = #{key,jdbcType=VARCHAR}
+        </if>
+        and ir.resource_id in
+        <foreach collection="resourceIds" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </select>
+    <select id="countByMap" resultType="java.lang.Integer" parameterType="java.util.Map">
+        select count(*) from
+        <if test="resourceId != null">
+            (select i.id from item i,item_resource ir where i.is_delete = 0 and ir.is_delete = 0 and i.id = ir.item_id
+            <if test="key != null">
+                and i.`key` = #{key,jdbcType=VARCHAR}
+            </if>
+            <if test="resourceId != null">
+                and ir.resource_id = #{resourceId,jdbcType=BIGINT}
+            </if>
+            <if test="id != null">
+                and i.id != #{id,jdbcType=BIGINT}
+            </if>
+            union select i.id from item i where i.is_delete = 0
+            <if test="instanceId != null">
+                and i.instance_id = #{instanceId,jdbcType=BIGINT}
+            </if>
+            <if test="key != null">
+                and i.`key` = #{key,jdbcType=VARCHAR}
+            </if>
+            <if test="id != null">
+                and i.id != #{id,jdbcType=BIGINT}
+            </if>) temp
+        </if>
+        <if test="resourceId == null">
+            item i where i.is_delete = 0
+            <if test="id != null">
+                and i.id != #{id,jdbcType=BIGINT}
+            </if>
+            <if test="key != null">
+                and i.`key` = #{key,jdbcType=VARCHAR}
+            </if>
+            and (
+            <if test="instanceIds != null">
+                i.instance_id in
+                <foreach collection="instanceIds" item="id" index="index" open="(" close=")" separator=",">
+                    #{id,jdbcType=BIGINT}
+                </foreach>
+                or
+            </if>
+            (i.instance_id = 0
+            <if test="envId != null">
+                and i.env_id = #{envId,jdbcType=BIGINT}
+            </if>
+            <if test="instanceTypeId != null">
+                and i.instance_type_id = #{instanceTypeId,jdbcType=INTEGER}
+            </if>
+            <if test="versionId != null">
+                and i.version_id = #{versionId,jdbcType=INTEGER}
+            </if>))
+        </if>
+    </select>
+    <select id="duplicateCurrentCountByMap" resultType="java.lang.Integer" parameterType="java.util.Map">
+        select count(*) from item where is_delete = 0
+        <if test="key != null">
+            and `key` = #{key,jdbcType=VARCHAR}
+        </if>
+        <if test="instanceId != null">
+            and instance_id = #{instanceId,jdbcType=BIGINT}
+        </if>
+        <if test="id != null">
+            and id != #{id,jdbcType=BIGINT}
+        </if>
+    </select>
+    <select id="getDuplicateProductItemByMap" resultType="com.hsgene.hdas.cmcs.modules.admin.domain.Item"
+            parameterType="java.util.Map">
+        select
+        <include refid="ItemAsList"/>
+        from item where is_delete = 0
+        <if test="key != null">
+            and `key` = #{key,jdbcType=VARCHAR}
+        </if>
+        <if test="instanceId != null">
+            and instance_id = #{instanceId,jdbcType=BIGINT}
+        </if>
+        <if test="id != null">
+            and id != #{id,jdbcType=BIGINT}
+        </if>
+    </select>
+    <select id="getDuplicateProductResourceIdsByMap" resultType="java.lang.Long" parameterType="java.util.Map">
+        select ins.resource_id from item i,instance ins where i.is_delete = 0 and i.instance_id = ins.id and
+        i.instance_id in (select id from instance where resource_id in
+        <foreach collection="resourceIds" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+        )
+        <if test="key != null">
+            and i.`key` = #{key,jdbcType=VARCHAR}
+        </if>
+        <if test="id != null">
+            and i.id != #{id,jdbcType=BIGINT}
+        </if>
+    </select>
+    <select id="duplicatePublicCountByMap" resultType="java.lang.Integer" parameterType="java.util.Map">
+        select count(*) from item i,item_resource ir where i.is_delete = 0 and i.instance_id = 0
+        <if test="key != null">
+            and i.`key` = #{key,jdbcType=VARCHAR}
+        </if>
+        <if test="resourceId != null">
+            and ir.resource_id = #{resourceId,jdbcType=BIGINT} and i.id=ir.item_id
+        </if>
+    </select>
+    <select id="getDuplicatePublicItemByMap" resultType="com.hsgene.hdas.cmcs.modules.admin.domain.Item"
+            parameterType="java.util.Map">
+        select
+        <include refid="ItemAsList"/>
+        from item i where i.is_delete = 0 and i.instance_id = 0
+        <if test="key != null">
+            and i.`key` = #{key,jdbcType=VARCHAR}
+        </if>
+        <if test="envId != null">
+            and i.env_id = #{envId,jdbcType=BIGINT}
+        </if>
+        <if test="versionId != null">
+            and i.version_id = #{versionId,jdbcType=BIGINT}
+        </if>
+    </select>
+    <select id="getExcludePropertiesByInstanceId" resultMap="ItemPrivateAndPublicInfoMap"
+            parameterType="java.lang.Long">
+        select
+        <include refid="ItemPrivateInfoList"/>
+        from item i where i.is_delete = 0 and i.instance_id = #{instanceId,jdbcType=BIGINT}
+    </select>
+    <select id="getExcludePropertiesByResourceId" resultMap="ItemPrivateAndPublicInfoMap"
+            parameterType="java.lang.Long">
+        select
+        <include refid="ItemPublicInfoList"/>
+        from item i,item_resource ir where i.is_delete = 0 and i.id = ir.item_id and ir.resource_id =
+        #{resourceId,jdbcType=BIGINT}
+    </select>
+    <select id="getPropertiesByIds" resultMap="ItemMainInfoMap">
+        select
+        <include refid="ItemMainInfoList"/>
+        from item where is_delete = 0 and id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+        order by line_num
+    </select>
+    <select id="getPublicItemByInstanceTypeIdAndVersionId" resultType="com.hsgene.hdas.cmcs.modules.admin.domain.Item"
+            parameterType="java.util.Map">
+        select
+        <include refid="ItemAsList"/>
+        from item where is_public = 1 and is_delete = 0
+        <if test="instanceTypeId != null">
+            and instance_type_id = #{instanceTypeId,jdbcType=BIGINT}
+        </if>
+        <if test="versionId != null">
+            and version_id = #{versionId,jdbcType=BIGINT}
+        </if>
+        <if test="envId != null">
+            and env_id = #{envId,jdbcType=BIGINT}
+        </if>
+    </select>
+    <select id="getAll" resultType="com.hsgene.hdas.cmcs.modules.admin.domain.Item">
+        select
+        <include refid="ItemIfNullList"/>
+        from item where is_delete = 0
+    </select>
+    <select id="getUseIdsByIds" resultType="java.lang.Long">
+        select id from item i,(select instance_id,`key`,version_id,instance_type_id from item where id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>) t where i.instance_id = t.instance_id and i.`key` = t.`key` and i.instance_type_id =
+        t.instance_type_id and i.version_id = t.version_id and i.is_delete = 0 and i.id not in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </select>
+    <select id="getByVersionIdAndReleaseStatus" resultType="com.hsgene.hdas.cmcs.modules.admin.domain.Item">
+        select
+        <include refid="ItemIfNullList"/>
+        from item where is_delete = 0
+        <if test="versionId != null">
+            and version_id = #{versionId,jdbcType=BIGINT}
+        </if>
+        <if test="releaseStatus != null">
+            and release_status = #{releaseStatus,jdbcType=INTEGER}
+        </if>
+    </select>
+    <insert id="save" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.Item">
+        insert into item
+        (<include refid="ItemList"/>)
+        values
+        (#{id,jdbcType=BIGINT},#{versionNum,jdbcType=VARCHAR},#{instanceId,jdbcType=BIGINT},#{key,jdbcType=VARCHAR},
+        #{value,jdbcType=VARCHAR},#{comment,jdbcType=VARCHAR},#{lineNum,jdbcType=INTEGER},#{isDelete,jdbcType=INTEGER},
+        #{releaseStatus,jdbcType=INTEGER},#{lastUpdateBy,jdbcType=BIGINT},#{lastUpdateTime,jdbcType=VARCHAR},#{versionId,
+        jdbcType=INTEGER},#{isPublic,jdbcType=INTEGER},#{instanceTypeId,jdbcType=INTEGER},#{classId,jdbcType=BIGINT},
+        #{envId,jdbcType=BIGINT},#{updateTime,jdbcType=VARCHAR},#{mustChange,jdbcType=INTEGER})
+    </insert>
+    <update id="update" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.Item">
+        update item
+        <set>
+            <if test="versionNum != null">
+                version_num = #{versionNum,jdbcType=VARCHAR},
+            </if>
+            <if test="instanceId != null">
+                instance_id = #{instanceId,jdbcType=BIGINT},
+            </if>
+            <if test="key != null">
+                `key` = #{key,jdbcType=VARCHAR},
+            </if>
+            <if test="value != null">
+                value = #{value,jdbcType=VARCHAR},
+            </if>
+            <if test="comment != null">
+                comment = #{comment,jdbcType=VARCHAR},
+            </if>
+            <if test="lineNum != null">
+                line_num = #{lineNum,jdbcType=VARCHAR},
+            </if>
+            <if test="isDelete != null">
+                is_delete = #{isDelete,jdbcType=VARCHAR},
+            </if>
+            <if test="releaseStatus != null">
+                release_status = #{releaseStatus,jdbcType=VARCHAR},
+            </if>
+            <if test="lastUpdateBy != null">
+                last_update_by = #{lastUpdateBy,jdbcType=VARCHAR},
+            </if>
+            <if test="lastUpdateTime != null">
+                last_update_time = #{lastUpdateTime,jdbcType=VARCHAR},
+            </if>
+            <if test="versionId != null">
+                version_id = #{versionId,jdbcType=INTEGER},
+            </if>
+            <if test="releaseStatus != null">
+                release_status = #{releaseStatus,jdbcType=INTEGER},
+            </if>
+            <if test="classId != null">
+                class_id = #{classId,jdbcType=BIGINT},
+            </if>
+            <if test="envId != null">
+                env_id = #{envId,jdbcType=BIGINT},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime,jdbcType=VARCHAR},
+            </if>
+            <if test="mustChange != null">
+                must_change = #{mustChange,jdbcType=INTEGER}
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="updateToGrayReleasing">
+        update item
+        <set>
+            release_status = 2
+        </set>
+        where id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </update>
+    <update id="updateToGrayReleased">
+        update item
+        <set>
+            release_status = 3,
+            <if test="lastUpdateTime != null">
+                last_update_time = #{lastUpdateTime,jdbcType=VARCHAR}
+            </if>
+        </set>
+        where id in
+        <foreach collection="ids" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </update>
+    <update id="deleteByIds">
+        update item
+        <set>
+            is_delete = 1
+        </set>
+        where id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </update>
+    <update id="deleteAndUpdateTimeByIds">
+        update item
+        <set>
+            is_delete = 1,
+            last_update_time = #{lastUpdateTime,jdbcType=VARCHAR}
+        </set>
+        where id in
+        <foreach collection="ids" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </update>
+    <update id="overByIds">
+        update item
+        <set>
+            is_delete = 2,
+            last_update_time = #{lastUpdateTime,jdbcType=VARCHAR}
+        </set>
+        where id in
+        <foreach collection="ids" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </update>
+    <update id="setUseByIds">
+        update item
+        <set>
+            is_delete = 0,last_update_time = #{lastUpdateTime,jdbcType=VARCHAR}
+        </set>
+        where id in
+        <foreach collection="ids" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </update>
+    <update id="releaseFromLogByIds" parameterType="java.util.Map">
+        update item
+        <set>
+            release_status = 1,
+            is_delete = 0,
+            <if test="userId != null">
+                last_update_by = #{userId,jdbcType=BIGINT},
+            </if>
+            <if test="lastUpdateTime != null">
+                last_update_time = #{lastUpdateTime,jdbcType=VARCHAR},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime,jdbcType=VARCHAR}
+            </if>
+        </set>
+        where id in
+        <foreach collection="ids" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </update>
+    <update id="releaseByIds" parameterType="java.util.Map">
+        update item
+        <set>
+            release_status = 1,
+            is_delete = 0,
+            <if test="userId != null">
+                last_update_by = #{userId,jdbcType=BIGINT},
+            </if>
+            <if test="lastUpdateTime != null">
+                last_update_time = #{lastUpdateTime,jdbcType=VARCHAR},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime,jdbcType=VARCHAR},
+            </if>
+            <if test="frontVersion != null">
+                version_num
+                =
+                concat(#{frontVersion,jdbcType=VARCHAR},substring(version_num,length(version_num)-15,length(version_num)))
+            </if>
+        </set>
+        where id in
+        <foreach collection="ids" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </update>
+    <update id="offlineFromLogByIds" parameterType="java.util.Map">
+        update item
+        <set>
+            release_status = 0,
+            is_delete = 0,
+            <if test="userId != null">
+                last_update_by = #{userId,jdbcType=BIGINT},
+            </if>
+            <if test="lastUpdateTime != null">
+                last_update_time = #{lastUpdateTime,jdbcType=VARCHAR},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime,jdbcType=VARCHAR}
+            </if>
+        </set>
+        where id in
+        <foreach collection="ids" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </update>
+    <update id="offlineByIds" parameterType="java.util.Map">
+        update item
+        <set>
+            release_status = 0,
+            <if test="userId != null">
+                last_update_by = #{userId,jdbcType=BIGINT},
+            </if>
+            <if test="lastUpdateTime != null">
+                last_update_time = #{lastUpdateTime,jdbcType=VARCHAR},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime,jdbcType=VARCHAR},
+            </if>
+            <if test="frontVersion != null">
+                version_num
+                =
+                concat(#{frontVersion,jdbcType=VARCHAR},substring(version_num, length(version_num)-15,
+                length(version_num)))
+            </if>
+        </set>
+        where id in
+        <foreach collection="ids" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </update>
+</mapper>

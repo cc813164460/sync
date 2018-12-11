@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hsgene.hdas.cmcs.modules.admin.mapper.EnvModuleProductMapper">
+    <resultMap id="EnvModuleProductMap" type="java.util.Map">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="product_module_name" property="product_module_name" jdbcType="VARCHAR"/>
+        <result column="env_name" property="env_name" jdbcType="VARCHAR"/>
+        <result column="description" property="description" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="EnvModuleProductList">
+        id,env_id,module_id,product_id
+    </sql>
+    <sql id="EnvModuleProductMnList">
+        e.id as id,GROUP_CONCAT(concat(p.name,'-',m.name)) as product_module_name,e.name as env_name,e.description as
+        description
+    </sql>
+    <select id="selectByNamePage" resultMap="EnvModuleProductMap" parameterType="java.lang.String">
+        select * from (select
+        <include refid="EnvModuleProductMnList"/>
+        from env e,module m,product p,env_module_product emp where emp.env_id = e.id and emp.module_id = m.id and
+        emp.product_id = p.id GROUP BY e.id) temp where env_name like concat('%',#{name,jdbcType=VARCHAR},'%')
+    </select>
+    <select id="countByMap" resultType="java.lang.Integer" parameterType="java.util.HashMap">
+        select count(*) from env e,module m,product p,env_module_product emp where emp.env_id = e.id and
+        emp.module_id = m.id and emp.product_id = p.id
+        <if test="envId != null">
+            and e.id = #{envId,jdbcType=BIGINT}
+        </if>
+        <if test="moduleIds != null">
+            and m.id in (#{moduleIds,jdbcType=VARCHAR})
+        </if>
+        <if test="productIds != null">
+            and p.id in (#{productIds,jdbcType=VARCHAR})
+        </if>
+        <if test="id != null">
+            and emp.id != #{id,jdbcType=BIGINT}
+        </if>
+    </select>
+    <select id="selectByPage" resultMap="EnvModuleProductMap">
+        select
+        <include refid="EnvModuleProductMnList"/>
+        from env e,module m,product p,env_module_product emp where emp.env_id = e.id and emp.module_id = m.id and
+        emp.product_id = p.id GROUP BY e.id
+    </select>
+    <select id="getDistinctEnvIds" resultType="java.lang.Long">
+        select distinct env_id from env_module_product
+    </select>
+    <select id="getDistinctModuleIds" resultType="java.lang.Long">
+        select distinct module_id from env_module_product
+    </select>
+    <delete id="deleteByIds">
+        delete from env_module_product
+        where id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </delete>
+    <delete id="deleteByEnvIds">
+        delete from env_module_product
+        where env_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </delete>
+    <delete id="deleteByModuleIdAndNotInProductIds">
+        delete from env_module_product
+        where module_id = #{moduleId,jdbcType=BIGINT} and product_id not in
+        <foreach collection="productIds" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </delete>
+    <delete id="deleteByModuleIds">
+        delete from env_module_product
+        where module_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </delete>
+    <delete id="deleteByProductIds">
+        delete from env_module_product
+        where product_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </delete>
+    <insert id="save" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.EnvModuleProduct">
+        insert into env_module_product (<include refid="EnvModuleProductList"/>)
+        values (#{id,jdbcType=BIGINT},#{envId,jdbcType=BIGINT},#{moduleId,jdbcType=BIGINT},#{productId,jdbcType=BIGINT})
+    </insert>
+    <update id="update" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.EnvModuleProduct">
+        update env_module_product
+        <set>
+            <if test="envId != null">
+                env_id = #{envId,jdbcType=BIGINT},
+            </if>
+            <if test="moduleId != null">
+                module_id = #{moduleId,jdbcType=BIGINT},
+            </if>
+            <if test="productId != null">
+                product_id = #{productId,jdbcType=BIGINT}
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+</mapper>

@@ -1,0 +1,47 @@
+.area-table > thead > tr {
+    display: flex;
+}
+
+.area-table > tbody > tr {
+    display: flex;
+    align-items: center;
+}
+
+.area-table > thead > tr > th:nth-of-type(1) {
+    width: 5% !important;
+}
+
+.area-table > thead > tr > th:nth-of-type(2) {
+    width: 5% !important;
+}
+
+.area-table > thead > tr > th:nth-of-type(3) {
+    width: 75% !important;
+}
+
+.area-table > thead > tr > th:nth-of-type(4) {
+    width: 15% !important;
+}
+
+.area-table > tbody > tr > td:nth-of-type(1) {
+    width: 5%;
+}
+
+.area-table > tbody > tr > td:nth-of-type(2) {
+    width: 5%;
+}
+
+.area-table > tbody > tr > td:nth-of-type(3) {
+    width: 75%;
+}
+
+.area-table > tbody > tr > td:nth-of-type(3) div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.area-table > tbody > tr > td:nth-of-type(4) {
+    width: 15%;
+}

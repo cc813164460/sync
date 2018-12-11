@@ -1,0 +1,50 @@
+<div class="main-div">
+    <div class="item-div">
+        <h4 class="h4-label">项目名称</h4>
+        <input id="product_name" class="page-input" autocomplete="off"/>
+        <span id="product_info" class="info"></span>
+        <label id="id" style="display: none"></label>
+    </div>
+    <div style="margin-bottom: 28%">
+        <div class="select-div item-div" style="float:left"><h4 class="h4-label">分布</h4><select id="area"
+                                                                                                class="page-select"></select>
+            <span id="area_info" class="info"></span>
+        </div>
+        <div class="select-div item-div" style="float:left"><h4 class="h4-label">部门</h4><select id="organ"
+                                                                                                class="page-select"></select>
+            <span id="organ_info" class="info"></span>
+        </div>
+        <div class="select-div item-div"><h4 class="h4-label">部门负责人</h4><select id="user" class="page-select"></select>
+            <span id="user_info" class="info"></span>
+        </div>
+    </div>
+    <div class="btm-btn-div">
+        <div>
+            <span class="save-btn-small" id="save">保存</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="cancel-btn-small" id="cancel">取消</span>
+        </div>
+    </div>
+</div>
+<script src="/scripts/product_action.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        loadAreaSelectData(true, false, function () {
+            var data = new Object();
+            data.areaId = getSelectVal("area");
+            linkage("/organ/organ_data", data, "organ", function () {
+                selected("organ", "organ_name");
+                data.organId = getSelectVal("organ");
+                linkage("/user/user_data", data, "user", function () {
+                    selected("user", "user_name");
+                });
+            });
+        });
+        loadUpdateProductVal();
+        updateProduct();
+        loadItem(NAV.SETTING, NAV.PRODUCT_MANAGE, NAV.EDIT_PAGE, null, HTML.PRODUCT_UPDATE);
+        clickSetMainHeight(true);
+        initLinkageAreaOrgan();
+        initLinkageOrganUser();
+    });
+</script>

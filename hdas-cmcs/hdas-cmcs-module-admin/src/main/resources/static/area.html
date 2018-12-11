@@ -1,0 +1,62 @@
+<div>
+    <div id="add_btn" class="auth-hidden">
+        <section class="pointer">
+            <table class="btn-table">
+                <tbody>
+                <tr>
+                    <td><span><img src="/img/icon_xinzeng.png"/></span></td>
+                </tr>
+                <tr>
+                    <td><span class="btn-comment">新增列表信息</span></td>
+                </tr>
+                <tr>
+                    <td><span class="btn-name">新增</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <div id="delete_btn" class="auth-hidden">
+        <section class="pointer">
+            <table class="btn-table">
+                <tbody>
+                <tr>
+                    <td><span><img src="/img/icon_shanchu.png"/></span></td>
+                </tr>
+                <tr>
+                    <td><span class="btn-comment">对所选选项批量删除</span></td>
+                </tr>
+                <tr>
+                    <td><span class="btn-name">批量删除</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</div>
+<div class="table-main-div">
+    <table id="area_table" class="display area-table">
+        <thead>
+        <tr>
+            <th><input id="list_select_all" type="checkbox" class="select-all-checkbox no-margin"/>全选</th>
+            <th>序号</th>
+            <th>分布</th>
+            <th>操作</th>
+            <th>id</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+<link rel="stylesheet" href="/styles/area.css"/>
+<script src="/scripts/area.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        loadAreaTable();
+        initTableStyle();
+        addPage(HTML.AREA_ADD);
+        loadItem(NAV.SETTING, NAV.AREA_MANAGE, NAV.LIST_PAGE, null, HTML.AREA);
+        clickSetMainHeight();
+        selectAll("list_select_all");
+    });
+</script>
+<link rel="stylesheet" href="/styles/area_no_action.css"/>

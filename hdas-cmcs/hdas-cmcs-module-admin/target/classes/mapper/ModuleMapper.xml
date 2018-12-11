@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hsgene.hdas.cmcs.modules.admin.mapper.ModuleMapper">
+    <sql id="ModuleList">
+        id,name,create_date_time,update_date_time,description
+    </sql>
+    <sql id="ModuleAsList">
+        id,name,create_date_time as createDateTime,update_date_time as updateDateTime,description
+    </sql>
+    <select id="getSelectByMap" resultType="java.util.HashMap">
+        select id,name from module
+    </select>
+    <select id="get" resultType="com.hsgene.hdas.cmcs.modules.admin.domain.Module" parameterType="java.lang.Long">
+        select
+        <include refid="ModuleAsList"/>
+        from module where id = #{id,jdbcType=BIGINT}
+    </select>
+    <select id="countByMap" resultType="java.lang.Integer" parameterType="java.util.HashMap">
+        select count(*) from module where 1 = 1
+        <if test="name != null">
+            and name = #{name,jdbcType=VARCHAR}
+        </if>
+        <if test="id != null">
+            and id != #{id,jdbcType=BIGINT}
+        </if>
+    </select>
+    <insert id="save" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.Module">
+        insert into module
+        (<include refid="ModuleList"/>)
+        values
+        (#{id,jdbcType=BIGINT},#{name,jdbcType=VARCHAR},#{createDateTime,jdbcType=TIMESTAMP},
+        #{updateDateTime,jdbcType=TIMESTAMP},#{description,jdbcType=VARCHAR})
+    </insert>
+    <update id="update" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.Module">
+        update module
+        <set>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null">
+                update_date_time = #{updateDateTime,jdbcType=VARCHAR},
+            </if>
+            <if test="description != null">
+                description = #{description,jdbcType=VARCHAR}
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <delete id="deleteByIds">
+        delete from module
+        where id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </delete>
+    <delete id="deleteNotInIds">
+        delete from module
+        where id not in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </delete>
+</mapper>

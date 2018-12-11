@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hsgene.hdas.cmcs.modules.admin.mapper.UserRoleMapper">
+    <sql id="UserRoleList">
+        id,user_id,role_id
+    </sql>
+    <resultMap id="UserRoleMap" type="java.util.Map">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="user_id" property="user_id" jdbcType="BIGINT"/>
+        <result column="role_id" property="role_id" jdbcType="BIGINT"/>
+    </resultMap>
+    <select id="countByMap" resultType="java.lang.Integer" parameterType="java.util.HashMap">
+        select count(*) from user_role where 1 = 1
+        <if test="userId != null">
+            and user_id = #{userId,jdbcType=BIGINT}
+        </if>
+        <if test="roleId != null">
+            and role_id != #{roleId,jdbcType=BIGINT}
+        </if>
+        <if test="id != null">
+            and id != #{id,jdbcType=BIGINT}
+        </if>
+    </select>
+    <select id="getRoleIdsByUserId" resultType="java.lang.Long" parameterType="java.lang.Long">
+        select role_id from user_role where user_id = #{userId,jdbcType=BIGINT}
+    </select>
+    <select id="selectByPage" resultMap="UserRoleMap">
+        select id,user_id,role_id from user_role
+    </select>
+    <insert id="save" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.UserRole">
+        insert into user_role
+        (<include refid="UserRoleList"/>)
+        values
+        (#{id,jdbcType=BIGINT},#{userId,jdbcType=BIGINT},#{roleId,jdbcType=BIGINT})
+    </insert>
+    <update id="update" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.UserRole">
+        update user_role
+        <set>
+            <if test="userId != null">
+                user_id = #{userId,jdbcType=BIGINT},
+            </if>
+            <if test="organId != null">
+                role_id = #{roleId,jdbcType=BIGINT}
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <delete id="deleteByIds">
+        delete from user_role
+        where id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </delete>
+    <delete id="deleteByUserIds">
+        delete from user_role
+        where user_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </delete>
+    <delete id="deleteByRoleIds">
+        delete from user_role
+        where role_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </delete>
+</mapper>

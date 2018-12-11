@@ -1,0 +1,148 @@
+#####准备工作#####
+1.配置hosts映射hbase库地址
+2.mysql、canal
+    几点说明：(mysql及canal初始化)
+    a. canal的原理是基于mysql binlog技术，所以这里一定需要开启mysql的binlog写入功能，建议配置binlog模式为row.
+        **针对阿里云RDS账号默认已经有binlog dump权限,不需要任何权限或者binlog设置,可以直接跳过这一步**
+        [mysqld]
+        log-bin=mysql-bin #添加这一行就ok
+        binlog-format=ROW #选择row模式
+        server_id=1 #配置mysql replaction需要定义，不能和canal的slaveId重复
+    b. canal的原理是模拟自己为mysql slave，所以这里一定需要做为mysql slave的相关权限.
+        CREATE USER canal IDENTIFIED BY 'canal';
+        GRANT SELECT, REPLICATION SLAVE, REPLICATION CLIENT ON *.* TO 'canal'@'%';
+        -- GRANT ALL PRIVILEGES ON *.* TO 'canal'@'%' ;
+        FLUSH PRIVILEGES;
+    c.canal开启心跳、sql检查语句及HA模式开启
+        #心跳是否开启
+        canal.instance.detecting.enable = true
+        #心跳检查的sql语句
+        canal.instance.detecting.sql = insert into retl.xdual values(1,now()) on duplicate key update x=now()
+        #HA模式是否开启
+        canal.instance.detecting.heartbeatHaEnable = true
+        #设置检测的目标，多个以英文逗号分隔，这里的example即为conf下面的文件夹
+        canal.destinations = example1,example2
+    d.创建canal心跳检查数据库及表
+        CREATE DATABASE retl DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+        CREATE TABLE `retl`.`xdual` (
+          `id` int(11) NOT NULL DEFAULT '0',
+          `x` datetime DEFAULT NULL,
+          PRIMARY KEY (`id`)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    针对已有的账户可直接通过grant
+    配置文件中一个增量的canal就需要配置一个example，不能重复，且slaveId不能一样
+    mysql全量导入完成过后再配置文件里面会有一个ts，记录了完成的时间，用户增量同步时使用；增量同步时需要配置canal的一些参数
+
+2.mongodb
+    mongodb必须以副本集启动且进行了以下的初始化：
+        在mongo命令中初始化副本集，执行：
+    	        #填写配置信息
+    	        config={_id : 'dbset',members : [{_id : 1, host : '192.168.0.1:12345'},{_id : 2, host : '192.168.0.2:12345'},{_id : 3, host : '192.168.0.3:12345'}]}
+    	        #初始化副本集
+    	        rs.initiate(config);
+    	local数据库中要有oplog.rs集合
+    用户必须有访问local中oplog.rs的权限
+    mongodb在全量导入完成过后也会有一个ts，记录了完成的时间，用户增量同步时使用;增量同步时需要配置canal的一些参数
+
+3.启动canal
+    将canal相应的instance.properties进行配置，在/canal/conf/对应的example名/instance.properties文件进行配置
+        #修改salveId，跟其他的example不一样且不跟mysql的server_id相同
+        canal.instance.mysql.slaveId
+        #修改master.address，mysql主机的ip
+        canal.instance.master.address
+        #修改master.timestamp，mysql开始读取的时间戳（毫秒级），如果不填
+        canal.instance.master.timestamp = 1517887970642
+        #修改访问的mysql数据库的用户名
+        canal.instance.dbUsername = canal
+        #修改访问的mysql数据库的密码
+        canal.instance.dbPassword = canal
+        #修改默认连接的schemaName
+        canal.instance.defaultDatabaseName = canal
+        #修改table regex，为正则表达式
+        canal.instance.filter.regex = .*\\..*
+    启动canal，linux下：/canal/bin/startup.sh，windows下：/canal/bin/startup.bat
+    关闭canal，linux下：/canal/bin/stop.sh，windows下：直接关闭打开的命令窗口
+    canal挂掉后会自动记录上次传输位置，下次启动会从上次位置开始，若要重新配置，请删除/canal/conf/example/meta.dat文件
+4.启动数据收集工具
+    配置urlinfos.properties文件，具体配置请看下面
+    启动数据收集工具：/start.sh
+    关闭数据收集工具：/stop.sh
+
+#####urlinfos.properties文件#####
+	确保服务java(jdk1.8)环境已经配置好，将工程打成jar过后需要将urlinfos.properties文件单独提出放到与jar同级目录，然后执行：java -jar [项目名].jar
+	urlinfos.properties是数据源及kafka等信息的配置文件
+	urlinfos.properties文件中以json格式存放，mysql及mongodb代表不同的数据源，每种类型数据源下面可以包含多个数据源
+	全量同步后只能根据全量同步的条件进行增量同步，全量同步过后会在全量同步的配置信息里面加入增量同步的配置信息，会按照之前全量配置的数据源、数据库和表为标识（即：整库的全量同步，增量同步时就是整库的增量同步；单表的全量同步，增量同步时就是单表的增量同步；多表亦是如此）
+	mysql是否为增量根据是否设置destination
+	mongodb是否为增量根据是否设置ts
+
+###必填信息###
+	{"target.info":{
+    "type":"hbase",//类型为hbase，不用修改
+    "host":"192.168.10.106",//hbase地址
+    "port":"2181",//hbase中使用的zookeeper的端口，此项可以不要，默认为2181
+    "column.family":"case",//列族的名字
+    "table.info":[
+    {"mongodb.columns":["patient.basic.admissionDate","patient.basic.admissionWhy"],//mongodb中扁平化过后的字段，默认配置好不用修改
+    "hbase.columns":["case_no","member_id"],//hbase表中的字段，第一个为主键
+    "sql":"",//查询mysql的sql语句
+    "table":"case"//hbase中表的名字
+    }]},
+    "mysql.url":"192.168.10.196:3306/hbase?user=root&password=root",//mysql的url
+    "host":"192.168.10.196",//mongodb数据库地址
+    "port":27017,//mongodb数据库的端口
+    "auth.database":"hbase",//mongodb的认证数据库
+    "database":"hbase",//mongodb的业务数据库
+    "oplog.database":"hbase",//mongodb的日志数据库
+    "tables":"cases",//mongodb业务表
+    "snapshot.mysql.url":"192.168.10.153:3306/kb_en?user=root&password=root",//mysql快照地址
+    "canal.zkServers":"192.168.10.156,192.168.10.157,192.168.10.158:2181",//zk的地址
+    "canal.host":"192.168.10.156",//canal部署的地址
+    "canal.port":11111,//canal的端口
+    "canal.destination":"example",//canal使用的配置文件夹名
+    "ts":"1515397672-1",//mongo中oplog的时间戳
+    "sync.type":"sync_all"//同步的方式：1.sync_all为全量同步；2.sync_add为增量同步；3.sync_all_add为全量过后增量同步
+    }
+    {"mysql":[{
+    "target.info":{
+    "type":"hbase",//类型为hbase，不用修改
+    "host":"192.168.10.106",//hbase地址
+    "port":"2181",//hbase中使用的zookeeper的端口，此项可以不要，默认为2181
+    "column.family":"case",//列族的名字
+    "table.info":[{
+    "hbase.columns":["id","name"],//hbase表的字段
+    "sql":"",//查询mysql的sql语句
+    "table":"office"//hbase表的名字
+    },{"hbase.columns":["office_relation_id"],//hbase表的字段
+    "sql":"",//查询mysql的sql语句
+    "table":"office_relation"//hbase表的名字
+    }]},
+    "host":"192.168.10.196",
+    "port":3306,
+    "database":"hbase",
+    "user":"root",
+    "password":"root",
+    "snapshot.mysql.url":"192.168.10.153:3306/kb_en?user=root&password=root",//mysql快照地址
+    "canal.zkServers":"192.168.10.156,192.168.10.157,192.168.10.158:2181",//zk的地址
+    "canal.host":"192.168.10.156",//canal部署的地址
+    "canal.port":11111,//canal部署的端口
+    "canal.destination":"example",//canal使用的实例，默认为example
+    "sync.type":"sync_all"//同步的方式：1.sync_all为全量同步；2.sync_add为增量同步；3.sync_all_add为全量过后增量同步
+    }
+
+###选填信息###
+	#表名或者集合名，不填代表该数据库下所有的表或者集合，否则指定某张表或者集合，可以指定多张表或者集合，多个以英文的","分隔
+	"table":"patient",
+	#用户名，mongodb可能没有用户名，可以不填，mysql如果读取的是canal发送的数据可以不填
+	"user":"root",
+	#密码，mongodb可能没有密码，可以不填，mysql如果读取的是canal发送的数据可以不填
+	"password":"123456"
+
+#####备注#####
+	mysql需要开启日志模式，mysql全量和增量默认使用kafka中名为：mysql_topic的队列，队列名可以配置
+	mongodb需要以副本集的方式启动，然后需要初始化rs：
+	    在mongo命令中初始化副本集，执行：
+	        #填写配置信息
+	        config={_id : 'dbset',members : [{_id : 1, host : '192.168.0.1:12345'},{_id : 2, host : '192.168.0.2:12345'},{_id : 3, host : '192.168.0.3:12345'}]}
+	        #初始化副本集
+	        rs.initiate(config);

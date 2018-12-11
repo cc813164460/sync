@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hsgene.hdas.cmcs.modules.admin.mapper.UserAreaMapper">
+    <sql id="UserAreaList">
+        id,user_id,area_id
+    </sql>
+    <resultMap id="UserAreaMap" type="java.util.Map">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="user_id" property="user_id" jdbcType="BIGINT"/>
+        <result column="area_id" property="area_id" jdbcType="BIGINT"/>
+    </resultMap>
+    <select id="countByMap" resultType="java.lang.Integer" parameterType="java.util.HashMap">
+        select count(*) from user_area where 1 = 1
+        <if test="userId != null">
+            and user_id = #{userId}
+        </if>
+        <if test="areaId != null">
+            and area_id != #{areaId}
+        </if>
+        <if test="id != null">
+            and id != #{id,jdbcType=BIGINT}
+        </if>
+    </select>
+    <insert id="save" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.UserArea">
+        insert into user_area
+        (<include refid="UserAreaList"/>)
+        values
+        (#{id,jdbcType=BIGINT},#{userId,jdbcType=BIGINT},#{areaId,jdbcType=BIGINT})
+    </insert>
+    <update id="update" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.UserArea">
+        update area
+        <set>
+            <if test="userId != null">
+                user_id = #{userId,jdbcType=BIGINT},
+            </if>
+            <if test="areaId != null">
+                area_id = #{areaId,jdbcType=BIGINT}
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <delete id="deleteByIds">
+        delete from user_area
+        where id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </delete>
+    <delete id="deleteByUserIds">
+        delete from user_area
+        where user_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </delete>
+    <delete id="deleteByAreaIds">
+        delete from user_area
+        where area_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </delete>
+</mapper>

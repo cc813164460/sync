@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hsgene.hdas.cmcs.modules.admin.mapper.AuthResourceMapper">
+    <resultMap id="AuthResourceMnMap" type="java.util.Map">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="resource_name" property="resource_name" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="AuthResourceList">
+        id,auth_id,resource_id
+    </sql>
+    <insert id="save" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.AuthResource">
+        insert into auth_resource
+        (<include refid="AuthResourceList"/>)
+        values
+        (#{id,jdbcType=BIGINT},#{authId,jdbcType=BIGINT},#{resourceId,jdbcType=BIGINT})
+    </insert>
+    <update id="update" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.AuthResource">
+        update auth_resource
+        <set>
+            <if test="authId != null">
+                auth_id = #{authId,jdbcType=BIGINT},
+            </if>
+            <if test="resourceId != null">
+                resource_id = #{resourceId,jdbcType=BIGINT}
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="deleteByIds">
+        delete from auth_resource
+        where id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </update>
+    <delete id="deleteByAuthIds">
+        delete from auth_resource
+        where auth_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </delete>
+    <delete id="deleteByProductIds">
+        delete from auth_resource
+        where resource_id in (select id from resource r where r.is_delete = 0 and product_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>)
+    </delete>
+    <delete id="deleteByModuleIds">
+        delete from auth_resource
+        where resource_id in (select id from resource r where r.is_delete = 0 and module_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>)
+    </delete>
+    <delete id="deleteByEnvIds">
+        delete from auth_resource
+        where resource_id in (select id from resource r where r.is_delete = 0 and env_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>)
+    </delete>
+    <delete id="deleteByVersionIds">
+        delete from auth_resource
+        where resource_id in (select id from resource r where r.is_delete = 0 and version_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>)
+    </delete>
+    <delete id="deleteByResourceIds">
+        delete from auth_resource
+        where resource_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </delete>
+</mapper>

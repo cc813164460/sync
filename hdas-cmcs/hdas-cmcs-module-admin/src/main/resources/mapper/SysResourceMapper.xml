@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hsgene.hdas.cmcs.modules.admin.mapper.SysResourceMapper">
+    <sql id="SysResourceList">
+        id,one_name,two_name,three_name
+    </sql>
+    <select id="getAllId" resultType="java.lang.Long">
+        select id from sys_resource
+    </select>
+    <insert id="save" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.SysResource">
+        insert into sys_resource
+        (<include refid="SysResourceList"/>)
+        values
+        (#{id,jdbcType=BIGINT},#{oneName,jdbcType=VARCHAR},#{twoName,jdbcType=VARCHAR},#{threeName,jdbcType=VARCHAR})
+    </insert>
+    <update id="update" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.SysResource">
+        update sys_resource
+        <set>
+            <if test="oneName != null">
+                one_name = #{oneName,jdbcType=VARCHAR},
+            </if>
+            <if test="twoName != null">
+                two_name = #{twoName,jdbcType=VARCHAR},
+            </if>
+            <if test="threeName != null">
+                three_name = #{threeName,jdbcType=VARCHAR}
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="deleteByIds">
+        delete from sys_resource
+        where id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </update>
+</mapper>

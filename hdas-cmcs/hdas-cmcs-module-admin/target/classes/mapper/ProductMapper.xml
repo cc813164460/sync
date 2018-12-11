@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hsgene.hdas.cmcs.modules.admin.mapper.ProductMapper">
+    <resultMap id="ProductMnMap" type="java.util.Map">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="product_name" property="product_name" jdbcType="VARCHAR"/>
+        <result column="area_name" property="area_name" jdbcType="VARCHAR"/>
+        <result column="organ_name" property="organ_name" jdbcType="VARCHAR"/>
+        <result column="user_name" property="user_name" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="ProductList">
+        id,name,user_id,area_id,organ_id
+    </sql>
+    <sql id="ProductMnList">
+        p.id as id,p.name as product_name,ifnull(a.name,'') as area_name,ifnull(o.name,'') as organ_name,ifnull(u.user_name,'') as user_name
+    </sql>
+    <sql id="ProductAsList">
+        id id,name,user_id as userId,area_id as areaId,organ_id as organId
+    </sql>
+    <select id="get" resultType="com.hsgene.hdas.cmcs.modules.admin.domain.Product" parameterType="java.lang.Long">
+        select
+        <include refid="ProductAsList"/>
+        from product where id = #{id,jdbcType=BIGINT}
+    </select>
+    <select id="selectByNamePage" resultMap="ProductMnMap" parameterType="java.lang.String">
+        select
+        <include refid="ProductMnList"/>
+        from product p left join user u on p.user_id = u.id and u.is_delete = 0 left join area a on p.area_id = a.id
+        left join organ o on p.organ_id = o.id where p.name like concat('%',#{name,jdbcType=VARCHAR},'%')
+    </select>
+    <select id="getSelectByMap" resultType="java.util.HashMap" parameterType="java.util.HashMap">
+        select p.id as id,name from product p
+        <if test="envId != null">
+            , env_module_product emp where emp.product_id = p.id
+            <if test="moduleId != null">
+                and emp.module_id != #{moduleId,jdbcType=BIGINT}
+            </if>
+            and emp.env_id != #{envId,jdbcType=BIGINT}
+        </if>
+    </select>
+    <select id="getData" resultType="java.util.HashMap">
+        select distinct p.id as id,name from product p, env_module_product emp where emp.product_id = p.id
+    </select>
+    <select id="countByMap" resultType="java.lang.Integer" parameterType="java.util.HashMap">
+        select count(*) from product where name = #{name,jdbcType=VARCHAR}
+        <if test="id != null">
+            and id != #{id,jdbcType=BIGINT}
+        </if>
+    </select>
+    <select id="selectByPage" resultMap="ProductMnMap">
+        select
+        <include refid="ProductMnList"/>
+        from product p left join user u on p.user_id = u.id and u.is_delete = 0 left join area a on p.area_id = a.id
+        left join organ o on p.organ_id = o.id
+    </select>
+    <delete id="deleteByIds">
+        delete from product
+        where id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </delete>
+    <insert id="save" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.Product">
+        insert into product
+        (<include refid="ProductList"/>)
+        values
+        (#{id,jdbcType=BIGINT},#{name,jdbcType=VARCHAR},#{userId,jdbcType=BIGINT},#{areaId,jdbcType=BIGINT},
+        #{organId,jdbcType=BIGINT})
+    </insert>
+    <update id="update" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.Product">
+        update product
+        <set>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="userId != null">
+                user_id = #{userId,jdbcType=BIGINT},
+            </if>
+            <if test="areaId != null">
+                area_id = #{areaId,jdbcType=BIGINT},
+            </if>
+            <if test="organId != null">
+                organ_id = #{organId,jdbcType=BIGINT}
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+</mapper>

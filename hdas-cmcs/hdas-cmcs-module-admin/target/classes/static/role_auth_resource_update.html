@@ -1,0 +1,68 @@
+<div class="main-div">
+    <div>
+        <div class="select-div item-div"><h4 class="h4-label">角色名</h4>
+            <select id="role" class="page-select"></select>
+            <span id="role_info" class="info"></span>
+        </div>
+    </div>
+    <div>
+        <div class="select-div item-div">
+            <h4 class="h4-label">选择级别</h4>
+        </div>
+        <div class="item-div">
+            <div class="class-input" style="margin-left: 0">
+                <input id="confidential" type="radio" name="class"><span>机密</span>
+            </div>
+            <div class="class-input">
+                <input id="secrecy" type="radio" name="class"><span>保密</span>
+            </div>
+            <div class="class-input">
+                <input id="normal" type="radio" name="class"><span>一般</span>
+            </div>
+        </div>
+    </div>
+    <div class="auth-table-title">
+        <h4 class="h4-label">选择权限</h4>
+    </div>
+    <table id="role_auth_resource_action_table">
+        <thead>
+        <tr>
+            <th><input id="list_select_all" type="checkbox" class="select-all-checkbox no-margin"/>全选</th>
+            <th>一级板块</th>
+            <th>二级板块</th>
+            <th>三级板块</th>
+            <th>四级板块</th>
+            <th><input id="select_select_all" type="checkbox" class="select-all-checkbox"></input>查看</th>
+            <th><input id="insert_select_all" type="checkbox" class="select-all-checkbox"></input>添加</th>
+            <th><input id="update_select_all" type="checkbox" class="select-all-checkbox"></input>编辑</th>
+            <th><input id="delete_select_all" type="checkbox" class="select-all-checkbox"></input>删除</th>
+            <th><input id="release_select_all" type="checkbox" class="select-all-checkbox"></input>发布</th>
+            <th><input id="offline_select_all" type="checkbox" class="select-all-checkbox"></input>下线</th>
+            <th>id</th>
+        </tr>
+        </thead>
+    </table>
+    <span id="auth_info" class="info"></span>
+    <div class="btm-btn-div">
+        <div>
+            <span class="save-btn-small" id="save">保存</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="cancel-btn-small" id="cancel">取消</span>
+        </div>
+    </div>
+</div>
+<script src="/scripts/role_auth_resource_action.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        loadRoleSelectData(true, false, function () {
+            loadClass();
+            loadRoleAuthResourceActionTable("role_auth_resource_action_table");
+        });
+        updateRoleAuthResource();
+        loadItem(NAV.SETTING, NAV.AUTH_MANAGE, NAV.EDIT_PAGE, null, HTML.ROLE_AUTH_RES_UPDATE);
+        clickSetMainHeight(true);
+        selectLinkageTable();
+        authSelectAll();
+        selectAll("list_select_all", "select_line");
+    });
+</script>

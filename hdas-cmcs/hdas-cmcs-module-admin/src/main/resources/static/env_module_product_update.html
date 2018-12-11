@@ -1,0 +1,47 @@
+<div class="main-div">
+    <div class="item-div">
+        <h4 class="h4-label">环境</h4>
+        <input id="env_name" class="page-input" autocomplete="off"/>
+        <span id="env_info" class="info"></span>
+    </div>
+    <div class="item-div" style="margin-bottom: 4%">
+        <h4 class="h4-label">备注</h4>
+        <label id="id" style="display: none"></label>
+        <textarea id="description" class="page-input"/>
+        <span id="comment_info" class="info"></span>
+    </div>
+    <div class="item-div">
+        <h4 class="h4-label">项目模块</h4>
+        <table id="product_module_table" class="display">
+            <thead>
+            <tr>
+                <th><input type="checkbox" id="select_all" class="select-all-checkbox no-margin"/>全选</th>
+                <th>项目名</th>
+                <th>product_id</th>
+                <th>模块名</th>
+                <th>module_id</th>
+                <th>id</th>
+            </tr>
+            </thead>
+        </table>
+        <span id="product_module_info" class="info"></span>
+    </div>
+    <div class="btm-btn-div">
+        <div>
+            <span class="save-btn-small" id="save">保存</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="cancel-btn-small" id="cancel">取消</span>
+        </div>
+    </div>
+</div>
+<script src="/scripts/env_module_product_action.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        loadUpdateEnvModuleProductVal();
+        updateEnvModuleProduct();
+        loadItem(NAV.SETTING, NAV.ENV_MANAGE, NAV.EDIT_PAGE, null, HTML.ENV_MODULE_PRODUCT_UPDATE);
+        clickSetMainHeight(true);
+        loadProductModuleTable();
+        selectAll("select_all");
+    });
+</script>

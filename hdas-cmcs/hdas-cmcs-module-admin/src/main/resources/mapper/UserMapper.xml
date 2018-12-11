@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hsgene.hdas.cmcs.modules.admin.mapper.UserMapper">
+    <resultMap id="UserMap" type="java.util.Map">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="nickname" property="nickname" jdbcType="VARCHAR"/>
+        <result column="mobile" property="mobile" jdbcType="VARCHAR"/>
+        <result column="email" property="email" jdbcType="VARCHAR"/>
+        <result column="create_date_time" property="create_date_time" jdbcType="TIMESTAMP"/>
+        <result column="username" property="username" jdbcType="VARCHAR"/>
+        <result column="password" property="password" jdbcType="VARCHAR"/>
+        <result column="is_delete" property="is_delete" jdbcType="INTEGER"/>
+        <result column="last_date_time" property="last_date_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+    <resultMap id="UserInfoMap" type="java.util.Map">
+        <id column="user_name" property="user_name" jdbcType="VARCHAR"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="email" property="email" jdbcType="VARCHAR"/>
+        <result column="last_date_time" property="last_date_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+    <resultMap id="UserMnMap" type="java.util.Map">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="nickname" property="nickname" jdbcType="VARCHAR"/>
+        <result column="area_name" property="area_name" jdbcType="VARCHAR"/>
+        <result column="organ_name" property="organ_name" jdbcType="VARCHAR"/>
+        <result column="role_name" property="role_name" jdbcType="VARCHAR"/>
+        <result column="mobile" property="mobile" jdbcType="VARCHAR"/>
+        <result column="email" property="email" jdbcType="VARCHAR"/>
+        <result column="username" property="username" jdbcType="VARCHAR"/>
+        <result column="password" property="password" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="UserList">
+        id,user_name,nick_name,mobile,email,create_date_time,is_delete,password,last_date_time
+    </sql>
+    <sql id="UserAsList">
+        id,user_name as username,nick_name as nickname,mobile,email,create_date_time as createDateTime,is_delete as
+        isDelete,password,last_date_time as lastDateTime
+    </sql>
+    <sql id="UserMnList">
+        id,u.nick_name as nickname,ifnull(area_name,"") as area_name,ifnull(organ_name,"") as organ_name,group_concat(ifnull(role_name,"")) as role_name,u.mobile as mobile,u.email as email,u.user_name as username,u.password as password
+    </sql>
+    <select id="getIdByName" resultType="java.lang.Long" parameterType="java.lang.String">
+        select id from user where user_name = #{name,jdbcType=VARCHAR} and is_delete = 0
+    </select>
+    <select id="getByUsername" resultType="com.hsgene.hdas.cmcs.modules.admin.domain.User"
+            parameterType="java.lang.String">
+        select
+        <include refid="UserAsList"/>
+        from user where user_name = #{username,jdbcType=VARCHAR}
+    </select>
+    <select id="getUserByUsername" resultType="com.hsgene.hdas.cmcs.modules.admin.domain.User"
+            parameterType="java.lang.String">
+        select
+        <include refid="UserAsList"/>
+        from user where user_name = #{username,jdbcType=VARCHAR} and is_delete = 0
+    </select>
+    <update id="updateLastDateTime" parameterType="java.lang.String">
+        update user set last_date_time = #{lastDateTime,jdbcType=TIMESTAMP} where user_name = #{username,jdbcType=VARCHAR}
+    </update>
+    <select id="getLoginInfoByUsername" resultMap="UserInfoMap" parameterType="java.lang.String">
+        select u.user_name,group_concat(temp.name) as name,u.email,u.last_date_time from user u left join (select
+        r.name,ur.user_id from user_role ur,role r where ur.role_id = r.id) temp on u.id = temp.user_id where
+        u.user_name = #{username,jdbcType=VARCHAR} and is_delete = 0 group by u.id
+    </select>
+    <select id="getSelectByMap" resultType="java.util.HashMap" parameterType="java.util.HashMap">
+        select u.id as id,u.user_name as name,ua.area_id,uo.organ_id from user u left join user_area ua on
+        ua.user_id = u.id
+        <if test="areaId != null">
+            and ua.area_id = #{areaId,jdbcType=BIGINT}
+        </if>
+        left join user_organ uo on uo.user_id = u.id
+        <if test="organId != null">
+            and uo.organ_id = #{organId,jdbcType=BIGINT}
+        </if>
+        where is_delete = 0
+        <if test="areaId != null">
+            and area_id = #{areaId,jdbcType=BIGINT}
+        </if>
+        <if test="organId != null">
+            and organ_id = #{organId,jdbcType=BIGINT}
+        </if>
+    </select>
+    <select id="selectByNamePage" resultMap="UserMnMap" parameterType="java.lang.String">
+        select
+        <include refid="UserMnList"/>
+        from user u left join (select ua.user_id,a.name as area_name from user_area ua,area a where ua.area_id = a
+        .id) s1 on u.id = s1.user_id left join (select uo.user_id,o.name as organ_name from user_organ uo,organ o
+        where uo.organ_id = o.id) s2 on u.id = s2.user_id left join (select ur.user_id,r.name as role_name from
+        user_role ur,role r where ur.role_id = r.id) s3 on u.id = s3.user_id where u.is_delete = 0 and u.nick_name like
+        concat('%',#{name,jdbcType=VARCHAR},'%') and u.user_name !='admin' group by id
+    </select>
+    <select id="selectByPage" resultMap="UserMnMap">
+        select
+        <include refid="UserMnList"/>
+        from user u left join (select ua.user_id,a.name as area_name from user_area ua,area a where ua.area_id = a.id)
+        s1 on u.id = s1.user_id left join (select uo.user_id,o.name as organ_name from user_organ uo,organ o where
+        uo.organ_id = o.id) s2 on u.id = s2.user_id left join (select ur.user_id,r.name as role_name from user_role
+        ur,role r where ur.role_id = r.id) s3 on u.id = s3.user_id where u.is_delete = 0 and u.user_name != 'admin'
+        group by id
+    </select>
+    <select id="countByMap" resultType="java.lang.Integer" parameterType="java.util.HashMap">
+        select count(*) from user where is_delete = 0
+        <if test="username != null">
+            and user_name = #{username,jdbcType=VARCHAR}
+        </if>
+        <if test="id != null">
+            and id != #{id,jdbcType=BIGINT}
+        </if>
+    </select>
+    <select id="countMobileByMap" resultType="java.lang.Integer" parameterType="java.util.HashMap">
+        select count(*) from user where is_delete = 0
+        <if test="mobile != null">
+            and mobile = #{mobile,jdbcType=VARCHAR}
+        </if>
+        <if test="id != null">
+            and id != #{id,jdbcType=BIGINT}
+        </if>
+    </select>
+    <select id="countEmailByMap" resultType="java.lang.Integer" parameterType="java.util.HashMap">
+        select count(*) from user where is_delete = 0
+        <if test="email != null">
+            and email = #{email,jdbcType=VARCHAR}
+        </if>
+        <if test="id != null">
+            and id != #{id,jdbcType=BIGINT}
+        </if>
+    </select>
+    <insert id="save" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.User">
+        insert into user
+        (<include refid="UserList"/>)
+        values
+        (#{id,jdbcType=BIGINT},#{username,jdbcType=VARCHAR},#{nickname,jdbcType=VARCHAR},
+        #{mobile,jdbcType=VARCHAR},#{email,jdbcType=VARCHAR},#{createDateTime,jdbcType=TIMESTAMP},0,
+        #{password,jdbcType=VARCHAR},#{lastDateTime,jdbcType=TIMESTAMP})
+    </insert>
+    <update id="update" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.User">
+        update user
+        <set>
+            <if test="username != null">
+                user_name = #{username,jdbcType=VARCHAR},
+            </if>
+            <if test="nickname != null">
+                nick_name = #{nickname,jdbcType=VARCHAR},
+            </if>
+            <if test="mobile != null">
+                mobile = #{mobile,jdbcType=VARCHAR},
+            </if>
+            <if test="email != null">
+                email = #{email,jdbcType=VARCHAR},
+            </if>
+            <if test="password != null">
+                password = #{password,jdbcType=VARCHAR},
+            </if>
+            <if test="lastDateTime != null">
+                last_date_time = #{lastDateTime,jdbcType=TIMESTAMP}
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="deleteByIds">
+        update user
+        <set>
+            is_delete = 1
+        </set>
+        where id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </update>
+</mapper>

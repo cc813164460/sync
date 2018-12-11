@@ -1,0 +1,50 @@
+.config-table > thead > tr > th:nth-of-type(1) {
+    width: 5% !important;
+}
+
+.config-table > thead > tr > th:nth-of-type(5) {
+    width: 40% !important;
+}
+
+.config-table > thead > tr > th:nth-of-type(6) {
+    width: 40% !important;
+}
+
+.config-table > thead > tr > th:nth-of-type(7) {
+    width: 15% !important;
+}
+
+.config-table > tbody > tr > td:nth-of-type(1) {
+    width: 5%;
+    text-align: center;
+}
+
+.config-table > tbody > tr > td:nth-of-type(5){
+    width: 40%;
+    text-align: center;
+}
+
+.config-table > tbody > tr > td:nth-of-type(5) > input{
+    width: 100%;
+    border: none;
+}
+
+.config-table > tbody > tr > td:nth-of-type(6){
+    width: 40%;
+    text-align: center;
+}
+
+.config-table > tbody > tr > td:nth-of-type(6) > input{
+    width: 100%;
+    border: none;
+}
+
+.config-table > tbody > tr > td:nth-of-type(7) {
+    width: 15%;
+    text-align: center;
+}
+
+.config-table > tbody > tr > td:nth-of-type(7) > input{
+    width: 100%;
+    border: none;
+}

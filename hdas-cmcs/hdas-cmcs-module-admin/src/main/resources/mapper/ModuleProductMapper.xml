@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hsgene.hdas.cmcs.modules.admin.mapper.ModuleProductMapper">
+    <resultMap id="ModuleProductMap" type="java.util.Map">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="product_name" property="product_name" jdbcType="VARCHAR"/>
+        <result column="module_name" property="module_name" jdbcType="VARCHAR"/>
+        <result column="description" property="description" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="ModuleProductList">
+        id,module_id,product_id
+    </sql>
+    <sql id="ModuleProductMnList">
+        m.id as id,ifnull(GROUP_CONCAT(p.name),'') as product_name,m.name as module_name,ifnull(m.description,'') as
+        description
+    </sql>
+    <select id="selectByNamePage" resultMap="ModuleProductMap" parameterType="java.lang.String">
+        select * from (select
+        <include refid="ModuleProductMnList"/>
+        from module m,product p,module_product mp where mp.module_id = m.id and mp.product_id = p.id GROUP BY m.id) temp
+        where module_name like concat('%',#{name,jdbcType=VARCHAR},'%')
+    </select>
+    <select id="countByMap" resultType="java.lang.Integer" parameterType="java.util.HashMap">
+        select count(*) from module m,product p,module_product mp where mp.module_id = m.id and mp.product_id = p.id
+        <if test="envId != null">
+            and m.id = #{moduleId,jdbcType=BIGINT}
+        </if>
+        <if test="productIds != null">
+            and p.id in (#{productIds,jdbcType=VARCHAR})
+        </if>
+        <if test="id != null">
+            and mp.id != #{id,jdbcType=BIGINT}
+        </if>
+    </select>
+    <select id="selectByPage" resultMap="ModuleProductMap">
+        select
+        <include refid="ModuleProductMnList"/>
+        from module m,product p,module_product mp where mp.module_id = m.id and mp.product_id = p.id GROUP BY m.id
+    </select>
+    <select id="getProductModuleData" resultType="java.util.Map" parameterType="java.util.Map">
+        select mp.id,p.name as product_name,p.id as product_id,m.name as module_name,m.id as module_id,case when emp.id
+        is null then 0 else 1 end as is_select from product p,module m,module_product mp left join env_module_product
+        emp on mp.module_id = emp.module_id and mp.product_id = emp.product_id
+        <if test="envId != null">
+            and emp.env_id = #{envId,jdbcType=BIGINT}
+        </if>
+        where mp.module_id = m.id and mp.product_id = p.id
+        <if test="moduleId != null">
+            and m.id = #{moduleId,jdbcType=BIGINT}
+        </if>
+        <if test="productName != null">
+            and p.name like concat('%',#{productName,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="isSelect != null">
+            <if test="isSelect == 0">
+                and emp.id is null
+            </if>
+            <if test="isSelect == 1">
+                and emp.id is not null
+            </if>
+        </if>
+    </select>
+    <select id="getDistinctModuleIds" resultType="java.lang.Long">
+        select distinct module_id from module_product
+    </select>
+    <delete id="deleteByIds">
+        delete from module_product
+        where id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </delete>
+    <delete id="deleteByModuleIds">
+        delete from module_product
+        where module_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </delete>
+    <delete id="deleteByProductIds">
+        delete from module_product
+        where product_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </delete>
+    <insert id="save" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.ModuleProduct">
+        insert into module_product
+        (<include refid="ModuleProductList"/>)
+        values
+        (#{id,jdbcType=BIGINT},#{moduleId,jdbcType=BIGINT},#{productId,jdbcType=BIGINT})
+    </insert>
+    <update id="update" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.ModuleProduct">
+        update module_product
+        <set>
+            <if test="moduleId != null">
+                module_id = #{moduleId,jdbcType=BIGINT},
+            </if>
+            <if test="productId != null">
+                product_id = #{productId,jdbcType=BIGINT}
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+</mapper>

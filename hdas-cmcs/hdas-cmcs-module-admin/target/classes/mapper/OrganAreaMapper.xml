@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hsgene.hdas.cmcs.modules.admin.mapper.OrganAreaMapper">
+    <resultMap id="OrganAreaMap" type="java.util.Map">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="area_name" property="area_name" jdbcType="VARCHAR"/>
+        <result column="organ_name" property="organ_name" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="OrganAreaList">
+        id,organ_id,area_id
+    </sql>
+    <sql id="OrganAreaMnList">
+        o.id as id,GROUP_CONCAT(a.name) as area_name,o.name as organ_name
+    </sql>
+    <select id="countByMap" resultType="java.lang.Integer" parameterType="java.util.HashMap">
+        select count(*) from organ_area where 1 = 1
+        <if test="organId != null">
+            and organ_id = #{organId,jdbcType=BIGINT}
+        </if>
+        <if test="areaIds != null">
+            and area_id in (#{areaIds,jdbcType=VARCHAR})
+        </if>
+    </select>
+    <select id="selectByPage" resultMap="OrganAreaMap">
+        select
+        <include refid="OrganAreaMnList"/>
+        from organ_area oa, area a, organ o where oa.area_id = a.id and oa.organ_id = o.id GROUP BY oa.organ_id
+    </select>
+    <insert id="save" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.OrganArea">
+        insert into organ_area
+        (<include refid="OrganAreaList"/>)
+        values
+        (#{id,jdbcType=BIGINT},#{organId,jdbcType=BIGINT},#{areaId,jdbcType=BIGINT})
+    </insert>
+    <delete id="deleteByIds">
+        delete from organ_area
+        where id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </delete>
+    <delete id="deleteByOrganIds">
+        delete from organ_area
+        where organ_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </delete>
+    <delete id="deleteByAreaIds">
+        delete from organ_area
+        where area_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </delete>
+</mapper>

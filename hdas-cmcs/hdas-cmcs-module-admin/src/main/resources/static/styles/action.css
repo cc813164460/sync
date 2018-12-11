@@ -1,0 +1,32 @@
+.page-input {
+    width: 89.5%;
+    height: 2.5em;
+    line-height: 2.5em;
+    background: #F9F9F9;
+    border: 1px solid #EEEEEE;
+    border-radius: 0.5em;
+}
+
+.page-select {
+    width: 100%;
+    background: #F9F9F9;
+    border: 1px solid #EEEEEE;
+    border-radius: 0.5em;
+    height: 2.5em;
+    line-height: 2.5em;
+}
+
+.select-label {
+    border: 1px solid #EEEEEE;
+    border-radius: 0.5em;
+    background: #F9F9F9;
+}
+
+#description {
+    width: 89.5%;
+    height: 15em;
+    line-height: 2.5em;
+    background: #F9F9F9;
+    border: 1px solid #EEEEEE;
+    border-radius: 0.5em;
+}

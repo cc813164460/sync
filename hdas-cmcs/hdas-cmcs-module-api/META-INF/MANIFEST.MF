@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Class-Path: lib/log4j-1.2.17.jar lib/fastjson-1.2.29.jar lib/guava-19.
+ 0.jar
+Main-Class: com.hsgene.hdas.cmcs.modules.api.ConfigHttp
+

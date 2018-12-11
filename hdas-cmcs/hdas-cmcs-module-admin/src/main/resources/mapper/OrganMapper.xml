@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hsgene.hdas.cmcs.modules.admin.mapper.OrganMapper">
+    <sql id="OrganList">
+        id,name,create_date_time
+    </sql>
+    <select id="getSelectByMap" resultType="java.util.HashMap" parameterType="java.util.HashMap">
+        select o.id as id,name from organ o
+        <if test="areaId != null">
+            , organ_area oa where oa.organ_id = o.id
+            and oa.area_id = #{areaId,jdbcType=BIGINT}
+        </if>
+    </select>
+    <select id="getIdByName" resultType="java.lang.Long" parameterType="java.lang.String">
+        select id from organ where name = #{name,jdbcType=VARCHAR}
+    </select>
+    <select id="countByMap" resultType="java.lang.Integer" parameterType="java.util.HashMap">
+        select count(*) from organ where 1 = 1
+        <if test="name != null">
+            and name = #{name,jdbcType=VARCHAR}
+        </if>
+        <if test="id != null">
+            and id != #{id,jdbcType=BIGINT}
+        </if>
+    </select>
+    <insert id="save" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.Organ">
+        insert into organ
+        (<include refid="OrganList"/>)
+        values
+        (#{id,jdbcType=BIGINT},#{name,jdbcType=VARCHAR},#{createDateTime,jdbcType=TIMESTAMP})
+    </insert>
+    <update id="update" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.Organ">
+        update organ
+        <set>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR}
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <delete id="deleteByIds">
+        delete from organ
+        where id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </delete>
+</mapper>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hsgene.hdas.cmcs.modules.admin.mapper.AppMapper">
+    <sql id="AppList">
+        id,ip,hostname
+    </sql>
+    <select id="getAll" resultType="com.hsgene.hdas.cmcs.modules.admin.domain.App">
+        select
+        <include refid="AppList"/>
+        from app order by hostname
+    </select>
+    <select id="getSelectByMap" resultType="java.util.HashMap" parameterType="java.util.HashMap">
+        select a.id,hostname,case when ia.item_id is null then 0 else 1 end as is_select from app a left join item_app
+        ia on ia.is_delete = 0 and ia.app_id = a.id
+        <if test="itemId != null">
+            and ia.item_id = #{itemId,jdbcType=BIGINT}
+        </if>
+        order by hostname
+    </select>
+    <select id="countByMap" resultType="java.lang.Integer" parameterType="java.util.HashMap">
+        select count(*) from app where 1 = 1
+        <if test="ip != null">
+            and ip = #{ip,jdbcType=VARCHAR}
+        </if>
+        <if test="id != null">
+            and id != #{id,jdbcType=BIGINT}
+        </if>
+    </select>
+    <select id="selectByPage" resultType="com.hsgene.hdas.cmcs.modules.admin.domain.App">
+        select
+        <include refid="AppList"/>
+        from app
+    </select>
+    <insert id="save" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.App">
+        insert into app
+        (<include refid="AppList"/>)
+        values
+        (#{id,jdbcType=BIGINT},#{ip,jdbcType=VARCHAR},#{hostname,jdbcType=VARCHAR})
+    </insert>
+    <update id="update" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.App">
+        update app
+        <set>
+            <if test="ip != null">
+                ip = #{ip,jdbcType=VARCHAR},
+            </if>
+            <if test="hostname != null">
+                hostname = #{hostname,jdbcType=VARCHAR}
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <delete id="deleteByIds">
+        delete from app
+        where id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </delete>
+</mapper>

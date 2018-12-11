@@ -1,0 +1,2 @@
+#!/bin/bash
+java -Xms2048m -Xmx4096m -XX:ReservedCodeCacheSize=2048m -XX:+UseConcMarkSweepGC -XX:SoftRefLRUPolicyMSPerMB=2048 -ea -Dsun.io.useCanonCaches=false -Djava.net.preferIPv4Stack=true -jar hsgene_sync_tool.jar &

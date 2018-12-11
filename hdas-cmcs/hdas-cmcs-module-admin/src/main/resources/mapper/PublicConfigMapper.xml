@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hsgene.hdas.cmcs.modules.admin.mapper.PublicConfigMapper">
+    <sql id="PublicConfigPropertiesList">
+        i.id,ifnull(i.version_num,"") as version_num,ifnull(group_concat(concat(temp.product_name,"-",temp.module_name))
+        ,"") as apply,ifnull(i.`key`,"") as `key`,ifnull(i2.value,"") as main_value,ifnull(i.value,"") as value,
+        ifnull(app_num,"") as app_num,ifnull(i.comment,"") as comment,case i.release_status when 0 then '未发布' else
+        '已发布' end as release_status, ifnull(u.user_name,"") as last_update_by,ifnull(i.last_update_time,"") as
+        last_update_time,i.class_id,ifnull(i.update_time,"") as update_time,i.must_change
+    </sql>
+    <resultMap id="PublicConfigPropertiesMap" type="java.util.Map">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="version_num" property="version_num" jdbcType="VARCHAR"/>
+        <result column="apply" property="apply" jdbcType="VARCHAR"/>
+        <result column="key" property="key" jdbcType="VARCHAR"/>
+        <result column="main_value" property="main_value" jdbcType="VARCHAR"/>
+        <result column="value" property="value" jdbcType="VARCHAR"/>
+        <result column="app_num" property="app_num" jdbcType="INTEGER"/>
+        <result column="comment" property="comment" jdbcType="VARCHAR"/>
+        <result column="release_status" property="release_status" jdbcType="INTEGER"/>
+        <result column="last_update_by" property="last_update_by" jdbcType="VARCHAR"/>
+        <result column="last_update_time" property="last_update_time" jdbcType="VARCHAR"/>
+        <result column="update_time" property="update_time" jdbcType="VARCHAR"/>
+        <result column="must_change" property="must_change" jdbcType="INTEGER"/>
+    </resultMap>
+    <resultMap id="ProductAndModuleAndEnvMap" type="java.util.Map">
+        <result column="productName" property="productName" jdbcType="VARCHAR"/>
+        <result column="moduleName" property="moduleName" jdbcType="VARCHAR"/>
+        <result column="envName" property="envName" jdbcType="VARCHAR"/>
+    </resultMap>
+    <select id="selectPropertiesByKeyPage" resultMap="PublicConfigPropertiesMap" parameterType="java.util.Map">
+        select
+        <include refid="PublicConfigPropertiesList"/>
+        from item i left join (select ir.item_id,p.name as product_name,m.name as module_name,e.name as env_name from
+        item_resource ir,resource r,product p,module m,env e where r.is_delete = 0 and ir.resource_id = r.id and
+        r.product_id = p.id and r.module_id = m.id and r.env_id = e.id) temp on i.id = temp.item_id left join (select
+        group_concat(a.hostname) as app_num,item_id from item_app ia,app a where ia.is_delete = 0 and ia.app_id = a.id
+        group by ia.item_id ) temp1 on i.id = temp1.item_id left join user u on i.last_update_by = u.id left join item
+        i2 on i2.`key` = i.`key` and i2.instance_id = i.instance_id and i2.version_id = 0 and i2.instance_type_id =
+        i.instance_type_id and i2.is_delete = 0 and i.id = i2.id where i.is_public = 1 and i.instance_type_id = 0 and
+        i.is_delete = 0
+        <if test="key != null">
+            and i.key like concat('%',#{key,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="versionId != null">
+            and i.version_id = #{versionId,jdbcType=BIGINT}
+        </if>
+        <if test="envId != null">
+            and i.env_id = #{envId,jdbcType=BIGINT}
+        </if>
+        group by i.id order by i.line_num,i.update_time desc
+    </select>
+    <select id="selectPropertiesByPage" resultMap="PublicConfigPropertiesMap" parameterType="java.lang.Long">
+        select
+        <include refid="PublicConfigPropertiesList"/>
+        from item i left join (select ir.item_id,p.name as product_name,m.name as module_name,e.name as env_name from
+        item_resource ir,resource r,product p,module m,env e where r.is_delete = 0 and ir.resource_id = r.id and
+        r.product_id = p.id and r.module_id = m.id and r .env_id = e.id) temp on i.id = temp.item_id left join (select
+        group_concat(a.hostname) as app_num,item_id from item_app ia,app a where ia.is_delete = 0 and ia.app_id = a.id
+        group by ia.item_id ) temp1 on i.id = temp1.item_id left join user u on i.last_update_by = u.id left join
+        item i2 on i2.`key` = i.`key` and i2.instance_id = i.instance_id and i2.version_id = 0 and i2.instance_type_id =
+        i.instance_type_id and i2.is_delete = 0 and i.id = i2.id where i.is_public = 1 and i.instance_type_id = 0 and
+        i.is_delete = 0 and i.version_id = #{versionId,jdbcType=BIGINT} group by i.id order by i.line_num,i.update_time
+        desc
+    </select>
+    <select id="getAllKeyAndValue" resultMap="PublicConfigPropertiesMap" parameterType="java.util.Map">
+        select
+        <include refid="PublicConfigPropertiesList"/>
+        from item i left join (select ir.item_id,p.name as product_name,m.name as module_name,e.name as env_name from
+        item_resource ir,resource r,product p,module m,env e where r.is_delete = 0 and ir.resource_id = r.id and
+        r.product_id = p.id and r.module_id = m.id and r.env_id = e.id) temp on i.id = temp.item_id left join (select
+        group_concat(a.hostname) as app_num,item_id from item_app ia,app a where ia.is_delete = 0 and ia.app_id = a.id
+        group by ia.item_id ) temp1 on i.id = temp1.item_id left join user u on i.last_update_by = u.id left join item
+        i2 on i2.`key` = i.`key` and i2.instance_id = i.instance_id and i2.version_id = 0 and i2.instance_type_id =
+        i.instance_type_id and i2.is_delete = 0 and i.id = i2.id where i.is_public = 1 and i.instance_type_id = 0 and
+        i.is_delete = 0
+        <if test="versionId != null">
+            and i.version_id = #{versionId,jdbcType=BIGINT}
+        </if>
+        <if test="envId != null">
+            and i.env_id = #{envId,jdbcType=BIGINT}
+        </if>
+        group by i.id order by i.line_num,i.update_time desc
+    </select>
+    <select id="getDuplicateProductAndModuleAndEnvByResourceIds" resultMap="ProductAndModuleAndEnvMap">
+        select p.name as productName,m.name as moduleName,e.name as envName from product p,module m,env e,resource r
+        where r.product_id = p.id and r.module_id = m.id and r.env_id = e.id
+        <if test="resourceIds != null">
+            and r.id in
+            <foreach collection="resourceIds" item="id" index="index" open="(" close=")" separator=",">
+                #{id,jdbcType=BIGINT}
+            </foreach>
+        </if>
+    </select>
+</mapper>

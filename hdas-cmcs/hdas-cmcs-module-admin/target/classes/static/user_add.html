@@ -1,0 +1,66 @@
+<div class="main-div">
+    <div class="item-div">
+        <h4 class="h4-label">人员</h4>
+        <input id="nickname" class="page-input" autocomplete="off"/>
+        <span id="nickname_info" class="info"></span>
+    </div>
+    <div>
+        <div class="select-div item-div" style="float:left">
+            <h4 class="h4-label">分布</h4>
+            <select id="area" class="page-select"></select>
+            <span id="area_info" class="info"></span>
+        </div>
+        <div class="select-div item-div">
+            <h4 class="h4-label">部门</h4>
+            <select id="organ" class="page-select"></select>
+            <span id="organ_info" class="info"></span>
+        </div>
+        <div class="select-div item-div" style="position: absolute;">
+            <h4 class="h4-label">关联角色</h4>
+            <select id="role" multiple="multiple" class="hidden page-select"></select>
+            <span id="role_info" class="info"></span>
+        </div>
+    </div>
+    <div class="item-div">
+        <h4 class="h4-label">手机</h4>
+        <input id="mobile" class="page-input" autocomplete="off" type="number"/>
+        <span id="mobile_info" class="info"></span>
+    </div>
+    <div class="item-div">
+        <h4 class="h4-label">邮箱</h4>
+        <input id="email" class="page-input" autocomplete="off"/>
+        <span id="email_info" class="info"></span>
+    </div>
+    <div class="item-div">
+        <h4 class="h4-label">账号</h4>
+        <input id="username" class="page-input" autocomplete="off"/>
+        <span id="username_info" class="info"></span>
+    </div>
+    <div class="item-div">
+        <h4 class="h4-label">密码</h4>
+        <input id="password" class="page-input" autocomplete="off" type="password"/>
+        <span id="password_info" class="info"></span>
+    </div>
+    <div class="btm-btn-div">
+        <div>
+            <span class="save-btn-small" id="save">保存</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="cancel-btn-small" id="cancel">取消</span>
+        </div>
+    </div>
+</div>
+<script src="/scripts/user_action.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        loadAreaSelectData(false, false, function () {
+            loadOrganSelectData(false, false, function () {
+                linkageOrgan()
+            });
+        });
+        loadRoleSelectData(false, true);
+        addUser();
+        loadItem(NAV.SETTING, NAV.USER_MANAGE, NAV.ADD_PAGE, null, HTML.USER_ADD);
+        clickSetMainHeight(true);
+        initLinkageAreaOrgan();
+    });
+</script>

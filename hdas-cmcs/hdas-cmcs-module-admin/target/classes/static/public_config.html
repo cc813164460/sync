@@ -1,0 +1,574 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<div>
+    <div id="export_btn" class="auth-hidden">
+        <section class="pointer">
+            <table class="btn-table">
+                <tbody>
+                <tr>
+                    <td><span><img src="/img/icon_daochu.png"/></span></td>
+                </tr>
+                <tr>
+                    <td><span class="btn-comment">导出所选择的信息</span></td>
+                </tr>
+                <tr>
+                    <td><span class="btn-name">导出</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <div id="import_btn" class="auth-hidden">
+        <section class="pointer">
+            <table class="btn-table">
+                <tbody>
+                <tr>
+                    <td><span><img src="/img/icon_daoru.png"/></span></td>
+                </tr>
+                <tr>
+                    <td><span class="btn-comment">请导入需要的文本</span></td>
+                </tr>
+                <tr>
+                    <td><span class="btn-name">导入</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <div id="add_btn" class="auth-hidden">
+        <section class="pointer">
+            <table class="btn-table">
+                <tbody>
+                <tr>
+                    <td><span><img src="/img/icon_xinzeng.png"/></span></td>
+                </tr>
+                <tr>
+                    <td><span class="btn-comment">新增列表信息</span></td>
+                </tr>
+                <tr>
+                    <td><span class="btn-name">新增</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <div id="delete_btn" class="auth-hidden">
+        <section class="pointer">
+            <table class="btn-table">
+                <tbody>
+                <tr>
+                    <td><span><img src="/img/icon_shanchu.png"/></span></td>
+                </tr>
+                <tr>
+                    <td><span class="btn-comment">对所选选项批量删除</span></td>
+                </tr>
+                <tr>
+                    <td><span class="btn-name">批量删除</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <div id="release_btn" class="auth-hidden">
+        <section class="pointer">
+            <table class="btn-table">
+                <tbody>
+                <tr>
+                    <td><span><img src="/img/icon_fabu.png"/></span></td>
+                </tr>
+                <tr>
+                    <td><span class="btn-comment">对所选选项批量发布</span></td>
+                </tr>
+                <tr>
+                    <td><span class="btn-name">批量发布</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <div id="gray_export_btn" class="auth-hidden">
+        <section class="pointer">
+            <table class="btn-table">
+                <tbody>
+                <tr>
+                    <td><span><img src="/img/icon_daochu.png"/></span></td>
+                </tr>
+                <tr>
+                    <td><span class="btn-comment">导出所选择的信息</span></td>
+                </tr>
+                <tr>
+                    <td><span class="btn-name">导出</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <div id="gray_import_btn" class="auth-hidden">
+        <section class="pointer">
+            <table class="btn-table">
+                <tbody>
+                <tr>
+                    <td><span><img src="/img/icon_daoru.png"/></span></td>
+                </tr>
+                <tr>
+                    <td><span class="btn-comment">请导入需要的文本</span></td>
+                </tr>
+                <tr>
+                    <td><span class="btn-name">导入</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <div id="gray_delete_btn" class="auth-hidden">
+        <section class="pointer">
+            <table class="btn-table">
+                <tbody>
+                <tr>
+                    <td><span><img src="/img/icon_shanchu.png"/></span></td>
+                </tr>
+                <tr>
+                    <td><span class="btn-comment">对所选选项批量删除</span></td>
+                </tr>
+                <tr>
+                    <td><span class="btn-name">批量删除</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <div id="gray_release_btn" class="auth-hidden">
+        <section class="pointer">
+            <table class="btn-table">
+                <tbody>
+                <tr>
+                    <td><span><img src="/img/icon_fabu.png"/></span></td>
+                </tr>
+                <tr>
+                    <td><span class="btn-comment">对所选选项批量发布</span></td>
+                </tr>
+                <tr>
+                    <td><span class="btn-name">批量发布</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</div>
+<div class="table-main-div">
+    <div class="switch-div">
+        <span id="main_version_btn" class="version-btn auth-hidden sys-hidden">主版本</span>&nbsp;&nbsp;&nbsp;&nbsp;<span
+            id="gray_version_btn" class="version-btn auth-hidden sys-hidden">灰度版本</span>
+    </div>
+    <div class="tab-content">
+        <div id="main_version_tab" class="auth-hidden sys-hidden">
+            <ul id="tab_instance" class="tab-instance">
+                <li id="properties_tab" class="tab-li-active top-left-border"
+                    style="border-left: 1px solid #EEEEEE;">
+                    properties
+                </li>
+                <li id="json_tab">json</li>
+                <li id="xml_tab">xml</li>
+                <li id="yml_tab" class="top-right-border">yml</li>
+            </ul>
+            <div class="env-div" id="properties_env_div">
+                <span>环境：</span>
+                <select id="properties_env_select" class="env-select"></select>
+            </div>
+            <div class="env-div sys-hidden" id="json_env_div">
+                <span>环境：</span>
+                <select id="json_env_select" class="env-select"></select>
+            </div>
+            <div class="env-div sys-hidden" id="xml_env_div">
+                <span>环境：</span>
+                <select id="xml_env_select" class="env-select"></select>
+            </div>
+            <div class="env-div sys-hidden" id="yml_env_div">
+                <span>环境：</span>
+                <select id="yml_env_select" class="env-select"></select>
+            </div>
+            <div id="main_properties_div" class="instance-div sys-hidden">
+                <table id="main_properties_table" class="display public-main-table">
+                    <thead>
+                    <tr>
+                        <th><input id="main_list_select_all" type="checkbox" class="select-all-checkbox no-margin"/>全选</th>
+                        <th>序号</th>
+                        <th>版本号</th>
+                        <th>应用范围</th>
+                        <th>键</th>
+                        <th>值</th>
+                        <th>实例</th>
+                        <th>备注</th>
+                        <th>发布状态</th>
+                        <th>最后修改人</th>
+                        <th>最后修改时间</th>
+                        <th>操作</th>
+                        <th>id</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div id="json_div" class="sys-hidden">
+                <div class="item-div">
+                    <h4 class="h4-label" style="display: inline-block">发布状态：</h4>
+                    <h4 id="json_release_status" style="display: inline-block">未发布</h4>
+                    <input id="json_item_id" style="display: none"/>
+                    <input id="json_version_num" style="display: none"/>
+                </div>
+                <div class="item-div">
+                    <h4 class="h4-label">值</h4>
+                    <textarea id="json_value" class="instance-textarea"/>
+                    <span id="json_value_info" class="info"></span>
+                </div>
+                <div class="item-div">
+                    <h4 class="h4-label">应用范围</h4>
+                    <table id="json_product_module_table" class="display public-exclude-properties-table">
+                        <thead>
+                        <tr>
+                            <th><input type="checkbox" id="json_select_all" class="select-all-checkbox no-margin"/>全选</th>
+                            <th>项目名</th>
+                            <th>模块名</th>
+                            <th>id</th>
+                        </tr>
+                        </thead>
+                    </table>
+                    <span id="json_apply_info" class="info"></span>
+                </div>
+                <div class="item-div">
+                    <div>
+                        <h4 class="h4-label app-h4">实例</h4>
+                        全选<input id="json_app_select_all" type="checkbox" class="select-all-checkbox"/>
+                    </div>
+                    <div id="json_app" class="app-list">
+                    </div>
+                    <span id="json_app_info" class="info"></span>
+                </div>
+                <div class="item-div">
+                    <h4 class="h4-label">注释</h4>
+                    <textarea id="json_comment" class="instance-textarea"/>
+                    <span id="json_comment_info" class="info"></span>
+                </div>
+                <div class="btm-btn-div">
+                    <span class="release-btn-small auth-hidden" id="json_release">发布</span>
+                    <span class="offline-btn-small auth-hidden" id="json_offline">下线</span>
+                    <span class="edit-btn-small auth-hidden" id="json_edit">修改</span>
+                    <span class="save-btn-small auth-hidden" id="json_save">新增</span>
+                    <span class="del-btn-small auth-hidden" id="json_del">删除</span>
+                </div>
+            </div>
+            <div id="xml_div" class="sys-hidden">
+                <div class="item-div">
+                    <h4 class="h4-label" style="display: inline-block">发布状态：</h4>
+                    <h4 id="xml_release_status" style="display: inline-block">未发布</h4>
+                    <input id="xml_item_id" style="display: none"/>
+                    <input id="xml_version_num" style="display: none"/>
+                </div>
+                <div class="item-div">
+                    <h4 class="h4-label">值</h4>
+                    <textarea id="xml_value" class="instance-textarea"/>
+                    <span id="xml_value_info" class="info"></span>
+                </div>
+                <div class="item-div">
+                    <h4 class="h4-label">应用范围</h4>
+                    <table id="xml_product_module_table" class="display public-exclude-properties-table">
+                        <thead>
+                        <tr>
+                            <th><input type="checkbox" id="xml_select_all" class="select-all-checkbox no-margin"/>全选</th>
+                            <th>项目名</th>
+                            <th>模块名</th>
+                            <th>id</th>
+                        </tr>
+                        </thead>
+                    </table>
+                    <span id="xml_apply_info" class="info"></span>
+                </div>
+                <div class="item-div">
+                    <div>
+                        <h4 class="h4-label app-h4">实例</h4>
+                        全选<input id="xml_app_select_all" type="checkbox" class="select-all-checkbox"/>
+                    </div>
+                    <div id="xml_app" class="app-list">
+                    </div>
+                    <span id="xml_app_info" class="info"></span>
+                </div>
+                <div class="item-div">
+                    <h4 class="h4-label">注释</h4>
+                    <textarea id="xml_comment" class="instance-textarea"/>
+                    <span id="xml_comment_info" class="info"></span>
+                </div>
+                <div class="btm-btn-div">
+                    <span class="release-btn-small auth-hidden" id="xml_release">发布</span>
+                    <span class="offline-btn-small auth-hidden" id="xml_offline">下线</span>
+                    <span class="edit-btn-small auth-hidden" id="xml_edit">修改</span>
+                    <span class="save-btn-small auth-hidden" id="xml_save">新增</span>
+                    <span class="del-btn-small auth-hidden" id="xml_del">删除</span>
+                </div>
+            </div>
+            <div id="yml_div" class="sys-hidden">
+                <div class="item-div">
+                    <h4 class="h4-label" style="display: inline-block">发布状态：</h4>
+                    <h4 id="yml_release_status" style="display: inline-block">未发布</h4>
+                    <input id="yml_item_id" style="display: none"/>
+                    <input id="yml_version_num" style="display: none"/>
+                </div>
+                <div class="item-div">
+                    <h4 class="h4-label">值</h4>
+                    <textarea id="yml_value" class="instance-textarea"/>
+                    <span id="yml_value_info" class="info"></span>
+                </div>
+                <div class="item-div">
+                    <h4 class="h4-label">应用范围</h4>
+                    <table id="yml_product_module_table" class="display public-exclude-properties-table">
+                        <thead>
+                        <tr>
+                            <th><input type="checkbox" id="yml_select_all" class="select-all-checkbox no-margin"/>全选</th>
+                            <th>项目名</th>
+                            <th>模块名</th>
+                            <th>id</th>
+                        </tr>
+                        </thead>
+                    </table>
+                    <span id="yml_apply_info" class="info"></span>
+                </div>
+                <div class="item-div">
+                    <div>
+                        <h4 class="h4-label app-h4">实例</h4>
+                        全选<input id="yml_app_select_all" type="checkbox" class="select-all-checkbox"/>
+                    </div>
+                    <div id="yml_app" class="app-list">
+                    </div>
+                    <span id="yml_app_info" class="info"></span>
+                </div>
+                <div class="item-div">
+                    <h4 class="h4-label">注释</h4>
+                    <textarea id="yml_comment" class="instance-textarea"/>
+                    <span id="yml_comment_info" class="info"></span>
+                </div>
+                <div class="btm-btn-div">
+                    <span class="release-btn-small auth-hidden" id="yml_release">发布</span>
+                    <span class="offline-btn-small auth-hidden" id="yml_offline">下线</span>
+                    <span class="edit-btn-small auth-hidden" id="yml_edit">修改</span>
+                    <span class="save-btn-small auth-hidden" id="yml_save">新增</span>
+                    <span class="del-btn-small auth-hidden" id="yml_del">删除</span>
+                </div>
+            </div>
+        </div>
+        <div id="gray_version_tab" class="auth-hidden sys-hidden">
+            <ul id="gray_tab_instance" class="tab-instance">
+                <li id="gray_properties_tab" class="tab-li-active top-left-border" style="border-left: 1px solid
+                #EEEEEE;"> properties
+                </li>
+                <li id="gray_json_tab">json</li>
+                <li id="gray_xml_tab">xml</li>
+                <li id="gray_yml_tab" class="top-right-border">yml</li>
+            </ul>
+            <div class="env-div" id="gray_properties_env_div">
+                <span>环境：</span>
+                <select id="gray_properties_env_select" class="env-select"></select>
+            </div>
+            <div class="env-div sys-hidden" id="gray_json_env_div">
+                <span>环境：</span>
+                <select id="gray_json_env_select" class="env-select"></select>
+            </div>
+            <div class="env-div sys-hidden" id="gray_xml_env_div">
+                <span>环境：</span>
+                <select id="gray_xml_env_select" class="env-select"></select>
+            </div>
+            <div class="env-div sys-hidden" id="gray_yml_env_div">
+                <span>环境：</span>
+                <select id="gray_yml_env_select" class="env-select"></select>
+            </div>
+            <div id="gray_properties_div" class="instance-div sys-hidden">
+                <table id="gray_properties_table" class="display public-gray-table">
+                    <thead>
+                    <tr>
+                        <th><input id="gray_list_select_all" type="checkbox" class="select-all-checkbox no-margin"/>全选</th>
+                        <th>序号</th>
+                        <th>版本号</th>
+                        <th>应用范围</th>
+                        <th>键</th>
+                        <th>主版本的值</th>
+                        <th>灰度的值</th>
+                        <th>实例</th>
+                        <th>备注</th>
+                        <th>发布状态</th>
+                        <th>最后修改人</th>
+                        <th>最后修改时间</th>
+                        <th>操作</th>
+                        <th>id</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div id="gray_json_div" class="sys-hidden">
+                <div class="item-div">
+                    <h4 class="h4-label" style="display: inline-block">发布状态：</h4>
+                    <h4 id="gray_json_release_status" style="display: inline-block">未发布</h4>
+                    <input id="gray_json_item_id" style="display: none"/>
+                    <input id="gray_json_version_num" style="display: none"/>
+                </div>
+                <div class="item-div">
+                    <h4 class="h4-label">值</h4>
+                    <textarea id="gray_json_value" class="instance-textarea"/>
+                    <span id="gray_json_value_info" class="info"></span>
+                </div>
+                <div class="item-div">
+                    <h4 class="h4-label">应用范围</h4>
+                    <table id="gray_json_product_module_table" class="display public-exclude-properties-table">
+                        <thead>
+                        <tr>
+                            <th><input type="checkbox" id="gray_json_select_all" class="select-all-checkbox no-margin"/>全选</th>
+                            <th>项目名</th>
+                            <th>模块名</th>
+                            <th>id</th>
+                        </tr>
+                        </thead>
+                    </table>
+                    <span id="gray_json_apply_info" class="info"></span>
+                </div>
+                <div class="item-div">
+                    <div>
+                        <h4 class="h4-label app-h4">实例</h4>
+                        全选<input id="gray_json_app_select_all" type="checkbox" class="select-all-checkbox"/>
+                    </div>
+                    <div id="gray_json_app" class="app-list">
+                    </div>
+                    <span id="gray_json_app_info" class="info"></span>
+                </div>
+                <div class="item-div">
+                    <h4 class="h4-label">注释</h4>
+                    <textarea id="gray_json_comment" class="instance-textarea"/>
+                    <span id="gray_json_comment_info" class="info"></span>
+                </div>
+                <div class="btm-btn-div">
+                    <span class="release-btn-small auth-hidden" id="gray_json_release">发布</span>
+                    <span class="offline-btn-small auth-hidden" id="gray_json_offline">下线</span>
+                    <span class="edit-btn-small auth-hidden" id="gray_json_edit">修改</span>
+                    <span class="save-btn-small auth-hidden" id="gray_json_save">新增</span>
+                    <span class="del-btn-small auth-hidden" id="gray_json_del">删除</span>
+                </div>
+            </div>
+            <div id="gray_xml_div" class="sys-hidden">
+                <div class="item-div">
+                    <h4 class="h4-label" style="display: inline-block">发布状态：</h4>
+                    <h4 id="gray_xml_release_status" style="display: inline-block">未发布</h4>
+                    <input id="gray_xml_item_id" style="display: none"/>
+                    <input id="gray_xml_version_num" style="display: none"/>
+                </div>
+                <div class="item-div">
+                    <h4 class="h4-label">值</h4>
+                    <textarea id="gray_xml_value" class="instance-textarea"/>
+                    <span id="gray_xml_value_info" class="info"></span>
+                </div>
+                <div class="item-div">
+                    <h4 class="h4-label">应用范围</h4>
+                    <table id="gray_xml_product_module_table" class="display public-exclude-properties-table">
+                        <thead>
+                        <tr>
+                            <th><input type="checkbox" id="gray_xml_select_all" class="select-all-checkbox no-margin"/>全选</th>
+                            <th>项目名</th>
+                            <th>模块名</th>
+                            <th>id</th>
+                        </tr>
+                        </thead>
+                    </table>
+                    <span id="gray_xml_apply_info" class="info"></span>
+                </div>
+                <div class="item-div">
+                    <div>
+                        <h4 class="h4-label app-h4">实例</h4>
+                        全选<input id="gray_xml_app_select_all" type="checkbox" class="select-all-checkbox"/>
+                    </div>
+                    <div id="gray_xml_app" class="app-list">
+                    </div>
+                    <span id="gray_xml_app_info" class="info"></span>
+                </div>
+                <div class="item-div">
+                    <h4 class="h4-label">注释</h4>
+                    <textarea id="gray_xml_comment" class="instance-textarea"/>
+                    <span id="gray_xml_comment_info" class="info"></span>
+                </div>
+                <div class="btm-btn-div">
+                    <span class="release-btn-small auth-hidden" id="gray_xml_release">发布</span>
+                    <span class="offline-btn-small auth-hidden" id="gray_xml_offline">下线</span>
+                    <span class="edit-btn-small auth-hidden" id="gray_xml_edit">修改</span>
+                    <span class="save-btn-small auth-hidden" id="gray_xml_save">新增</span>
+                    <span class="del-btn-small auth-hidden" id="gray_xml_del">删除</span>
+                </div>
+            </div>
+            <div id="gray_yml_div" class="sys-hidden">
+                <div class="item-div">
+                    <h4 class="h4-label" style="display: inline-block">发布状态：</h4>
+                    <h4 id="gray_yml_release_status" style="display: inline-block">未发布</h4>
+                    <input id="gray_yml_item_id" style="display: none"/>
+                    <input id="gray_yml_version_num" style="display: none"/>
+                </div>
+                <div class="item-div">
+                    <h4 class="h4-label">值</h4>
+                    <textarea id="gray_yml_value" class="instance-textarea"/>
+                    <span id="gray_yml_value_info" class="info"></span>
+                </div>
+                <div class="item-div">
+                    <h4 class="h4-label">应用范围</h4>
+                    <table id="gray_yml_product_module_table" class="display public-exclude-properties-table">
+                        <thead>
+                        <tr>
+                            <th><input type="checkbox" id="gray_yml_select_all" class="select-all-checkbox no-margin"/>全选</th>
+                            <th>项目名</th>
+                            <th>模块名</th>
+                            <th>id</th>
+                        </tr>
+                        </thead>
+                    </table>
+                    <span id="gray_yml_apply_info" class="info"></span>
+                </div>
+                <div class="item-div">
+                    <div>
+                        <h4 class="h4-label app-h4">实例</h4>
+                        全选<input id="gray_yml_app_select_all" type="checkbox" class="select-all-checkbox"/>
+                    </div>
+                    <div id="gray_yml_app" class="app-list">
+                    </div>
+                    <span id="gray_yml_app_info" class="info"></span>
+                </div>
+                <div class="item-div">
+                    <h4 class="h4-label">注释</h4>
+                    <textarea id="gray_yml_comment" class="instance-textarea"/>
+                    <span id="gray_yml_comment_info" class="info"></span>
+                </div>
+                <div class="btm-btn-div">
+                    <span class="release-btn-small auth-hidden" id="gray_yml_release">发布</span>
+                    <span class="offline-btn-small auth-hidden" id="gray_yml_offline">下线</span>
+                    <span class="edit-btn-small auth-hidden" id="gray_yml_edit">修改</span>
+                    <span class="save-btn-small auth-hidden" id="gray_yml_save">新增</span>
+                    <span class="del-btn-small auth-hidden" id="gray_yml_del">删除</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/scripts/public_config.js"></script>
+<script src="/scripts/public_config_action.js"></script>
+<script type="text/javascript" th:inline="javascript">
+    $(document).ready(function () {
+        removeItemValue();
+        loadInstanceData();
+        addPage(HTML.PUBLIC_CONFIG_ADD);
+        clickVersionBtn();
+        clickTabInstanceLi();
+        importInstance();
+        exportInstance();
+        loadItem(NAV.PUBLIC_CONFIG, null, NAV.LIST_PAGE, null, HTML.PUBLIC_CONFIG);
+        excludePropertiesEdit();
+        excludePropertiesSave();
+        excludePropertiesOffline();
+        excludePropertiesRelease();
+        excludePropertiesDelete();
+        selectAll("main_list_select_all");
+        selectAll("gray_list_select_all");
+        envAllSelect();
+        appSelectAll();
+        applySelectAll();
+    });
+</script>
+<link rel="stylesheet" href="/styles/public_config_no_action.css"/>
+</html>

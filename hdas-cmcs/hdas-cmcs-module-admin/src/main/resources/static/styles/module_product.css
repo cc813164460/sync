@@ -1,0 +1,77 @@
+.module-product-table > thead > tr {
+    display: flex;
+}
+
+.module-product-table > tbody > tr {
+    display: flex;
+    align-items: center;
+}
+
+.module-product-table > thead > tr > th:nth-of-type(1) {
+    width: 5% !important;
+}
+
+.module-product-table > thead > tr > th:nth-of-type(2) {
+    width: 5% !important;
+}
+
+.module-product-table > thead > tr > th:nth-of-type(3) {
+    width: 35% !important;
+}
+
+.module-product-table > thead > tr > th:nth-of-type(4) {
+    width: 10% !important;
+}
+
+.module-product-table > thead > tr > th:nth-of-type(5) {
+    width: 30% !important;
+}
+
+.module-product-table > thead > tr > th:nth-of-type(6) {
+    width: 15% !important;
+}
+
+.module-product-table > tbody > tr > td:nth-of-type(1) {
+    width: 5%;
+}
+
+.module-product-table > tbody > tr > td:nth-of-type(2) {
+    width: 5%;
+}
+
+.module-product-table > tbody > tr > td:nth-of-type(3) {
+    width: 35%;
+}
+
+.module-product-table > tbody > tr > td:nth-of-type(3) div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.module-product-table > tbody > tr > td:nth-of-type(4) {
+    width: 10%;
+}
+
+.module-product-table > tbody > tr > td:nth-of-type(4) div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.module-product-table > tbody > tr > td:nth-of-type(5) {
+    width: 30%;
+}
+
+.module-product-table > tbody > tr > td:nth-of-type(5) div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.module-product-table > tbody > tr > td:nth-of-type(6) {
+    width: 15%;
+}

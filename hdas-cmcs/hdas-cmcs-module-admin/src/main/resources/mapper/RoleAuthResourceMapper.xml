@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hsgene.hdas.cmcs.modules.admin.mapper.RoleAuthResourceMapper">
+    <sql id="RoleAuthResourceList">
+        id,ar_id,role_id
+    </sql>
+    <resultMap id="ArIdMap" type="java.util.Map">
+        <id column="ar_id" property="ar_id" jdbcType="BIGINT"/>
+    </resultMap>
+    <resultMap id="RoleAuthResourceMap" type="java.util.Map">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="role_name" property="role_name" jdbcType="VARCHAR"/>
+        <result column="product_names" property="product_names" jdbcType="VARCHAR"/>
+    </resultMap>
+    <resultMap id="RoleAuthResourceActionMnMap" type="java.util.Map">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="product_name" property="product_name" jdbcType="VARCHAR"/>
+        <result column="module_name" property="module_name" jdbcType="VARCHAR"/>
+        <result column="env_name" property="env_name" jdbcType="VARCHAR"/>
+        <result column="version_name" property="version_name" jdbcType="VARCHAR"/>
+        <result column="auths" property="auths" jdbcType="VARCHAR"/>
+        <result column="product_id" property="product_id" jdbcType="BIGINT"/>
+        <result column="env_id" property="env_id" jdbcType="BIGINT"/>
+    </resultMap>
+    <sql id="RoleAuthResourceMnList">
+        id,role_name,GROUP_CONCAT(distinct product_names) as product_names
+    </sql>
+    <sql id="RoleAuthResourceActionMnList">
+        id,product_name,module_name,env_name,version_name,ifnull(auths,'') as auths,product_id,module_id,env_id
+    </sql>
+    <select id="countByMap" resultType="java.lang.Integer" parameterType="java.util.HashMap">
+        select count(*) from role_auth_resource where 1 = 1
+        <if test="roleId != null">
+            and role_id = #{roleId,jdbcType=BIGINT}
+        </if>
+    </select>
+    <select id="getUserAuthResource" resultMap="RoleAuthResourceActionMnMap" parameterType="java.util.Map">
+        select
+        <include refid="RoleAuthResourceActionMnList"/>
+        from (select r.id,p.name as product_name,m.name as module_name,e.name as env_name,v.name as
+        version_name,r.product_id,r.module_id,r.env_id from resource r,product p,module m,env e,version v where
+        r.product_id = p.id and r.module_id = m.id and r.env_id = e.id and r.version_id = v.id and r.is_delete = 0
+        GROUP BY r.id UNION select id,one_name as product_name,two_name as module_name,three_name as env_name,four_name
+        as version_name,id as product_id,id as module_id,id as env_id from sys_resource) res inner join (select
+        ar.resource_id,GROUP_CONCAT(a.name) as auths from auth a,auth_resource ar,role_auth_resource rar,user_role ur
+        where ar.auth_id = a.id and rar.ar_id = ar.id and rar.role_id = ur.role_id
+        <if test="userId != null">
+            and ur.user_id = #{userId}
+        </if>
+        GROUP BY ar.resource_id) action on action.resource_id = res.id where 1 = 1
+        <if test="productId != null">
+            and product_id = #{productId,jdbcType=BIGINT}
+        </if>
+        <if test="moduleId != null">
+            and module_id = #{moduleId,jdbcType=BIGINT}
+        </if>
+        <if test="envId != null">
+            and env_id = #{envId,jdbcType=BIGINT}
+        </if>
+        <if test="isPublic != null">
+            and id in(9,10)
+        </if>
+    </select>
+    <select id="getSelectByMap" resultMap="RoleAuthResourceActionMnMap" parameterType="java.util.HashMap">
+        select
+        <include refid="RoleAuthResourceActionMnList"/>
+        from (select r.id,p.name as product_name,m.name as module_name,e.name as env_name,v.name as
+        version_name,r.product_id,r.module_id,r.env_id from resource r,product p,module m,env e,version v where r
+        .product_id = p.id and r.module_id = m.id and r.env_id = e.id and r.version_id = v.id and v.id = 0 and
+        r.is_delete = 0 GROUP BY r.id UNION select id,one_name as product_name,two_name as module_name,three_name as
+        env_name,four_name as version_name,id as product_id,id as module_id,id as env_id from sys_resource sr where
+        sr.id != 13 and sr.id != 14 and sr.id != 10) res left join (select ar.resource_id,GROUP_CONCAT(a.name) as auths
+        from auth a,auth_resource ar,role_auth_resource rar where ar.auth_id = a.id and rar.ar_id = ar.id
+        <if test="roleId != null">
+            and rar.role_id = #{roleId,jdbcType=BIGINT}
+        </if>
+        GROUP BY ar.resource_id) action on action.resource_id = res.id
+    </select>
+    <select id="getSelectByCondition" resultMap="RoleAuthResourceActionMnMap" parameterType="java.util.HashMap">
+        select
+        <include refid="RoleAuthResourceActionMnList"/>
+        from (select r.id,p.name as product_name,m.name as module_name,e.name as env_name,v.name as
+        version_name,r.product_id,r.module_id,r.env_id from resource r,product p,module m,env e,version v where
+        r.product_id = p.id and r.module_id = m.id and r.env_id = e.id and r.version_id = v.id and v.id = 0 and
+        r.is_delete = 0
+        <if test="name != null">
+            and p.name like concat('%',#{name,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="moduleId != null">
+            and m.id = #{moduleId,jdbcType=BIGINT}
+        </if>
+        <if test="envId != null">
+            and e.id = #{envId,jdbcType=BIGINT}
+        </if>
+        <if test="organId != null">
+            and p.organ_id = #{organId,jdbcType=BIGINT}
+        </if>
+        <if test="areaId != null">
+            and p.area_id = #{areaId,jdbcType=BIGINT}
+        </if>
+        GROUP BY r.id UNION select id,one_name as product_name,two_name as module_name,three_name as env_name,four_name
+        as version_name,id as product_id,id as module_id,id as env_id from sys_resource sr where sr.id != 13 and
+        sr.id != 14 and sr.id != 10
+        <if test="name != null">
+            and one_name like concat('%',#{name,jdbcType=VARCHAR},'%')
+        </if>
+        ) res left join (select ar.resource_id,GROUP_CONCAT(a.name) as auths from auth a,auth_resource
+        ar,role_auth_resource rar where ar.auth_id = a.id and rar.ar_id = ar.id
+        <if test="roleId != null">
+            and rar.role_id = #{roleId,jdbcType=BIGINT}
+        </if>
+        GROUP BY ar.resource_id) action on action.resource_id = res.id
+        <if test="configId != null">
+            <if test="configId == 1">
+                where auths!='' and auths is not null
+            </if>
+            <if test="configId == 0">
+                where auths='' or auths is null
+            </if>
+        </if>
+
+    </select>
+    <select id="selectByPage" resultMap="RoleAuthResourceMap">
+        select
+        <include refid="RoleAuthResourceMnList"/>
+        from (select r.id as id,r.name as role_name,GROUP_CONCAT(distinct p.name) as product_names from role r,product
+        p,module m,role_auth_resource rar,auth_resource ar,resource res where rar.ar_id = ar.id and p.id =
+        res.product_id and m.id = res.module_id and res.id = ar.resource_id and ar.id = rar.ar_id and r.id = rar.role_id
+        and res.is_delete = 0 group by r.id union select r.id as id,r.name as role_name,GROUP_CONCAT(distinct
+        sr.one_name) as product_module_names from role r,role_auth_resource rar,auth_resource ar,sys_resource sr where
+        rar.ar_id = ar.id and sr.id = ar.resource_id and ar.id = rar.ar_id and r.id = rar.role_id group by r.id) temp
+        group by id
+    </select>
+    <select id="getArIdsByRoleIds" resultType="java.lang.Long">
+        select ar_id from role_auth_resource where role_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </select>
+    <insert id="save" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.RoleAuthResource">
+        insert into role_auth_resource
+        (<include refid="RoleAuthResourceList"/>)
+        values
+        (#{id,jdbcType=BIGINT},#{arId,jdbcType=BIGINT},#{roleId,jdbcType=BIGINT})
+    </insert>
+    <update id="update" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.RoleAuthResource">
+        update role_auth_resource
+        <set>
+            <if test="arId != null">
+                ar_id = #{arId,jdbcType=BIGINT},
+            </if>
+            <if test="roleId != null">
+                role_id = #{roleId,jdbcType=BIGINT}
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <delete id="deleteByIds">
+        delete from role_auth_resource
+        where id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </delete>
+    <delete id="deleteByRoleIds">
+        delete from role_auth_resource
+        where role_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </delete>
+    <delete id="deleteByAuthIds">
+        delete from role_auth_resource
+        where ar_id in (select id from auth_resource where auth_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>)
+    </delete>
+    <delete id="deleteByProductIds">
+        delete from role_auth_resource
+        where ar_id in (select id from auth_resource where resource_id in (select id from resource where product_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>))
+    </delete>
+    <delete id="deleteByModuleIds">
+        delete from role_auth_resource
+        where ar_id in (select id from auth_resource where resource_id in (select id from resource where module_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>))
+    </delete>
+    <delete id="deleteByEnvIds">
+        delete from role_auth_resource
+        where ar_id in (select id from auth_resource where resource_id in (select id from resource where env_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>))
+    </delete>
+    <delete id="deleteByVersionIds">
+        delete from role_auth_resource
+        where ar_id in (select id from auth_resource where resource_id in (select id from resource where version_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>))
+    </delete>
+</mapper>

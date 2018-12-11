@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hsgene.hdas.cmcs.modules.admin.mapper.ItemResourceMapper">
+    <sql id="ItemResourceList">
+        id,item_id,resource_id,is_delete
+    </sql>
+    <sql id="ItemResourceAsList">
+        id,item_id as itemId,resource_id as resourceId,is_delete as isDelete
+    </sql>
+    <resultMap id="ProductModuleEnvListMap" type="java.util.Map">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="product_name" property="product_name" jdbcType="VARCHAR"/>
+        <result column="module_name" property="module_name" jdbcType="VARCHAR"/>
+        <result column="env_name" property="env_name" jdbcType="VARCHAR"/>
+        <result column="is_select" property="is_select" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="ProductModuleEnvList">
+        r.id as id,p.name as product_name,m.name as module_name,e.name as env_name,case when ir.id is null then 0
+        else 1 end as is_select
+    </sql>
+    <select id="getProductModuleEnvList" resultMap="ProductModuleEnvListMap" parameterType="java.util.Map">
+        select
+        <include refid="ProductModuleEnvList"/>
+        from product p,module m,env e,resource r left join item_resource ir on ir.is_delete != 1 and ir.resource_id
+        = r.id
+        <if test="itemId != null">
+            and ir.item_id = #{itemId,jdbcType=BIGINT}
+        </if>
+        where r.is_delete = 0 and r.product_id = p.id and r.module_id = m.id and r.env_id = e.id
+        <if test="versionId != null">
+            and r.version_id = #{versionId,jdbcType=BIGINT}
+        </if>
+        <if test="moduleId != null">
+            and r.module_id = #{moduleId,jdbcType=BIGINT}
+        </if>
+        <if test="envId != null">
+            and r.env_id = #{envId,jdbcType=BIGINT}
+        </if>
+        <if test="name != null">
+            and p.name like concat('%',#{name,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="configId != null">
+            <if test="configId == 0">
+                and ir.id is null
+            </if>
+            <if test="configId == 1">
+                and ir.id is not null
+            </if>
+        </if>
+    </select>
+    <select id="getResourceIdsByItemId" resultType="java.lang.Long" parameterType="java.lang.Long">
+        select resource_id from item_resource where is_delete != 1 and item_id = #{itemId,jdbcType=BIGINT}
+    </select>
+    <select id="countByMap" resultType="java.lang.Integer" parameterType="java.util.Map">
+        select count(*) from item_resource where is_delete != 1
+        <if test="itemId != null">
+            and item_id = #{itemId,jdbcType=BIGINT}
+        </if>
+        <if test="resourceId != null">
+            and resource_id = #{resourceId,jdbcType=BIGINT}
+        </if>
+    </select>
+    <select id="getAll" resultType="com.hsgene.hdas.cmcs.modules.admin.domain.ItemResource">
+        select
+        <include refid="ItemResourceAsList"/>
+        from item_resource where is_delete != 1
+    </select>
+    <insert id="save" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.ItemResource">
+        insert into item_resource
+        (<include refid="ItemResourceList"/>)
+        values
+        (#{id,jdbcType=BIGINT},#{itemId,jdbcType=BIGINT},#{resourceId,jdbcType=BIGINT},#{isDelete,jdbcType=INTEGER})
+    </insert>
+    <update id="update" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.ItemResource">
+        update item_resource
+        <set>
+            <if test="itemId != null">
+                item_id = #{itemId,jdbcType=BIGINT},
+            </if>
+            <if test="resourceId != null">
+                resource_id = #{resourceId,jdbcType=BIGINT}
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="overByItemIds">
+        update item_resource
+        set is_delete = 2
+        where item_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </update>
+    <update id="setUseByItemIds">
+        update item_resource
+        set is_delete = 0
+        where item_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </update>
+    <update id="deleteByIds">
+        update item_resource
+        set is_delete = 1
+        where id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </update>
+    <update id="deleteByItemIds">
+        update item_resource
+        set is_delete = 1
+        where item_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </update>
+    <update id="deleteByProductIds">
+        update item_resource
+        set is_delete = 1
+        where resource_id in (select id from resource r where r.is_delete = 0 and product_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>)
+    </update>
+    <update id="deleteByModuleIds">
+        update item_resource
+        set is_delete = 1
+        where resource_id in (select id from resource r where r.is_delete = 0 and module_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>)
+    </update>
+    <update id="deleteByEnvIds">
+        update item_resource
+        set is_delete = 1
+        where resource_id in (select id from resource r where r.is_delete = 0 and env_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>)
+    </update>
+    <update id="deleteByVersionIds">
+        update item_resource
+        set is_delete = 1
+        where resource_id in (select id from resource r where r.is_delete = 0 and version_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>)
+    </update>
+</mapper>

@@ -1,0 +1,27 @@
+.oblique-line {
+    color: #eeeeee;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+.word-page {
+    color: #D7D7D7;
+}
+
+.word-item > a {
+    color: #777777 !important;
+}
+
+.top-ul {
+    line-height: 4em;
+}
+
+.top-ul > li {
+    list-style: none;
+}
+
+.exit-div {
+    float: right;
+    line-height: 4em;
+    margin-right: 1.5%;
+}

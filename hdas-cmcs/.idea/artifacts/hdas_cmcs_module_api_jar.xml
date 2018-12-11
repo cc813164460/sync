@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="hdas-cmcs-module-api:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/hdas_cmcs_module_api_jar</output-path>
+    <root id="archive" name="hdas-cmcs-module-api.jar">
+      <element id="module-output" name="hdas-cmcs-module-api" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/log4j/log4j/1.2.17/log4j-1.2.17.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.29/fastjson-1.2.29.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/guava/guava/19.0/guava-19.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

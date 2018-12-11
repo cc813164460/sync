@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hsgene.hdas.cmcs.modules.admin.mapper.UserOrganMapper">
+    <sql id="UserOrganList">
+        id,user_id,organ_id
+    </sql>
+    <resultMap id="UserOrganMap" type="java.util.Map">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="user_id" property="user_id" jdbcType="BIGINT"/>
+        <result column="organ_id" property="organ_id" jdbcType="BIGINT"/>
+    </resultMap>
+    <select id="countByMap" resultType="java.lang.Integer" parameterType="java.util.Map">
+        select count(*) from user_organ where 1 = 1
+        <if test="userId != null">
+            and user_id = #{userId,jdbcType=BIGINT}
+        </if>
+        <if test="organId != null">
+            and organ_id != #{organId,jdbcType=BIGINT}
+        </if>
+        <if test="id != null">
+            and id != #{id,jdbcType=BIGINT}
+        </if>
+    </select>
+    <select id="selectByPage" resultMap="UserOrganMap">
+        select id,user_id,organ_id from user_organ
+    </select>
+    <insert id="save" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.UserOrgan">
+        insert into user_organ
+        (<include refid="UserOrganList"/>)
+        values
+        (#{id,jdbcType=BIGINT},#{userId,jdbcType=BIGINT},#{organId,jdbcType=BIGINT})
+    </insert>
+    <update id="update" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.UserOrgan">
+        update user_organ
+        <set>
+            <if test="userId != null">
+                user_id = #{userId,jdbcType=BIGINT},
+            </if>
+            <if test="organId != null">
+                organ_id = #{organId,jdbcType=BIGINT}
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <delete id="deleteByIds">
+        delete from user_organ
+        where id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </delete>
+    <delete id="deleteByUserIds">
+        delete from user_organ
+        where user_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </delete>
+    <delete id="deleteByOrganIds">
+        delete from user_organ
+        where organ_id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </delete>
+</mapper>

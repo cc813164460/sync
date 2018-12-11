@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hsgene.hdas.cmcs.modules.admin.mapper.EnvMapper">
+    <sql id="EnvList">
+        id,name,create_date_time,description
+    </sql>
+    <sql id="EnvAsList">
+        id,name,create_date_time as createDateTime,description
+    </sql>
+    <select id="getSelectByMap" resultType="java.util.HashMap">
+        select id,name from env
+    </select>
+    <select id="get" resultType="com.hsgene.hdas.cmcs.modules.admin.domain.Env" parameterType="java.lang.Long">
+        select
+        <include refid="EnvAsList"/>
+        from env where id = #{id,jdbcType=BIGINT}
+    </select>
+    <select id="countByMap" resultType="java.lang.Integer" parameterType="java.util.HashMap">
+        select count(*) from env where 1 = 1
+        <if test="name != null">
+            and name = #{name,jdbcType=VARCHAR}
+        </if>
+        <if test="id != null">
+            and id != #{id,jdbcType=BIGINT}
+        </if>
+    </select>
+    <insert id="save" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.Env">
+        insert into env
+        (<include refid="EnvList"/>)
+        values
+        (#{id,jdbcType=BIGINT},#{name,jdbcType=VARCHAR},#{createDateTime,jdbcType=TIMESTAMP},#{description,jdbcType=VARCHAR})
+    </insert>
+    <update id="update" parameterType="com.hsgene.hdas.cmcs.modules.admin.domain.Env">
+        update env
+        <set>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="description != null">
+                description = #{description,jdbcType=VARCHAR}
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <delete id="deleteByIds">
+        delete from env
+        where id in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </delete>
+    <delete id="deleteNotInIds">
+        delete from env
+        where id not in
+        <foreach collection="array" item="id" index="index" open="(" close=")" separator=",">
+            #{id,jdbcType=BIGINT}
+        </foreach>
+    </delete>
+</mapper>

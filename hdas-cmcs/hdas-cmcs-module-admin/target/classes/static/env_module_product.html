@@ -1,0 +1,67 @@
+<div>
+    <div id="add_btn" class="auth-hidden">
+        <section class="pointer">
+            <table class="btn-table">
+                <tbody>
+                <tr>
+                    <td><span><img src="/img/icon_xinzeng.png"/></span></td>
+                </tr>
+                <tr>
+                    <td><span class="btn-comment">新增列表信息</span></td>
+                </tr>
+                <tr>
+                    <td><span class="btn-name">新增</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <div id="delete_btn" class="auth-hidden">
+        <section class="pointer">
+            <table class="btn-table">
+                <tbody>
+                <tr>
+                    <td><span><img src="/img/icon_shanchu.png"/></span></td>
+                </tr>
+                <tr>
+                    <td><span class="btn-comment">对所选选项批量删除</span></td>
+                </tr>
+                <tr>
+                    <td><span class="btn-name">批量删除</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</div>
+<div class="table-main-div">
+    <div>
+        <table id="env_module_product_table" class="display env-module-product-table">
+            <thead>
+            <tr>
+                <th><input id="list_select_all" type="checkbox" class="select-all-checkbox no-margin"/>全选</th>
+                <th>序号</th>
+                <th>项目-模块名称</th>
+                <th>环境名称</th>
+                <th>备注</th>
+                <th>操作</th>
+                <th>id</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+<link rel="stylesheet" href="/styles/env_module_product.css">
+<script src="/scripts/env_module_product.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        loadEnvModuleProductTable();
+        loadQuery("请输入环境名称");
+        initTableStyle();
+        addPage(HTML.ENV_MODULE_PRODUCT_ADD);
+        loadItem(NAV.SETTING, NAV.ENV_MANAGE, NAV.LIST_PAGE, null, HTML.ENV_MODULE_PRODUCT);
+        clickSetMainHeight();
+        selectAll("list_select_all");
+    });
+</script>
+<link rel="stylesheet" href="/styles/env_module_product_no_action.css"/>

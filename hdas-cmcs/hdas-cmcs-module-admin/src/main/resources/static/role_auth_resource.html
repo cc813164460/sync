@@ -1,0 +1,45 @@
+<div>
+    <div id="add_btn" class="auth-hidden">
+        <section class="pointer">
+            <table class="btn-table">
+                <tbody>
+                <tr>
+                    <td><span><img src="/img/icon_xinzeng.png"/></span></td>
+                </tr>
+                <tr>
+                    <td><span class="btn-comment">新增列表信息</span></td>
+                </tr>
+                <tr>
+                    <td><span class="btn-name">新增</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</div>
+<div class="table-main-div">
+    <table id="role_auth_resource_table" class="display role-auth-resource-table">
+        <thead>
+        <tr>
+            <th>序号</th>
+            <th>角色</th>
+            <th>板块</th>
+            <th>操作</th>
+            <th>id</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+<link rel="stylesheet" href="/styles/role_auth_resource.css"/>
+<script src="/scripts/role_auth_resource.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        loadRoleAuthResourceTable();
+        initTableStyle();
+        addPage(HTML.ROLE_AUTH_RES_ADD);
+        loadItem(NAV.SETTING, NAV.AUTH_MANAGE, NAV.LIST_PAGE, null, HTML.ROLE_AUTH_RES);
+        clickSetMainHeight();
+        selectAll("list_select_all");
+    });
+</script>
+<link rel="stylesheet" href="/styles/role_auth_resource_no_action.css"/>

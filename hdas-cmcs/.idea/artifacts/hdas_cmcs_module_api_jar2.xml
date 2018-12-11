@@ -1,0 +1,19 @@
+<component name="ArtifactManager">
+  <artifact build-on-make="true" name="hdas-cmcs-module-api:jar2">
+    <output-path>$PROJECT_DIR$/out/artifacts/hdas_cmcs_module_api_jar2</output-path>
+    <root id="root">
+      <element id="archive" name="hdas-cmcs-module-api.jar">
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/hdas-cmcs-module-api/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="module-output" name="hdas-cmcs-module-api" />
+        <element id="module-test-output" name="hdas-cmcs-module-api" />
+      </element>
+      <element id="directory" name="lib">
+        <element id="library" level="project" name="Maven: com.alibaba:fastjson:1.2.29" />
+        <element id="library" level="project" name="Maven: com.google.guava:guava:19.0" />
+        <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
+      </element>
+    </root>
+  </artifact>
+</component>

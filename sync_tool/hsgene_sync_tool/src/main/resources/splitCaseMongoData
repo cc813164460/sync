@@ -1,0 +1,212 @@
+{"mongodb.columns":["_id.$oid","patient.basic.admissionDate","patient.basic.admissionWhy","patient.basic.hospital","patient.basic.name","patient.basic.shortName","patient.basic.gender","patient.basic.maritalStatus","patient.basic.hospitalSection","patient.basic.caseNoInHospital","patient.basic.admissionNo","patient.basic.birthDate","patient.basic.admissionAge","patient.basic.birthAddress","patient.basic.resideAddress","patient.basic.profession","patient.basic.credential.type","patient.basic.credential.no","patient.basic.nationality","patient.basic.mobilePhoneNumber","patient.basic.fcn","patient.basic.fcpn","patient.basic.dischargeDate","patient.basic.firstDiagnoseDate","patient.disease.transfered","patient.disease.transferedTo.site1","patient.disease.transferedTo.site2","patient.disease.details.category","patient.disease.details.name","patient.disease.details.pathology","patient.disease.details.differential","patient.disease.details.pathologyOther","patient.disease.details.phase","patient.disease.details.phaseOfTNM","patient.disease.symptom.firstAdmissionDate","patient.disease.symptom.first.unknown","patient.disease.symptom.first.time","patient.disease.symptom.first.detail","patient.disease.symptom.first.other","patient.disease.symptom.firstTreatment","patient.disease.symptom.current.unknown","patient.disease.symptom.current.time","patient.disease.symptom.current.detail","patient.disease.symptom.current.other","patient.dish.smoke.detail","patient.dish.smoke.years","patient.dish.smoke.measuresOfDay","patient.dish.drink.detail","patient.dish.drink.years","patient.dish.drink.measuresOfDay","patient.dish.history.detail","patient.dish.history.items.category","patient.dish.history.items.names","patient.dish.obsth.fullMonthChildren","patient.dish.obsth.lackMonthChildren","patient.dish.obsth.abortionChildren","patient.dish.obsth.currentChildren","patient.dish.obsth.pregnant","patient.dish.obsth.pregnantChildrenCount","patient.dish.treatmentHistory.operated","patient.dish.treatmentHistory.chemotherapyed","patient.dish.treatmentHistory.radiotherapyed","patient.dish.treatmentHistory.targeted","patient.dish.treatmentHistory.traditionalChineseed","patient.majorDoctor.name","patient.majorDoctor.hospital","patient.majorDoctor.gender","patient.majorDoctor.birthYear","patient.majorDoctor.section","patient.majorDoctor.professionalTitle","inspection.physical._id","inspection.physical.height","inspection.physical.weight","inspection.physical.surfaceArea","inspection.physical.bloodPressure","inspection.physical.time","inspection.physical.score","inspection.image._id","inspection.image.time","inspection.image.name","inspection.image.site.detail","inspection.image.site.lesionInformation","inspection.mirror._id","inspection.mirror.name","inspection.mirror.time","inspection.mirror.siteTumor.detail","inspection.mirror.siteTumor.tumor","inspection.mirror.siteTumor.laterPathology","inspection.mirror.siteTumor.tumorSize","inspection.blood._id","inspection.blood.time","inspection.blood.hematological.wbc","inspection.blood.hematological.rbc","inspection.blood.hematological.ngc","inspection.blood.hematological.bpc","inspection.blood.hematological.hemoglobin","inspection.blood.hematological.lymphocyteCount","inspection.blood.biochemical.k","inspection.blood.biochemical.na","inspection.blood.biochemical.cl","inspection.blood.biochemical.glu","inspection.blood.biochemical.alt","inspection.blood.biochemical.ast","inspection.blood.biochemical.ggt","inspection.blood.biochemical.akp","inspection.blood.biochemical.alb","inspection.blood.biochemical.tbil","inspection.blood.biochemical.bun","inspection.blood.biochemical.cre","inspection.blood.cruor.pt","inspection.blood.cruor.pta","inspection.blood.cruor.ptr","inspection.blood.cruor.inr","inspection.blood.cruor.aptt","inspection.blood.cruor.tt","inspection.blood.cruor.fib","inspection.blood.cruor.ddimer","inspection.blood.cruor.fdp","inspection.tumorSign._id","inspection.tumorSign.time","inspection.tumorSign.cea","inspection.tumorSign.ca125","inspection.tumorSign.ca199","inspection.tumorSign.nse","inspection.tumorSign.ca724","inspection.tumorSign.cyfra211","medical.targetedTherapy._id","medical.targetedTherapy.time","medical.targetedTherapy.name","medical.targetedTherapy.property","medical.targetedTherapy.opportunity","medical.targetedTherapy.medicineName","medical.targetedTherapy.testing","medical.targetedTherapy.takeDrug","medical.targetedTherapy.testingDate","medical.targetedTherapy.sideReaction.medulla","medical.targetedTherapy.sideReaction.gttt","medical.targetedTherapy.sideReaction.kidney","medical.targetedTherapy.sideReaction.neuro","medical.targetedTherapy.sideReaction.hyper","medical.targetedTherapy.sideReaction.infusionReaction","medical.targetedTherapy.sideReaction.electrolyte","medical.targetedTherapy.sideReaction.liverGall","medical.targetedTherapy.sideReaction.angiocarpy","medical.targetedTherapy.sideReaction.breathing","medical.targetedTherapy.sideReaction.endocrine","medical.targetedTherapy.sideReaction.eye","medical.targetedTherapy.sideReaction.skinMuscle","medical.targetedTherapy.sideReaction.other","medical.targetedTherapy.medicine.method.type","medical.targetedTherapy.medicine.method.period","medical.targetedTherapy.medicine.method.mode","medical.targetedTherapy.medicine.method.dose","medical.targetedTherapy.medicine.method.dailyDose","medical.targetedTherapy.medicine.method.monthlyDose","medical.targetedTherapy.medicine.duration","medical.targetedTherapy.medicine.totalDose","medical.targetedTherapy.medicine.cost","medical.targetedTherapy.effect.exist","medical.targetedTherapy.effect.time","medical.targetedTherapy.effect.evaluation.enable","medical.targetedTherapy.effect.evaluation.quantify","medical.targetedTherapy.effect.evaluation.qualitative","medical.targetedTherapy.effect.evaluation.conscious","medical.targetedTherapy.effect.reference.type","medical.targetedTherapy.effect.reference._id","medical.targetedTherapy.effect.current.type","medical.targetedTherapy.effect.current._id","medical.chrt._id","medical.chrt.name","medical.chrt.time","medical.chrt.property","medical.chrt.opportunity","medical.chrt.period","medical.chrt.periodIndex","medical.chrt.delay","medical.chrt.delayedCause","medical.chrt.cost","medical.chrt.treatmentNode","medical.chrt.sideReaction.medulla","medical.chrt.sideReaction.gttt","medical.chrt.sideReaction.kidney","medical.chrt.sideReaction.neuro","medical.chrt.sideReaction.hyper","medical.chrt.sideReaction.infusionReaction","medical.chrt.sideReaction.electrolyte","medical.chrt.sideReaction.liverGall","medical.chrt.sideReaction.angiocarpy","medical.chrt.sideReaction.breathing","medical.chrt.sideReaction.endocrine","medical.chrt.sideReaction.eye","medical.chrt.sideReaction.skinMuscle","medical.chrt.sideReaction.other","medical.chrt.medicinePlan.medicineName","medical.chrt.medicinePlan.madeFrom","medical.chrt.medicinePlan.mode","medical.chrt.medicinePlan.method","medical.chrt.medicinePlan.dose","medical.chrt.medicinePlan.totalDose","medical.chrt.effect.exist","medical.chrt.effect.time","medical.chrt.effect.evaluation.enable","medical.chrt.effect.evaluation.quantify","medical.chrt.effect.evaluation.qualitative","medical.chrt.effect.evaluation.conscious","medical.chrt.effect.reference.type","medical.chrt.effect.reference._id","medical.chrt.effect.current.type","medical.chrt.effect.current._id","medical.radiotherapy._id","medical.radiotherapy.name","medical.radiotherapy.time","medical.radiotherapy.property","medical.radiotherapy.allDose","medical.radiotherapy.treatmentNode","medical.radiotherapy.sideReaction.medulla","medical.radiotherapy.sideReaction.gttt","medical.radiotherapy.sideReaction.kidney","medical.radiotherapy.sideReaction.neuro","medical.radiotherapy.sideReaction.hyper","medical.radiotherapy.sideReaction.infusionReaction","medical.radiotherapy.sideReaction.electrolyte","medical.radiotherapy.sideReaction.liverGall","medical.radiotherapy.sideReaction.angiocarpy","medical.radiotherapy.sideReaction.breathing","medical.radiotherapy.sideReaction.endocrine","medical.radiotherapy.sideReaction.eye","medical.radiotherapy.sideReaction.skinMuscle","medical.radiotherapy.sideReaction.other","medical.radiotherapy.plan._id","medical.radiotherapy.plan.site","medical.radiotherapy.plan.times","medical.radiotherapy.plan.dose","medical.radiotherapy.plan.siteDose","medical.radiotherapy.plan.source.detail","medical.radiotherapy.plan.source.other","medical.radiotherapy.plan.effect.exist","medical.radiotherapy.plan.effect.time","medical.radiotherapy.plan.effect.evaluation.enable","medical.radiotherapy.plan.effect.evaluation.quantify","medical.radiotherapy.plan.effect.evaluation.qualitative","medical.radiotherapy.plan.effect.evaluation.conscious","medical.radiotherapy.plan.effect.reference.type","medical.radiotherapy.plan.effect.reference._id","medical.radiotherapy.plan.effect.current.type","medical.radiotherapy.plan.effect.current._id","medical.endocrineTherapy._id","medical.endocrineTherapy.name","medical.endocrineTherapy.time","medical.endocrineTherapy.property","medical.endocrineTherapy.opportunity","medical.endocrineTherapy.medicine","medical.endocrineTherapy.dose","medical.endocrineTherapy.duration","medical.endocrineTherapy.cost","medical.endocrineTherapy.treatmentNode","medical.endocrineTherapy.effect.exist","medical.endocrineTherapy.effect.time","medical.endocrineTherapy.effect.evaluation.enable","medical.endocrineTherapy.effect.evaluation.quantify","medical.endocrineTherapy.effect.evaluation.qualitative","medical.endocrineTherapy.effect.evaluation.conscious","medical.endocrineTherapy.effect.reference.type","medical.endocrineTherapy.effect.reference.id","medical.endocrineTherapy.effect.current.type","medical.endocrineTherapy.effect.current.id","medical.immunotherapy.id","medical.immunotherapy.name","medical.immunotherapy.time","medical.immunotherapy.duration","medical.immunotherapy.plan","medical.immunotherapy.period","medical.immunotherapy.treatmentNode","medical.immunotherapy.sideReaction.medulla","medical.immunotherapy.sideReaction.gttt","medical.immunotherapy.sideReaction.kidney","medical.immunotherapy.sideReaction.neuro","medical.immunotherapy.sideReaction.hyper","medical.immunotherapy.sideReaction.infusionReaction","medical.immunotherapy.sideReaction.electrolyte","medical.immunotherapy.sideReaction.liverGall","medical.immunotherapy.sideReaction.angiocarpy","medical.immunotherapy.sideReaction.breathing","medical.immunotherapy.sideReaction.endocrine","medical.immunotherapy.sideReaction.eye","medical.immunotherapy.sideReaction.skinMuscle","medical.immunotherapy.sideReaction.other","medical.immunotherapy.effect.exist","medical.immunotherapy.effect.time","medical.immunotherapy.effect.evaluation.enable","medical.immunotherapy.effect.evaluation.quantify","medical.immunotherapy.effect.evaluation.qualitative","medical.immunotherapy.effect.evaluation.conscious","medical.immunotherapy.effect.reference.type","medical.immunotherapy.effect.reference._id","medical.immunotherapy.effect.current.type","medical.immunotherapy.effect.current._id","surgical._id","surgical.operationTime","surgical.operationProperty","surgical.operationMode","surgical.operationName","surgical.pTNM","surgical.detail","surgical.pathology.cutClean","surgical.pathology.tumorSize","surgical.pathology.lnm.site","surgical.pathology.lnm.other","surgical.pathology.lnm.transfer","surgical.pathology.lnm.cut","surgical.pathology.otherLNMSite.detail","surgical.pathology.otherLNMSite.other","surgical.pathology.imtryIndex","surgical.pathology.sample","surgical.pathology.diagnosis.category","surgical.pathology.diagnosis.name","surgical.pathology.diagnosis.pathology","surgical.pathology.from","surgical.pathology.otherFrom","diagnosis.imtryIndex","diagnosis.pathology.primary","diagnosis.pathology.transfer","diagnosis.isDeath","diagnosis.deathTime","diagnosis.deathPlace","diagnosis.deathReason","diagnosis.os","moleIns._id","moleIns.projectName","moleIns.packageName","moleIns.time","moleIns.agency","moleIns.purpose","moleIns.cost","moleIns.deliverTime","moleIns.orderNo","moleIns.treatmentNode","moleIns.contentResult._id","moleIns.contentResult.geneticLocus","moleIns.contentResult.result.property","moleIns.contentResult.result.other","title","images"],
+"mongo.data":{
+                 "_id.$oid" : "56ab57af0cf2dd99c3575c92",
+                 "patient" : {
+                     "disease" : {
+                         "transferedTo" : [
+                             [
+                                 "3",
+                                 "42"
+                             ]
+                         ],
+                         "transfered" : "1",
+                         "symptom" : {
+                             "firstAdmissionDate" : "2015-12-14",
+                             "current" : {
+                                 "other" : "直肠癌肝转移术后1月余，化疗后2周",
+                                 "time" : "",
+                                 "detail" : [
+                                     "-1"
+                                 ],
+                                 "unknown" : false
+                             },
+                             "first" : {
+                                 "time" : "",
+                                 "unknown" : false
+                             }
+                         },
+                         "details" : [
+                             {
+                                 "name" : "4c4de75b-8dcf-11e5-99f6-3c970ecb1396",
+                                 "category" : "5ae9036c-8dcd-11e5-99f6-3c970ecb1396",
+                                 "pathology":"c6fb1798-8dcf-11e5-99f6-3c970ecb1396"
+                             },
+                             {
+                                                 "name" : "4c4de75b-8dcf-11e5-99f6-3c970ecb1396",
+                                                 "category" : "5ae9036c-8dcd-11e5-99f6-3c970ecb1396"
+                             }
+                         ]
+                     },
+                     "basic" : {
+                         "gender" : "1",
+                         "hospital" : "2cd8f0b805554db2ac24826b46972d33",
+                         "resideAddress" : [
+                             "926",
+                             "927",
+                             "934"
+                         ],
+                         "admissionDate" : "2015-12-14",
+                         "nationality" : "0",
+                         "maritalStatus" : "1",
+                         "birthAddress" : [
+                             "926",
+                             "927",
+                             "934"
+                         ],
+                         "admissionAge" : 65,
+                         "birthDate" : "",
+                         "profession" : [
+                             "",
+                             ""
+                         ],
+                         "dischargeDate" : "2015-12-16",
+                         "hospitalSection" : "2"
+                     },
+                     "dish" : {}
+                 },
+                 "diagnosis" : {
+                 "imtryIndex" : "肿瘤细胞ER(-),PR(-),c-erbb-2（2+），E-CAD(+）,P120(膜+），GCDFP-15(+),CK8/18(+),Galectin-3(灶性+），CK7(+),CK20(-),VILLIN(-),CK5/6(小部分+），ki-67阳性指数约50%",
+                     "isDeath" : "0",
+                     "pathology" : {
+                         "primary" : "左肺",
+                         "transfer" : "骨"
+                     }
+                 },
+                 "title" : "腹部肿瘤--大肠癌(结直肠癌)",
+                 "images" : [
+                     "DCW-20180422-000a-04-22-00-12-42.jpg",
+                     "DCW-20180422-000a-04-22-00-12-49.jpg"
+                 ],
+                 "inspection" : {
+                     "tumorSign" : [
+                         {
+                             "_id" : "23c7236f9e5d4b238d8b68b3bd214c5a",
+                             "nse" : "31.3700008392334",
+                             "time" : "2018-02-09"
+                         }
+                     ],
+                     "image" : [
+                         {
+                             "time" : "2015-10-28",
+                             "name" : "nmr",
+                             "site" : [
+                                 {
+                                     "detail" : [
+                                         "-2"
+                                     ]
+                                 }
+                             ]
+                         },
+                         {
+                             "time" : "2015-12-15",
+                             "name" : "ct",
+                             "site" : [
+                                 {
+                                     "detail" : [
+                                         "-2"
+                                     ]
+                                 }
+                             ]
+                         },
+                         {
+                             "time" : "2015-12-15",
+                             "name" : "nmr",
+                             "site" : [
+                                 {
+                                     "detail" : [
+                                         "-2"
+                                     ]
+                                 }
+                             ]
+                         }
+                     ],
+                     "blood" : [
+                         {
+                             "biochemical" : {},
+                             "time" : "",
+                             "hematological" : {},
+                             "cruor" : {}
+                         }
+                     ]
+                 },
+                 "medical" : {
+                     "chrt" : [
+                         {
+                             "_id" : "23c7236f9e5d4b238d8b68b3bd214c5a",
+                             "periodIndex" : 6,
+                             "medicinePlan" : [
+                                 {
+                                     "medicineName" : "429b5c06d54c421989f6807ff8c2e635",
+                                     "totalDose" : 900.0,
+                                     "mode" : "D1null"
+                                 },
+                                 {
+                                     "medicineName" : "d84068327ac64a90b2e13a936014275b",
+                                     "totalDose" : 150.0,
+                                     "mode" : "D1null"
+                                 },
+                                 {
+                                     "medicineName" : "ef98bba306434651befde1a7a0d37463",
+                                     "totalDose" : 9500.0,
+                                     "mode" : "D1其他"
+                                 },
+                                 {
+                                     "medicineName" : "e8f6f343680740ef87e846f4f8e6b65e",
+                                     "totalDose" : 400.0,
+                                     "mode" : "D1null"
+                                 }
+                             ],
+                             "time" : "2015-08-26",
+                             "opportunity" : [
+                                 null
+                             ],
+                             "effect" : {
+                                 "exist" : false
+                             },
+                             "sideReaction" : {}
+                         }
+                     ]
+                 },
+                 "surgical" : [
+                     {
+                         "operationProperty" : "",
+                         "pathology" : {
+                             "imtryIndex" : "",
+                             "from" : [
+                                 "0"
+                             ],
+                             "sample" : "1",
+                             "diagnosis" : [
+                                 {
+                                     "name" : "4c4de75b-8dcf-11e5-99f6-3c970ecb1396",
+                                     "category" : "5ae9036c-8dcd-11e5-99f6-3c970ecb1396"
+                                 }
+                             ],
+                             "tumorSize" : 4.0,
+                             "otherLNMSite" : {
+                                 "other" : "外膜外纤维、脂肪组织",
+                                 "detail" : [
+                                     "-1"
+                                 ]
+                             },
+                             "lnm" : {}
+                         },
+                         "operationTime" : "2015-07-31"
+                     },
+                     {
+                         "operationProperty" : "",
+                         "pathology" : {
+                             "imtryIndex" : "",
+                             "sample" : "1",
+                             "from" : [
+                                 "1"
+                             ],
+                             "lnm" : {},
+                             "tumorSize" : 3.0
+                         },
+                         "operationTime" : "2015-11-05"
+                     }
+                 ],
+                 "caseNo" : "DCW-2015-45684"
+             }
+}

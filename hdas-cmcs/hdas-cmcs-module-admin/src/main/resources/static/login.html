@@ -1,0 +1,49 @@
+<!Doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta content="always" name="referrer"/>
+    <link rel="shortcut icon" href="/img/logo.png"/>
+    <title>数据配置中心</title>
+    <script src="/scripts/jquery/jquery.js"></script>
+    <script src="/scripts/login.js"></script>
+    <script src="/scripts/common.js"></script>
+    <script src="/scripts/constant.js"></script>
+    <link rel="stylesheet" href="/styles/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/styles/bootstrap/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="/styles/login.css"/>
+    <link rel="stylesheet" href="/styles/common.css"/>
+</head>
+<body>
+<div>
+    <div id="login_left" class="login-left">
+    </div>
+    <div id="login_right" class="login-right">
+        <div class="top-title"><span>登录</span>数据配置中心</div>
+        <div class="login-frame">
+            <div><span id="info" class="info"></span></div>
+            <div class="username-div">
+                <img src="/img/icon_peo.png"></img>
+                <input type="text" autocomplete="off" autocorrect="off" placeholder="请输入您的登录账号" id="username"/>
+            </div>
+            <div><span id="username_info" class="info"></span></div>
+            <div class="password-div">
+                <img src="/img/icon_mima.png"></img>
+                <input type="password" autocomplete="off" autocorrect="off" placeholder="请输入您的登录密码" id="password"/>
+            </div>
+            <div><span id="password_info" class="info"></span></div>
+            <div class="login-div">
+                <span id="login" class="pointer">登录</span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" th:inline="javascript">
+    $(document).ready(function () {
+        allLogin();
+    });
+</script>
+</html>

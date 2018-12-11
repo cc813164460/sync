@@ -1,0 +1,832 @@
+.info {
+    display: block;
+    color: #F83B3B;
+    height: 1.5em;
+    font-family: PingFang-SC-Regula;
+}
+
+.new_userinfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+}
+
+.panel-body {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 15px;
+}
+
+.panel-body .new_userinfo:nth-child(1) p:first-of-type, .panel-body .new_userinfo:nth-child(2) p:first-of-type, .panel-body .new_userinfo:nth-child(3) p:first-of-type {
+    width: 55px;
+}
+
+.panel-body .new_userinfo p:first-of-type {
+    width: 85px;
+}
+
+.panel-body .new_userinfo p:last-of-type {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.btn-comment {
+    color: #777777;
+}
+
+.btn-name {
+    font-size: 1.5em;
+    color: #000000;
+    font-weight: bold;
+}
+
+#left_nav {
+    width: 16%;
+    height: 100%;
+    background: #282D34;
+    float: left;
+}
+
+#top_nav {
+    position: relative;
+    float: left;
+    background: #FFFFFF;
+    box-shadow: 0 11px 12px 0 rgba(86, 134, 232, 0.15);
+    width: 100%;
+}
+
+.top-btn, #add_btn, #delete_btn, #release_btn, #export_btn, #import_btn, #gray_delete_btn, #gray_release_btn, #gray_import_btn, #gray_export_btn {
+    width: 15%;
+    float: left;
+    background: #FFFFFF;
+    box-shadow: 0 6px 12px 0 rgba(86, 134, 232, 0.15);
+    border-radius: 8px;
+    margin-left: 1%;
+    margin-top: 2%;
+}
+
+.btn-table {
+    width: 100%;
+}
+
+.btn-table > tbody > tr:nth-child(1), .btn-table > tbody > tr:nth-child(3) {
+    line-height: 4em;
+}
+
+.btn-table > tbody > tr:nth-child(2) {
+    line-height: 2em;
+}
+
+.btn-table > tbody > tr > td > span {
+    margin-left: 5%;
+}
+
+#top_nav > ul {
+    margin: 0;
+}
+
+#top_nav > ul > li {
+    float: left;
+}
+
+.dataTables_filter > label {
+    width: 9%;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+.dataTables_filter > label > input {
+    width: 100%;
+    border: none;
+    line-height: 2em;
+    font-weight: normal;
+    margin: 0 !important;
+}
+
+.dataTables_filter {
+    padding-bottom: 2% !important;
+    padding-top: 2% !important;
+    text-align: center !important;
+    float: none !important;
+}
+
+.left-query-close, .left-query-search {
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 1%;
+}
+
+.query-close, .query-search {
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 1%;
+}
+
+.table-main-div {
+    position: relative;
+    float: left;
+    background: #FFFFFF;
+    width: 98%;
+    margin-top: 1%;
+    margin-left: 1%;
+}
+
+.main-div {
+    position: relative;
+    float: left;
+    background: #FFFFFF;
+    box-shadow: 0 11px 12px 0 rgba(86, 134, 232, 0.15);
+    width: 98%;
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-bottom: 2%;
+}
+
+.refresh-to {
+    margin-left: 1em;
+    border: 1px solid #eeeeee;
+    width: 4em;
+    display: inline-block;
+    height: 2.5em;
+    line-height: 2.5em;
+    border-radius: 0.3em;
+    text-align: center;
+}
+
+.dataTables_paginate > span > a, .dataTables_paginate > a {
+    height: 2.5em;
+    width: 2.5em;
+}
+
+.dataTables_paginate {
+    margin-top: 2em;
+}
+
+.dataTables_paginate a > img {
+    height: 2.5em;
+    width: 2.5em;
+}
+
+.dataTable > thead > tr > th {
+    font-size: 1em;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.dataTable > tbody > tr > td {
+    /* display: inline-block; */
+    border-top: none !important;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+td.td-ellipsis {
+    width: 10em;
+    line-height: 2em;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -moz-text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+}
+
+#release_info_table {
+    background-color: #F9F9F9;
+}
+
+#release_info_table > tbody > tr > th {
+    text-align: center;
+    width: 156px;
+}
+
+#release_info_table > tbody > tr > td {
+    width: 156px;
+}
+
+#release_info_table > tbody > tr > td > div {
+    width: 156px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    -moz-text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+}
+
+td.key-value-ellipsis {
+    width: 10em;
+    line-height: 2em;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -moz-text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+}
+
+.public-main-table > thead > tr, .public-main-table-no-action > thead > tr, .public-gray-table > thead > tr, .public-gray-table-no-action > thead > tr, .instance-main-table > thead > tr, .instance-main-table-no-action > thead > tr, .instance-gray-table > thead > tr, .instance-gray-table-no-action > thead > tr, .history-released-table > thead > tr, .history-released-table-no-action > thead > tr, .history-unreleased-table > thead > tr, .history-unreleased-table-no-action > thead > tr {
+    display: flex;
+}
+
+.public-main-table > tbody > tr, .public-main-table-no-action > tbody > tr, .public-gray-table > tbody > tr, .public-gray-table-no-action > tbody > tr, .instance-main-table > tbody > tr,  .instance-main-table-no-action > tbody > tr, .instance-gray-table > tbody > tr, .instance-gray-table-no-action > tbody > tr, .history-released-table > tbody > tr, .history-released-table-no-action > tbody > tr, .history-unreleased-table > tbody > tr, .history-unreleased-table-no-action > tbody > tr {
+    display: flex;
+    align-items: center;
+}
+
+.info-show {
+    display: inline-block;
+}
+
+span.span-ellipsis {
+    width: 10em;
+    white-space: nowrap;
+    height: 1.4em;
+    line-height: 1.8em;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -moz-text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+}
+
+.btm-page-info {
+    color: #D7D7D7;
+}
+
+.dataTable > tbody > tr:hover {
+    background-color: #f9f9f9;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    color: #000000;
+}
+
+::-moz-placeholder {
+    color: #D7D7D7;
+}
+
+::-webkit-input-placeholder {
+    color: #D7D7D7;
+}
+
+:-ms-input-placeholder {
+    color: #D7D7D7
+}
+
+.to-page {
+    width: 5em;
+    height: 2.5em;
+    border: 1px solid #eeeeee;
+}
+
+.paginate-sure {
+    cursor: pointer;
+    margin-left: 1em;
+    border: 1px solid #eeeeee;
+    width: 4em;
+    display: inline-block;
+    height: 2.5em;
+    line-height: 2.5em;
+    border-radius: 0.3em;
+    text-align: center;
+}
+
+.paginate-sure:hover {
+    color: #ffffff;
+    background: #5686E8;
+}
+
+.dataTable > thead > tr > th, .dataTable > tbody > tr {
+    text-align: center;
+}
+
+.dataTable > thead > tr > th {
+    border-bottom: 1px solid #D7D7D7;
+}
+
+.dataTable {
+    border-bottom: none !important;
+    background: #FFFFFF;
+    box-shadow: 0 11px 12px 0 rgba(86, 134, 232, 0.15);
+    border-radius: 1em;
+}
+
+.action-btn {
+    border: 1px solid #5686E8;
+    border-radius: 1em;
+    display: inline-block;
+    width: 4em;
+    line-height: 2em;
+    height: 2em;
+    color: #777777;
+    cursor: pointer;
+    margin-left: 1em;
+}
+
+.add-gray-action-btn {
+    border: 1px solid #5686E8;
+    border-radius: 1em;
+    display: inline-block;
+    width: 6em;
+    line-height: 2em;
+    height: 2em;
+    color: #777777;
+    cursor: pointer;
+}
+
+.version-btn {
+    border: 1px solid #EEEEEE;
+    border-radius: 1em;
+    display: inline-block;
+    width: 5em;
+    line-height: 2em;
+    height: 2em;
+    color: #777777;
+    cursor: pointer;
+    text-align: center;
+}
+
+.version-btn-active, .version-btn:hover {
+    background-color: #5686E8;
+    border-radius: 1em;
+    display: inline-block;
+    width: 5em;
+    line-height: 2em;
+    height: 2em;
+    color: #FFFFFF;
+    cursor: pointer;
+    text-align: center;
+}
+
+.copy-config-div {
+    display: inline-block;
+    text-align: center;
+    background: #5686E8;
+    border-radius: 0.8em;
+    color: #ffffff;
+    width: 5em;
+    height: 2em;
+    line-height: 2em;
+    box-shadow: 0 0.1em 0.1em 0 #5686E8;
+    cursor: pointer;
+    margin-right: 1em;
+}
+
+.copy-env-div {
+    margin-left: 10%;
+    margin-top: 2em;
+}
+
+.view-all-div {
+    display: inline-block;
+    text-align: center;
+    background: #5686E8;
+    border-radius: 0.8em;
+    color: #ffffff;
+    width: 5em;
+    height: 2em;
+    line-height: 2em;
+    box-shadow: 0 0.1em 0.1em 0 #5686E8;
+    cursor: pointer;
+}
+
+.view-all-textarea {
+    width: 95%;
+    height: 40em;
+}
+
+.save-btn {
+    background: #5686E8;
+    border-radius: 0.8em;
+    color: #ffffff;
+    display: inline-block;
+    width: 4em;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    box-shadow: 0 0.1em 0.1em 0 #5686E8;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background: #D7D7D7;
+    border-radius: 0.8em;
+    color: #ffffff;
+    display: inline-block;
+    width: 4em;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    box-shadow: 0 0.1em 0.1em 0 #D7D7D7;
+    cursor: pointer;
+}
+
+.left-query-btn {
+    background: #5686E8;
+    border-radius: 0.8em;
+    color: #ffffff;
+    display: inline-block;
+    width: 4em;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    box-shadow: 0 0.1em 0.1em 0 #5686E8;
+    cursor: pointer;
+}
+
+.left-cancel-btn {
+    background: #D7D7D7;
+    border-radius: 0.8em;
+    color: #ffffff;
+    display: inline-block;
+    width: 4em;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    box-shadow: 0 0.1em 0.1em 0 #D7D7D7;
+    cursor: pointer;
+}
+
+.save-btn-small {
+    background: #5686E8;
+    border-radius: 0.8em;
+    color: #ffffff;
+    display: inline-block;
+    width: 4em;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    box-shadow: 0 0.1em 0.1em 0 #5686E8;
+    cursor: pointer;
+}
+
+.cancel-btn-small {
+    background: #D7D7D7;
+    border-radius: 0.8em;
+    color: #ffffff;
+    display: inline-block;
+    width: 4em;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    box-shadow: 0 0.1em 0.1em 0 #D7D7D7;
+    cursor: pointer;
+}
+
+.release-btn-small, .offline-btn-small, .edit-btn-small, .save-btn-small, .del-btn-small {
+    margin-left: 2em;
+}
+
+.edit-btn-small {
+    background: #46cb71;
+    border-radius: 0.8em;
+    color: #ffffff;
+    display: inline-block;
+    width: 4em;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    box-shadow: 0 0.1em 0.1em 0 #D7D7D7;
+    cursor: pointer;
+}
+
+.release-btn-small {
+    background: #f5b354;
+    border-radius: 0.8em;
+    color: #ffffff;
+    display: inline-block;
+    width: 4em;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    box-shadow: 0 0.1em 0.1em 0 #D7D7D7;
+    cursor: pointer;
+}
+
+.offline-btn-small {
+    background: #ed5656;
+    border-radius: 0.8em;
+    color: #ffffff;
+    display: inline-block;
+    width: 4em;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    box-shadow: 0 0.1em 0.1em 0 #D7D7D7;
+    cursor: pointer;
+}
+
+.del-btn-small {
+    background: #D7D7D7;
+    border-radius: 0.8em;
+    color: #ffffff;
+    display: inline-block;
+    width: 4em;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    box-shadow: 0 0.1em 0.1em 0 #D7D7D7;
+    cursor: pointer;
+}
+
+div {
+    font-family: "Microsoft YaHei UI";
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #81a6f303;
+}
+
+.select-div {
+    display: inline-block;
+    width: 20%;
+}
+
+.item-div {
+    margin-left: 10%;
+    margin-top: 2%;
+}
+
+.auth-table-title {
+    margin-left: 10%;
+    margin-top: 2%;
+}
+
+.left-query-btn-div {
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 1%;;
+}
+
+.btm-btn-div {
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 1%;;
+}
+
+.btm-btn-div div span:first-of-type {
+    margin-right: 10px;
+}
+
+.h4-label {
+    font-weight: 600
+}
+
+.auth-hidden {
+    display: none;
+}
+
+.sys-hidden {
+    display: none;
+}
+
+.public-hidden {
+    display: none;
+}
+
+.query-hidden {
+    display: none !important;
+}
+
+.main-index {
+    background-image: url(../img/login_bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    margin-left: 1%;
+    margin-top: 6em;
+    width: 82%;
+    height: 90%;
+}
+
+.tab-instance {
+    display: inline-block;
+    margin-top: 1%;
+}
+
+.tab-instance > li {
+    border: 1px solid #EEEEEE;
+    border-left: none;
+    list-style: none;
+    float: left;
+    display: inline-block;
+    width: 6em;
+    line-height: 2em;
+    height: 2em;
+    color: #777777;
+    cursor: pointer;
+    text-align: center;
+}
+
+.tab-li-active, .tab-menu > li:hover {
+    border: none !important;
+    list-style: none;
+    float: left;
+    background-color: #5686E8;
+    display: inline-block;
+    width: 6em;
+    line-height: 2em;
+    height: 2em;
+    color: #FFFFFF !important;
+    cursor: pointer;
+    text-align: center;
+}
+
+.top-left-border {
+    border-top-left-radius: 0.5em;
+}
+
+.top-right-border {
+    border-top-right-radius: 0.5em;
+}
+
+.instance-input {
+    width: 45%;
+    height: 2em;
+    line-height: 2em;
+    background-color: #F9F9F9;
+    border: 1px solid #EEEEEE;
+    border-radius: 0.5em;
+}
+
+.instance-input-div {
+    margin-top: 1%;
+}
+
+.instance-div {
+    text-align: center;
+    position: relative;
+    float: left;
+    background: #FFFFFF;
+    width: 100%;
+    height: 80%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    overflow: hidden;
+}
+
+.instance-textarea {
+    width: 89.5%;
+    height: 15em;
+    background-color: #F9F9F9;
+    border: 1px solid #EEEEEE;
+    border-radius: 0.5em;
+}
+
+.config-list {
+    width: 89.5%;
+    background-color: #F9F9F9;
+    height: 45em;
+    border: 1px solid #EEEEEE;
+    padding: 2em;
+    overflow: scroll;
+}
+
+.config-table {
+    width: 100%;
+}
+
+.app-list {
+    width: 89.5%;
+    background-color: #F9F9F9;
+    height: 15em;
+    border: 1px solid #EEEEEE;
+    padding: 2em;
+    overflow: scroll;
+}
+
+.app-checkbox-div {
+    display: inline-block;
+    width: 20%;
+}
+
+.product-env-table {
+    border-color: #eeeeee;
+    text-align: center;
+    width: 89.5%;
+    line-height: 2em;
+}
+
+.product-module-table > tbody > tr > th {
+    text-align: center;
+}
+
+.left-query-div {
+    margin-left: 5%;
+    margin-bottom: 1%;
+    margin-right: 5%;
+}
+
+.left-query-span {
+    color: #868E96;
+}
+
+.left-query-input {
+    width: 70%;
+    background: #F9F9F9;
+    border: 1px solid #EEEEEE;
+    border-radius: 0.5em;
+    height: 2.5em;
+    line-height: 2.5em;
+    display: inline-block;
+}
+
+.history-query-div {
+    margin-top: 1%;
+    margin-left: 1%;
+    width: 15%;
+    display: inline-block;
+}
+
+.history-query-div-big {
+    margin-top: 1%;
+    margin-left: 1%;
+    width: 34%;
+    display: inline-block;
+}
+
+.history-query-select {
+    width: 60%;
+    background: #F9F9F9;
+    border: 1px solid #EEEEEE;
+    border-radius: 0.5em;
+    height: 2.5em;
+    line-height: 2.5em;
+    display: inline-block;
+}
+
+.history-query-select-time {
+    width: 35%;
+    background: #F9F9F9;
+    border: 1px solid #EEEEEE;
+    border-radius: 0.5em;
+    height: 2.5em;
+    line-height: 2.5em;
+    display: inline-block;
+}
+
+.switch-div {
+    margin-left: 1em;
+    margin-top: 1em;
+}
+
+.select-all-checkbox {
+    position: relative;
+    top: 2px;
+}
+
+.over-hidden {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.over-td-width {
+    width: 20%;
+}
+
+#left_nav::-webkit-scrollbar, #right_nav::-webkit-scrollbar {
+    display: none;
+}
+
+#left_nav, #right_nav {
+    overflow-y: auto;
+    height: 100%;
+}
+
+.dataTables_wrapper .dataTables_paginate .next, .dataTables_wrapper .dataTables_paginate .previous {
+    width: 5.5em;
+}
+
+.class-input {
+    margin-right: 5em;
+    display: inline-block;
+}
+
+.app-h4 {
+    display: inline-block;
+}
+
+.no-margin {
+    margin: 0 !important;
+}

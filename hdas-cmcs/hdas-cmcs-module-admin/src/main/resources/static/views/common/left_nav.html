@@ -1,0 +1,92 @@
+<div class="nav-header">
+    <img src="/img/bg_logo.png"/>
+    <span>配置中心</span>
+</div>
+<section class="panel">
+    <header class="panel-heading">
+        登录信息
+    </header>
+    <div class="panel-body">
+        <div class="new_userinfo">
+            <p>
+                <img src="/img/home_xinxi_my.png"/>
+                <span>账号:</span>
+            </p>
+            <p id="left_account"></p>
+        </div>
+        <div class="new_userinfo">
+            <p>
+                <img src="/img/home_xinxi_jiaose.png"/>
+                <span>&nbsp;角色:</span>
+            </p>
+            <p id="left_role"></p>
+        </div>
+        <div class="new_userinfo">
+            <p>
+                <img src="/img/home_xinxi_email.png"/>
+                <span>邮箱:</span>
+            </p>
+            <p id="left_email"></p>
+        </div>
+        <div class="new_userinfo">
+            <p>
+                <img src="/img/home_xinxi_time.png"/>
+                <span>最后登录:</span>
+            </p>
+            <p id="left_lastDateTime"></p>
+        </div>
+    </div>
+</section>
+<div class="list">
+    <div class="left-query-div" id="left_product_div">
+        <div class="left-query-close" id="left_cancel"><img src="/img/icon_guanbi.png"></div>
+        <input id="left_query_input" class="left-query-input" placeholder=" 请输入项目或模块或环境名称"></input>
+        <div class="left-query-search" id="left_query"><img src="/img/icon_sousuo.png"></div>
+    </div>
+</div>
+<ul class="list-ul" id="left_ul">
+    <li class="auth-hidden" id="public_config_li">
+        <div class="outer-li">
+            <img src="/img/home_gn_pz.png" class="front-img"/>
+            <span class="img-span query-text" id="public_config" style="position: relative;left: -4px;">公共配置</span>
+        </div>
+    </li>
+    <li class="auth-hidden" id="history_config_li">
+        <div class="outer-li"><img src="/img/home_gn_lsjl.png" class="front-img"/><span
+                class="img-span query-text" id="history_config">历史记录管理</span><!--<img src="/img/kit_xiala.png"
+                class="back-img
+                "/>--></div>
+        <!--<ul class="ul-no-active list-ul">
+            &lt;!&ndash;<li id="history_main" class="auth-hidden"><span class="inner-li query-text static-inner-lig">主版本</span></li>&ndash;&gt;
+            &lt;!&ndash;<li id="history_gray" class="auth-hidden sys-hidden"><span class="inner-li query-text static-inner-lig">灰度版本</span></li>&ndash;&gt;
+        </ul>-->
+    </li>
+    <li class="auth-hidden">
+        <div class="outer-li"><img src="/img/home_gn_sz.png" class="front-img"/><span
+                class="img-span query-text">设置</span><img
+                src="/img/kit_xiala.png" class="back-img "/></div>
+        <ul class="ul-no-active list-ul">
+            <li id="area_manage" class="auth-hidden"><span class="inner-li query-text static-inner-lig">分布管理</span></li>
+            <li id="organ_manage" class="auth-hidden"><span class="inner-li query-text static-inner-lig">部门管理</span>
+            </li>
+            <li id="role_manage" class="auth-hidden"><span class="inner-li query-text static-inner-lig">角色管理</span></li>
+            <li id="user_manage" class="auth-hidden"><span class="inner-li query-text static-inner-lig">人员管理</span></li>
+            <li id="product_manage" class="auth-hidden"><span class="inner-li query-text static-inner-lig">项目管理</span>
+            </li>
+            <li id="module_manage" class="auth-hidden"><span class="inner-li query-text static-inner-lig">模块管理</span>
+            </li>
+            <li id="env_manage" class="auth-hidden"><span class="inner-li query-text static-inner-lig">环境管理</span></li>
+            <li id="auth_manage" class="auth-hidden"><span class="inner-li query-text static-inner-lig">使用权限管理</span>
+            </li>
+        </ul>
+    </li>
+</ul>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        loadLoginInfo();
+        getUserAuthResourceSetLeft();
+        leftQuery();
+        leftCancel();
+    });
+</script>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hsgene.hdas.cmcs.modules.admin.mapper.HistoryManageMapper">
+    <sql id="historyOutList">
+        id,version_num,apply,`key`,value,app_num,comment,release_status,last_update_by,last_update_time,property,is_delete,
+        class_id,update_time
+    </sql>
+    <sql id="historyInList">
+    i.id,ifnull(version_num,"") as version_num,ifnull(group_concat(concat(temp.product_name,"-",temp.module_name,"-",temp.env_name)),"")
+    as apply,ifnull(`key`,"") as `key`,ifnull(value,"") as value,ifnull(app_num,"") as app_num,ifnull(comment,"")
+    as comment,case release_status when 0 then '未发布' else '已发布' end as release_status,ifnull(u.user_name,"")
+    as last_update_by,ifnull(last_update_time,"") as last_update_time,case is_public when 0 then '私有' else '公有' end
+    as property,i.version_id,group_concat(temp.product_id,"#") as product_ids,i.is_delete as is_delete,i.class_id as
+    class_id,ifnull(update_time,"") as update_time
+    </sql>
+    <resultMap id="historyMap" type="java.util.Map">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="version_num" property="version_num" jdbcType="VARCHAR"/>
+        <result column="apply" property="apply" jdbcType="VARCHAR"/>
+        <result column="key" property="key" jdbcType="VARCHAR"/>
+        <result column="value" property="value" jdbcType="VARCHAR"/>
+        <result column="app_num" property="app_num" jdbcType="INTEGER"/>
+        <result column="comment" property="comment" jdbcType="VARCHAR"/>
+        <result column="release_status" property="release_status" jdbcType="INTEGER"/>
+        <result column="last_update_by" property="last_update_by" jdbcType="VARCHAR"/>
+        <result column="last_update_time" property="last_update_time" jdbcType="VARCHAR"/>
+        <result column="update_time" property="update_time" jdbcType="VARCHAR"/>
+    </resultMap>
+    <select id="getHistory" resultMap="historyMap">
+        select
+        <include refid="historyOutList"/>
+        from ( select
+        <include refid="historyInList"/>
+        from item i left join (select ins.id,p.name as product_name,m.name as module_name,e.name as env_name,p.id as
+        product_id from instance ins,resource r,product p,module m,env e where r.is_delete = 0 and ins.resource_id =
+        r.id and r.product_id = p.id and r.module_id = m.id and r.env_id = e.id) temp on i.instance_id = temp.id left
+        join (select group_concat(a.hostname) as app_num,item_id from item_app ia,app a where ia.is_delete != 1 and
+        ia.app_id = a.id group by ia.item_id) temp1 on i.id = temp1.item_id left join user u on i.last_update_by = u.id
+        where i.is_delete != 1 and is_public = 0
+        <if test="releaseStatus != null">
+            <if test="releaseStatus == 1">
+                and i.release_status != 0
+            </if>
+            <if test="releaseStatus == 0">
+                and i.release_status = 0
+            </if>
+        </if>
+        group by i.id union select
+        <include refid="historyInList"/>
+        from item i left join (select group_concat(a.hostname) as app_num,item_id from item_app ia,app a where
+        ia.is_delete != 1 and ia.app_id = a.id group by ia.item_id) temp1 on i.id = temp1.item_id left join user u on
+        i.last_update_by = u.id left join (select ir.item_id,p.name as product_name,m.name as module_name,e.name as
+        env_name,p.id as product_id from item_resource ir,resource r,product p,module m,env e where r.is_delete = 0 and
+        ir.resource_id = r.id and r.product_id = p.id and r.module_id = m.id and r.env_id = e.id) temp on i.id =
+        temp.item_id where i.is_delete != 1 and is_public = 1
+        <if test="releaseStatus != null">
+            <if test="releaseStatus == 1">
+                and i.release_status != 0
+            </if>
+            <if test="releaseStatus == 0">
+                and i.release_status = 0
+            </if>
+        </if>
+        group by i.id) history where update_time > DATE_SUB(CURDATE(), INTERVAL 3 MONTH)
+        <if test="versionId != null">
+            and version_id = #{versionId,jdbcType=BIGINT}
+        </if>
+        order by update_time desc,is_delete
+    </select>
+    <select id="getHistoryByCondition" resultMap="historyMap">
+        select
+        <include refid="historyOutList"/>
+        from ( select
+        <include refid="historyInList"/>
+        from item i left join (select ins.id,p.name as product_name,m.name as module_name,e.name as env_name,p.id as
+        product_id from instance ins,resource r,product p,module m,env e where r.is_delete = 0 and ins.resource_id =
+        r.id and r.product_id = p.id and r.module_id = m.id and r.env_id = e.id) temp on i.instance_id = temp.id left
+        join (select group_concat(a.hostname) as app_num,item_id from item_app ia,app a where ia.is_delete != 1 and
+        ia.app_id = a.id group by ia.item_id) temp1 on i.id = temp1.item_id left join user u on i.last_update_by = u.id
+        where i.is_delete != 1 and is_public = 0
+        <if test="userId != null">
+            and i.last_update_by = #{userId,jdbcType=BIGINT}
+        </if>
+        <if test="releaseStatus != null">
+            <if test="releaseStatus == 1">
+                and i.release_status != 0
+            </if>
+            <if test="releaseStatus == 0">
+                and i.release_status = 0
+            </if>
+        </if>
+        group by i.id union select
+        <include refid="historyInList"/>
+        from item i left join (select group_concat(a.hostname) as app_num,item_id from item_app ia,app a where
+        ia.is_delete != 1 and ia.app_id = a.id group by ia.item_id) temp1 on i.id = temp1.item_id left join user u on
+        i.last_update_by = u.id left join (select ir.item_id,p.name as product_name,m.name as module_name,e.name as
+        env_name,p.id as product_id from item_resource ir,resource r,product p,module m,env e where r.is_delete = 0 and
+        ir.resource_id = r.id and r.product_id = p.id and r.module_id = m.id and r.env_id = e.id) temp on i.id =
+        temp.item_id where i.is_delete != 1 and is_public = 1
+        <if test="userId != null">
+            and i.last_update_by = #{userId,jdbcType=BIGINT}
+        </if>
+        <if test="releaseStatus != null">
+            <if test="releaseStatus == 1">
+                and i.release_status != 0
+            </if>
+            <if test="releaseStatus == 0">
+                and i.release_status = 0
+            </if>
+        </if>
+        group by i.id) history where update_time > DATE_SUB(CURDATE(), INTERVAL 3 MONTH)
+        <if test="versionId != null">
+            and version_id = #{versionId,jdbcType=BIGINT}
+        </if>
+        <if test="name != null">
+            and `key` like concat('%',#{name,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="isPublic != null">
+            and property = #{isPublic,jdbcType=VARCHAR}
+        </if>
+        <if test="startTime != null">
+            and last_update_time >= #{startTime,jdbcType=VARCHAR}
+        </if>
+        <if test="endTime != null">
+            and #{endTime,jdbcType=VARCHAR} >= last_update_time
+        </if>
+        <if test="productId != null">
+            and product_ids like concat('%',#{productId,jdbcType=BIGINT},'%')
+        </if>
+        order by update_time desc,is_delete
+    </select>
+</mapper>

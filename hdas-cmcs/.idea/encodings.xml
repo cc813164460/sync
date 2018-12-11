@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hdas-cmcs-module-admin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hdas-cmcs-module-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hdas-cmcs-module-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hdas-cmcs-module-config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hdas-cmcs-util-common" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

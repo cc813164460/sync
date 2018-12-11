@@ -1,0 +1,70 @@
+<div>
+    <div id="add_btn" class="auth-hidden">
+        <section class="pointer">
+            <table class="btn-table">
+                <tbody>
+                <tr>
+                    <td><span><img src="/img/icon_xinzeng.png"/></span></td>
+                </tr>
+                <tr>
+                    <td><span class="btn-comment">新增列表信息</span></td>
+                </tr>
+                <tr>
+                    <td><span class="btn-name">新增</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <div id="delete_btn" class="auth-hidden">
+        <section class="pointer">
+            <table class="btn-table">
+                <tbody>
+                <tr>
+                    <td><span><img src="/img/icon_shanchu.png"/></span></td>
+                </tr>
+                <tr>
+                    <td><span class="btn-comment">对所选选项批量删除</span></td>
+                </tr>
+                <tr>
+                    <td><span class="btn-name">批量删除</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</div>
+<div class="table-main-div">
+    <table id="user_table" class="display user-table">
+        <thead>
+        <tr>
+            <th><input id="list_select_all" type="checkbox" class="select-all-checkbox no-margin"/>全选</th>
+            <th>序号</th>
+            <th>人员</th>
+            <th>分布</th>
+            <th>部门</th>
+            <th>关联角色</th>
+            <th>手机</th>
+            <th>邮箱</th>
+            <th>账号</th>
+            <th>密码</th>
+            <th>操作</th>
+            <th>id</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+<link rel="stylesheet" href="/styles/user.css"/>
+<script src="/scripts/user.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        loadUserTable();
+        loadQuery("请输入人员名称");
+        initTableStyle();
+        addPage(HTML.USER_ADD);
+        loadItem(NAV.SETTING, NAV.USER_MANAGE, NAV.LIST_PAGE, null, HTML.USER);
+        clickSetMainHeight();
+        selectAll("list_select_all");
+    });
+</script>
+<link rel="stylesheet" href="/styles/user_no_action.css"/>

@@ -1,0 +1,751 @@
+===2018-09-27 15:42:16.036 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:48  - Starting AdminApplication on DESKTOP-8RT6NG5 with PID 19080 (D:\github\hdas-cmcs\hdas-cmcs-module-admin\target\classes started by zgh in D:\github\hdas-cmcs)
+===2018-09-27 15:42:16.045 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:641 - The following profiles are active: dev
+===2018-09-27 15:42:16.542 INFO  org.hibernate.validator.internal.util.Version Line:30  - HV000001: Hibernate Validator 5.3.5.Final
+===2018-09-27 15:42:19.514 INFO  com.hsgene.hdas.cmcs.modules.common.datasource.DynamicDataSourceRegister Line:65  - Dynamic DataSource Registry
+===2018-09-27 15:42:21.445 INFO  org.eclipse.jetty.util.log Line:192 - Logging initialized @7886ms to org.eclipse.jetty.util.log.Slf4jLog
+===2018-09-27 15:42:22.440 INFO  org.eclipse.jetty.server.Server Line:372 - jetty-9.4.4.v20170414
+===2018-09-27 15:42:22.775 INFO  org.eclipse.jetty.server.session Line:364 - DefaultSessionIdManager workerName=node0
+===2018-09-27 15:42:22.775 INFO  org.eclipse.jetty.server.session Line:369 - No SessionScavenger set, using defaults
+===2018-09-27 15:42:22.797 INFO  org.eclipse.jetty.server.session Line:149 - Scavenging every 660000ms
+===2018-09-27 15:42:22.814 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring embedded WebApplicationContext
+===2018-09-27 15:42:24.337 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:788 - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@112310af{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.3865642585885825512.80/],AVAILABLE}
+===2018-09-27 15:42:24.337 INFO  org.eclipse.jetty.server.Server Line:444 - Started @10777ms
+===2018-09-27 15:42:24.366 INFO  org.eclipse.jetty.server.session Line:167 - Stopped scavenging
+===2018-09-27 15:42:24.395 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:957 - Stopped o.s.b.c.e.j.JettyEmbeddedWebAppContext@112310af{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.3865642585885825512.80/],UNAVAILABLE}
+===2018-09-27 15:46:05.305 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:48  - Starting AdminApplication on DESKTOP-8RT6NG5 with PID 16028 (D:\github\hdas-cmcs\hdas-cmcs-module-admin\target\classes started by zgh in D:\github\hdas-cmcs)
+===2018-09-27 15:46:05.308 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:641 - The following profiles are active: dev
+===2018-09-27 15:46:05.699 INFO  org.hibernate.validator.internal.util.Version Line:30  - HV000001: Hibernate Validator 5.3.5.Final
+===2018-09-27 15:46:07.494 INFO  com.hsgene.hdas.cmcs.modules.common.datasource.DynamicDataSourceRegister Line:65  - Dynamic DataSource Registry
+===2018-09-27 15:46:09.107 INFO  org.eclipse.jetty.util.log Line:192 - Logging initialized @5590ms to org.eclipse.jetty.util.log.Slf4jLog
+===2018-09-27 15:46:09.530 INFO  org.eclipse.jetty.server.Server Line:372 - jetty-9.4.4.v20170414
+===2018-09-27 15:46:09.660 INFO  org.eclipse.jetty.server.session Line:364 - DefaultSessionIdManager workerName=node0
+===2018-09-27 15:46:09.660 INFO  org.eclipse.jetty.server.session Line:369 - No SessionScavenger set, using defaults
+===2018-09-27 15:46:09.664 INFO  org.eclipse.jetty.server.session Line:149 - Scavenging every 660000ms
+===2018-09-27 15:46:09.671 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring embedded WebApplicationContext
+===2018-09-27 15:46:10.579 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:788 - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@7fef0d9b{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.7496554746757485902.80/],AVAILABLE}
+===2018-09-27 15:46:10.580 INFO  org.eclipse.jetty.server.Server Line:444 - Started @7063ms
+===2018-09-27 15:46:10.634 INFO  org.eclipse.jetty.server.session Line:167 - Stopped scavenging
+===2018-09-27 15:46:10.643 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:957 - Stopped o.s.b.c.e.j.JettyEmbeddedWebAppContext@7fef0d9b{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.7496554746757485902.80/],UNAVAILABLE}
+===2018-09-27 15:51:29.924 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:48  - Starting AdminApplication on DESKTOP-8RT6NG5 with PID 10220 (D:\github\hdas-cmcs\hdas-cmcs-module-admin\target\classes started by zgh in D:\github\hdas-cmcs)
+===2018-09-27 15:51:29.929 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:641 - The following profiles are active: dev
+===2018-09-27 15:51:30.231 INFO  org.hibernate.validator.internal.util.Version Line:30  - HV000001: Hibernate Validator 5.3.5.Final
+===2018-09-27 15:51:32.438 INFO  com.hsgene.hdas.cmcs.modules.common.datasource.DynamicDataSourceRegister Line:65  - Dynamic DataSource Registry
+===2018-09-27 15:51:34.044 INFO  org.eclipse.jetty.util.log Line:192 - Logging initialized @5971ms to org.eclipse.jetty.util.log.Slf4jLog
+===2018-09-27 15:51:34.494 INFO  org.eclipse.jetty.server.Server Line:372 - jetty-9.4.4.v20170414
+===2018-09-27 15:51:34.613 INFO  org.eclipse.jetty.server.session Line:364 - DefaultSessionIdManager workerName=node0
+===2018-09-27 15:51:34.613 INFO  org.eclipse.jetty.server.session Line:369 - No SessionScavenger set, using defaults
+===2018-09-27 15:51:34.617 INFO  org.eclipse.jetty.server.session Line:149 - Scavenging every 660000ms
+===2018-09-27 15:51:34.623 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring embedded WebApplicationContext
+===2018-09-27 15:51:35.482 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:788 - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@28cbdfa8{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.4534990984458210291.80/],AVAILABLE}
+===2018-09-27 15:51:35.482 INFO  org.eclipse.jetty.server.Server Line:444 - Started @7409ms
+===2018-09-27 15:51:40.380 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+===2018-09-27 15:51:40.457 INFO  org.eclipse.jetty.server.AbstractConnector Line:280 - Started ServerConnector@7eb0e70b{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+===2018-09-27 15:51:40.465 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:57  - Started AdminApplication in 11.296 seconds (JVM running for 12.392)
+===2018-09-27 15:52:33.342 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:48  - Starting AdminApplication on DESKTOP-8RT6NG5 with PID 21552 (D:\github\hdas-cmcs\hdas-cmcs-module-admin\target\classes started by zgh in D:\github\hdas-cmcs)
+===2018-09-27 15:52:33.344 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:641 - The following profiles are active: dev
+===2018-09-27 15:52:33.564 INFO  org.hibernate.validator.internal.util.Version Line:30  - HV000001: Hibernate Validator 5.3.5.Final
+===2018-09-27 15:52:35.597 INFO  com.hsgene.hdas.cmcs.modules.common.datasource.DynamicDataSourceRegister Line:65  - Dynamic DataSource Registry
+===2018-09-27 15:52:37.202 INFO  org.eclipse.jetty.util.log Line:192 - Logging initialized @5718ms to org.eclipse.jetty.util.log.Slf4jLog
+===2018-09-27 15:52:37.631 INFO  org.eclipse.jetty.server.Server Line:372 - jetty-9.4.4.v20170414
+===2018-09-27 15:52:37.755 INFO  org.eclipse.jetty.server.session Line:364 - DefaultSessionIdManager workerName=node0
+===2018-09-27 15:52:37.756 INFO  org.eclipse.jetty.server.session Line:369 - No SessionScavenger set, using defaults
+===2018-09-27 15:52:37.759 INFO  org.eclipse.jetty.server.session Line:149 - Scavenging every 600000ms
+===2018-09-27 15:52:37.766 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring embedded WebApplicationContext
+===2018-09-27 15:52:38.640 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:788 - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@37e94fc8{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.5568882728673746583.80/],AVAILABLE}
+===2018-09-27 15:52:38.641 INFO  org.eclipse.jetty.server.Server Line:444 - Started @7158ms
+===2018-09-27 15:52:42.693 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+===2018-09-27 15:52:42.730 INFO  org.eclipse.jetty.server.AbstractConnector Line:280 - Started ServerConnector@20466fc8{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+===2018-09-27 15:52:42.737 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:57  - Started AdminApplication in 10.129 seconds (JVM running for 11.253)
+===2018-09-27 15:52:48.681 INFO  org.thymeleaf.TemplateEngine Line:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+===2018-09-27 15:52:48.753 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:99  - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+===2018-09-27 15:52:48.753 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+===2018-09-27 15:52:48.754 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:72  - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+===2018-09-27 15:52:48.754 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:78  - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+===2018-09-27 15:52:48.759 INFO  org.thymeleaf.TemplateEngine.CONFIG Line:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * XML
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+===2018-09-27 15:52:48.760 INFO  org.thymeleaf.TemplateEngine Line:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+===2018-09-27 15:52:58.186 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-1} inited
+===2018-09-27 15:53:16.710 INFO  org.eclipse.jetty.server.AbstractConnector Line:320 - Stopped ServerConnector@20466fc8{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+===2018-09-27 15:53:16.710 INFO  org.eclipse.jetty.server.session Line:167 - Stopped scavenging
+===2018-09-27 15:53:16.717 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Destroying Spring FrameworkServlet 'dispatcherServlet'
+===2018-09-27 15:53:16.718 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:957 - Stopped o.s.b.c.e.j.JettyEmbeddedWebAppContext@37e94fc8{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.5568882728673746583.80/],UNAVAILABLE}
+===2018-09-27 15:53:17.141 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:48  - Starting AdminApplication on DESKTOP-8RT6NG5 with PID 21552 (D:\github\hdas-cmcs\hdas-cmcs-module-admin\target\classes started by zgh in D:\github\hdas-cmcs)
+===2018-09-27 15:53:17.141 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:641 - The following profiles are active: dev
+===2018-09-27 15:53:19.379 INFO  com.hsgene.hdas.cmcs.modules.common.datasource.DynamicDataSourceRegister Line:65  - Dynamic DataSource Registry
+===2018-09-27 15:54:06.609 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:48  - Starting AdminApplication on DESKTOP-8RT6NG5 with PID 22460 (D:\github\hdas-cmcs\hdas-cmcs-module-admin\target\classes started by zgh in D:\github\hdas-cmcs)
+===2018-09-27 15:54:06.743 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:641 - The following profiles are active: dev
+===2018-09-27 15:54:07.108 INFO  org.hibernate.validator.internal.util.Version Line:30  - HV000001: Hibernate Validator 5.3.5.Final
+===2018-09-27 15:54:08.804 INFO  com.hsgene.hdas.cmcs.modules.common.datasource.DynamicDataSourceRegister Line:65  - Dynamic DataSource Registry
+===2018-09-27 15:54:10.435 INFO  org.eclipse.jetty.util.log Line:192 - Logging initialized @5682ms to org.eclipse.jetty.util.log.Slf4jLog
+===2018-09-27 15:54:10.892 INFO  org.eclipse.jetty.server.Server Line:372 - jetty-9.4.4.v20170414
+===2018-09-27 15:54:11.018 INFO  org.eclipse.jetty.server.session Line:364 - DefaultSessionIdManager workerName=node0
+===2018-09-27 15:54:11.018 INFO  org.eclipse.jetty.server.session Line:369 - No SessionScavenger set, using defaults
+===2018-09-27 15:54:11.022 INFO  org.eclipse.jetty.server.session Line:149 - Scavenging every 600000ms
+===2018-09-27 15:54:11.030 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring embedded WebApplicationContext
+===2018-09-27 15:54:11.955 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:788 - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@5b1b15b0{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.2561390275700649353.80/],AVAILABLE}
+===2018-09-27 15:54:11.955 INFO  org.eclipse.jetty.server.Server Line:444 - Started @7202ms
+===2018-09-27 15:54:16.112 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+===2018-09-27 15:54:16.192 INFO  org.eclipse.jetty.server.AbstractConnector Line:280 - Started ServerConnector@409b0925{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+===2018-09-27 15:54:16.307 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:57  - Started AdminApplication in 10.351 seconds (JVM running for 11.553)
+===2018-09-27 15:54:24.040 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-1} inited
+===2018-09-27 15:54:24.523 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-1} closed
+===2018-09-27 15:54:24.649 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-2} inited
+===2018-09-27 15:54:24.692 INFO  org.thymeleaf.TemplateEngine Line:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+===2018-09-27 15:54:24.768 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:99  - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+===2018-09-27 15:54:24.768 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+===2018-09-27 15:54:24.769 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:72  - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+===2018-09-27 15:54:24.769 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:78  - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+===2018-09-27 15:54:24.781 INFO  org.thymeleaf.TemplateEngine.CONFIG Line:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * XML
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+===2018-09-27 15:54:24.781 INFO  org.thymeleaf.TemplateEngine Line:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+===2018-09-27 15:54:25.285 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-3} inited
+===2018-09-27 15:54:25.287 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-4} inited
+===2018-09-27 15:54:25.322 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-7} inited
+===2018-09-27 15:54:25.328 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-8} inited
+===2018-09-27 15:54:25.330 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-6} inited
+===2018-09-27 15:54:25.330 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-5} inited
+===2018-09-27 15:54:25.500 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-3} closed
+===2018-09-27 15:54:25.609 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-9} inited
+===2018-09-27 15:54:25.685 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-4} closed
+===2018-09-27 15:54:25.754 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-10} inited
+===2018-09-27 15:54:25.854 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-9} closed
+===2018-09-27 15:54:25.916 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-11} inited
+===2018-09-27 15:54:25.934 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-7} closed
+===2018-09-27 15:54:25.984 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-8} closed
+===2018-09-27 15:54:25.996 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-12} inited
+===2018-09-27 15:54:26.057 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-13} inited
+===2018-09-27 15:54:26.057 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-10} closed
+===2018-09-27 15:54:26.066 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-6} closed
+===2018-09-27 15:54:26.076 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-5} closed
+===2018-09-27 15:54:26.086 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-11} closed
+===2018-09-27 15:54:26.155 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-15} inited
+===2018-09-27 15:54:26.158 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-14} inited
+===2018-09-27 15:54:26.167 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-12} closed
+===2018-09-27 15:54:26.202 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-16} inited
+===2018-09-27 15:54:26.206 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-13} closed
+===2018-09-27 15:54:26.373 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-14} closed
+===2018-09-27 15:54:26.407 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-15} closed
+===2018-09-27 15:54:26.438 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-16} closed
+===2018-09-27 15:54:26.603 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-17} inited
+===2018-09-27 15:54:26.674 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-17} closed
+===2018-09-27 15:54:26.684 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-18} inited
+===2018-09-27 15:54:26.704 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-19} inited
+===2018-09-27 15:54:26.722 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-20} inited
+===2018-09-27 15:54:26.774 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-18} closed
+===2018-09-27 15:54:26.848 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-19} closed
+===2018-09-27 15:54:26.865 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-20} closed
+===2018-09-27 15:54:26.884 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-21} inited
+===2018-09-27 15:54:26.957 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-21} closed
+===2018-09-27 15:54:27.291 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-23} inited
+===2018-09-27 15:54:27.291 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-22} inited
+===2018-09-27 15:54:27.343 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-24} inited
+===2018-09-27 15:54:27.359 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-22} closed
+===2018-09-27 15:54:27.469 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-25} inited
+===2018-09-27 15:54:27.518 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-23} closed
+===2018-09-27 15:54:27.566 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-24} closed
+===2018-09-27 15:54:27.594 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-25} closed
+===2018-09-27 15:54:27.607 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-29} inited
+===2018-09-27 15:54:27.609 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-28} inited
+===2018-09-27 15:54:27.613 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-27} inited
+===2018-09-27 15:54:27.630 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-26} inited
+===2018-09-27 15:54:27.705 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-30} inited
+===2018-09-27 15:54:27.724 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-29} closed
+===2018-09-27 15:54:27.786 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-31} inited
+===2018-09-27 15:54:27.796 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-27} closed
+===2018-09-27 15:54:27.849 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-28} closed
+===2018-09-27 15:54:27.849 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-26} closed
+===2018-09-27 15:54:27.879 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-30} closed
+===2018-09-27 15:54:27.923 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-31} closed
+===2018-09-27 15:54:27.934 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-32} inited
+===2018-09-27 15:54:27.952 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-33} inited
+===2018-09-27 15:54:27.977 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-34} inited
+===2018-09-27 15:54:28.020 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-35} inited
+===2018-09-27 15:54:28.062 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-36} inited
+===2018-09-27 15:54:28.070 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-32} closed
+===2018-09-27 15:54:28.131 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-37} inited
+===2018-09-27 15:54:28.158 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-33} closed
+===2018-09-27 15:54:28.166 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-38} inited
+===2018-09-27 15:54:28.206 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-34} closed
+===2018-09-27 15:54:28.208 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-35} closed
+===2018-09-27 15:54:28.257 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-37} closed
+===2018-09-27 15:54:28.260 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-36} closed
+===2018-09-27 15:54:28.265 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-38} closed
+===2018-09-27 15:54:28.615 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-39} inited
+===2018-09-27 15:54:28.633 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-40} inited
+===2018-09-27 15:54:28.710 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-39} closed
+===2018-09-27 15:54:28.749 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-40} closed
+===2018-09-27 15:54:29.029 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-41} inited
+===2018-09-27 15:54:29.029 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-42} inited
+===2018-09-27 15:54:29.046 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-43} inited
+===2018-09-27 15:54:29.069 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-44} inited
+===2018-09-27 15:54:29.075 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-45} inited
+===2018-09-27 15:54:29.076 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-46} inited
+===2018-09-27 15:54:29.089 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-47} inited
+===2018-09-27 15:54:29.106 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-41} closed
+===2018-09-27 15:54:29.140 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-42} closed
+===2018-09-27 15:54:29.223 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-45} closed
+===2018-09-27 15:54:29.224 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-43} closed
+===2018-09-27 15:54:29.277 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-47} closed
+===2018-09-27 15:54:29.282 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-46} closed
+===2018-09-27 15:54:29.287 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-44} closed
+===2018-09-27 15:54:29.367 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-48} inited
+===2018-09-27 15:54:29.433 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-48} closed
+===2018-09-27 15:54:29.525 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-49} inited
+===2018-09-27 15:54:29.607 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-49} closed
+===2018-09-27 15:54:29.685 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-50} inited
+===2018-09-27 15:54:29.694 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-51} inited
+===2018-09-27 15:54:29.773 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-50} closed
+===2018-09-27 15:54:29.798 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-51} closed
+===2018-09-27 15:54:29.929 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-52} inited
+===2018-09-27 15:54:30.022 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-52} closed
+===2018-09-27 15:54:30.168 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-53} inited
+===2018-09-27 15:54:30.242 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-53} closed
+===2018-09-27 15:54:30.344 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-54} inited
+===2018-09-27 15:54:30.480 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-54} closed
+===2018-09-27 15:54:30.559 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-55} inited
+===2018-09-27 15:54:30.639 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-55} closed
+===2018-09-27 15:54:30.713 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-56} inited
+===2018-09-27 15:54:30.837 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-56} closed
+===2018-09-27 15:54:30.950 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-57} inited
+===2018-09-27 15:54:30.998 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-58} inited
+===2018-09-27 15:54:31.015 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-57} closed
+===2018-09-27 15:54:31.021 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-59} inited
+===2018-09-27 15:54:31.025 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-60} inited
+===2018-09-27 15:54:31.107 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-58} closed
+===2018-09-27 15:54:31.206 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-60} closed
+===2018-09-27 15:54:31.213 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-59} closed
+===2018-09-27 16:32:04.876 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:48  - Starting AdminApplication on DESKTOP-8RT6NG5 with PID 7416 (D:\github\hdas-cmcs\hdas-cmcs-module-admin\target\classes started by zgh in D:\github\hdas-cmcs)
+===2018-09-27 16:32:04.880 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:641 - The following profiles are active: dev
+===2018-09-27 16:32:05.114 INFO  org.hibernate.validator.internal.util.Version Line:30  - HV000001: Hibernate Validator 5.3.5.Final
+===2018-09-27 16:32:07.171 INFO  com.hsgene.hdas.cmcs.modules.common.datasource.DynamicDataSourceRegister Line:65  - Dynamic DataSource Registry
+===2018-09-27 16:32:08.754 INFO  org.eclipse.jetty.util.log Line:192 - Logging initialized @5615ms to org.eclipse.jetty.util.log.Slf4jLog
+===2018-09-27 16:32:09.180 INFO  org.eclipse.jetty.server.Server Line:372 - jetty-9.4.4.v20170414
+===2018-09-27 16:32:09.303 INFO  org.eclipse.jetty.server.session Line:364 - DefaultSessionIdManager workerName=node0
+===2018-09-27 16:32:09.304 INFO  org.eclipse.jetty.server.session Line:369 - No SessionScavenger set, using defaults
+===2018-09-27 16:32:09.307 INFO  org.eclipse.jetty.server.session Line:149 - Scavenging every 660000ms
+===2018-09-27 16:32:09.314 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring embedded WebApplicationContext
+===2018-09-27 16:32:10.203 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:788 - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@23257fae{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.8073798295231818298.80/],AVAILABLE}
+===2018-09-27 16:32:10.203 INFO  org.eclipse.jetty.server.Server Line:444 - Started @7064ms
+===2018-09-27 16:32:14.252 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+===2018-09-27 16:32:14.292 INFO  org.eclipse.jetty.server.AbstractConnector Line:280 - Started ServerConnector@5c6d8fed{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+===2018-09-27 16:32:14.299 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:57  - Started AdminApplication in 10.003 seconds (JVM running for 11.16)
+===2018-09-27 16:32:26.323 INFO  org.thymeleaf.TemplateEngine Line:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+===2018-09-27 16:32:26.374 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:99  - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+===2018-09-27 16:32:26.375 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+===2018-09-27 16:32:26.376 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:72  - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+===2018-09-27 16:32:26.377 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:78  - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+===2018-09-27 16:32:26.381 INFO  org.thymeleaf.TemplateEngine.CONFIG Line:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * XML
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+===2018-09-27 16:32:26.381 INFO  org.thymeleaf.TemplateEngine Line:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+===2018-09-27 16:32:41.190 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-1} inited
+===2018-09-27 16:40:25.710 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:48  - Starting AdminApplication on DESKTOP-8RT6NG5 with PID 9112 (D:\github\hdas-cmcs\hdas-cmcs-module-admin\target\classes started by zgh in D:\github\hdas-cmcs)
+===2018-09-27 16:40:25.715 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:641 - The following profiles are active: dev
+===2018-09-27 16:40:25.994 INFO  org.hibernate.validator.internal.util.Version Line:30  - HV000001: Hibernate Validator 5.3.5.Final
+===2018-09-27 16:40:27.959 INFO  com.hsgene.hdas.cmcs.modules.common.datasource.DynamicDataSourceRegister Line:65  - Dynamic DataSource Registry
+===2018-09-27 16:40:29.517 INFO  org.eclipse.jetty.util.log Line:192 - Logging initialized @5566ms to org.eclipse.jetty.util.log.Slf4jLog
+===2018-09-27 16:40:30.065 INFO  org.eclipse.jetty.server.Server Line:372 - jetty-9.4.4.v20170414
+===2018-09-27 16:40:30.193 INFO  org.eclipse.jetty.server.session Line:364 - DefaultSessionIdManager workerName=node0
+===2018-09-27 16:40:30.193 INFO  org.eclipse.jetty.server.session Line:369 - No SessionScavenger set, using defaults
+===2018-09-27 16:40:30.197 INFO  org.eclipse.jetty.server.session Line:149 - Scavenging every 660000ms
+===2018-09-27 16:40:30.204 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring embedded WebApplicationContext
+===2018-09-27 16:40:31.135 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:788 - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@31848168{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.4546868800720209970.80/],AVAILABLE}
+===2018-09-27 16:40:31.135 INFO  org.eclipse.jetty.server.Server Line:444 - Started @7185ms
+===2018-09-27 16:40:35.048 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+===2018-09-27 16:40:35.090 INFO  org.eclipse.jetty.server.AbstractConnector Line:280 - Started ServerConnector@5d1c2681{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+===2018-09-27 16:40:35.097 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:57  - Started AdminApplication in 10.014 seconds (JVM running for 11.147)
+===2018-09-27 16:40:49.307 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-1} inited
+===2018-09-27 16:40:49.381 INFO  org.thymeleaf.TemplateEngine Line:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+===2018-09-27 16:40:49.425 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:99  - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+===2018-09-27 16:40:49.425 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+===2018-09-27 16:40:49.426 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:72  - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+===2018-09-27 16:40:49.426 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:78  - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+===2018-09-27 16:40:49.432 INFO  org.thymeleaf.TemplateEngine.CONFIG Line:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * XML
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * HTML5
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+===2018-09-27 16:40:49.433 INFO  org.thymeleaf.TemplateEngine Line:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+===2018-09-27 16:43:25.799 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:48  - Starting AdminApplication on DESKTOP-8RT6NG5 with PID 19800 (D:\github\hdas-cmcs\hdas-cmcs-module-admin\target\classes started by zgh in D:\github\hdas-cmcs)
+===2018-09-27 16:43:25.803 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:641 - The following profiles are active: dev
+===2018-09-27 16:43:26.014 INFO  org.hibernate.validator.internal.util.Version Line:30  - HV000001: Hibernate Validator 5.3.5.Final
+===2018-09-27 16:43:28.095 INFO  com.hsgene.hdas.cmcs.modules.common.datasource.DynamicDataSourceRegister Line:65  - Dynamic DataSource Registry
+===2018-09-27 16:43:29.526 INFO  org.eclipse.jetty.util.log Line:192 - Logging initialized @5910ms to org.eclipse.jetty.util.log.Slf4jLog
+===2018-09-27 16:43:29.970 INFO  org.eclipse.jetty.server.Server Line:372 - jetty-9.4.4.v20170414
+===2018-09-27 16:43:30.080 INFO  org.eclipse.jetty.server.session Line:364 - DefaultSessionIdManager workerName=node0
+===2018-09-27 16:43:30.081 INFO  org.eclipse.jetty.server.session Line:369 - No SessionScavenger set, using defaults
+===2018-09-27 16:43:30.084 INFO  org.eclipse.jetty.server.session Line:149 - Scavenging every 660000ms
+===2018-09-27 16:43:30.089 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring embedded WebApplicationContext
+===2018-09-27 16:43:30.966 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:788 - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@6c0bedc7{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.4247104333845600629.80/],AVAILABLE}
+===2018-09-27 16:43:30.967 INFO  org.eclipse.jetty.server.Server Line:444 - Started @7351ms
+===2018-09-27 16:43:37.599 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+===2018-09-27 16:43:37.668 INFO  org.eclipse.jetty.server.AbstractConnector Line:280 - Started ServerConnector@3caa3d85{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+===2018-09-27 16:43:37.675 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:57  - Started AdminApplication in 12.274 seconds (JVM running for 14.059)
+===2018-09-27 16:43:51.547 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-1} inited
+===2018-09-27 16:43:51.888 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-1} closed
+===2018-09-27 16:43:51.955 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-2} inited
+===2018-09-27 16:43:52.006 INFO  org.thymeleaf.TemplateEngine Line:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+===2018-09-27 16:43:52.049 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:99  - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+===2018-09-27 16:43:52.049 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+===2018-09-27 16:43:52.050 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:72  - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+===2018-09-27 16:43:52.050 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:78  - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+===2018-09-27 16:43:52.055 INFO  org.thymeleaf.TemplateEngine.CONFIG Line:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * XML
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+===2018-09-27 16:43:52.056 INFO  org.thymeleaf.TemplateEngine Line:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+===2018-09-27 16:46:03.323 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:48  - Starting AdminApplication on DESKTOP-8RT6NG5 with PID 13716 (D:\github\hdas-cmcs\hdas-cmcs-module-admin\target\classes started by zgh in D:\github\hdas-cmcs)
+===2018-09-27 16:46:03.326 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:641 - The following profiles are active: dev
+===2018-09-27 16:46:03.785 INFO  org.hibernate.validator.internal.util.Version Line:30  - HV000001: Hibernate Validator 5.3.5.Final
+===2018-09-27 16:46:08.231 INFO  com.hsgene.hdas.cmcs.modules.common.datasource.DynamicDataSourceRegister Line:65  - Dynamic DataSource Registry
+===2018-09-27 16:46:10.952 INFO  org.eclipse.jetty.util.log Line:192 - Logging initialized @9954ms to org.eclipse.jetty.util.log.Slf4jLog
+===2018-09-27 16:46:11.447 INFO  org.eclipse.jetty.server.Server Line:372 - jetty-9.4.4.v20170414
+===2018-09-27 16:46:11.610 INFO  org.eclipse.jetty.server.session Line:364 - DefaultSessionIdManager workerName=node0
+===2018-09-27 16:46:11.611 INFO  org.eclipse.jetty.server.session Line:369 - No SessionScavenger set, using defaults
+===2018-09-27 16:46:11.617 INFO  org.eclipse.jetty.server.session Line:149 - Scavenging every 660000ms
+===2018-09-27 16:46:11.627 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring embedded WebApplicationContext
+===2018-09-27 16:46:13.430 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:788 - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@59b59284{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.3633718378055231393.80/],AVAILABLE}
+===2018-09-27 16:46:13.431 INFO  org.eclipse.jetty.server.Server Line:444 - Started @12434ms
+===2018-09-27 16:46:17.640 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+===2018-09-27 16:46:17.680 INFO  org.eclipse.jetty.server.AbstractConnector Line:280 - Started ServerConnector@3fdb251c{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+===2018-09-27 16:46:17.687 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:57  - Started AdminApplication in 15.162 seconds (JVM running for 16.69)
+===2018-09-27 16:47:03.963 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-1} inited
+===2018-09-27 16:47:04.298 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-1} closed
+===2018-09-27 16:47:04.404 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-2} inited
+===2018-09-27 16:47:04.442 INFO  org.thymeleaf.TemplateEngine Line:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+===2018-09-27 16:47:04.488 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:99  - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+===2018-09-27 16:47:04.489 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+===2018-09-27 16:47:04.489 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:72  - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+===2018-09-27 16:47:04.489 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:78  - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+===2018-09-27 16:47:04.495 INFO  org.thymeleaf.TemplateEngine.CONFIG Line:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * XML
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * HTML5
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+===2018-09-27 16:47:04.496 INFO  org.thymeleaf.TemplateEngine Line:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+===2018-09-27 17:52:44.359 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:48  - Starting AdminApplication on DESKTOP-8RT6NG5 with PID 1104 (D:\github\hdas-cmcs\hdas-cmcs-module-admin\target\classes started by zgh in D:\github\hdas-cmcs)
+===2018-09-27 17:52:44.364 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:641 - The following profiles are active: dev
+===2018-09-27 17:52:44.516 INFO  org.hibernate.validator.internal.util.Version Line:30  - HV000001: Hibernate Validator 5.3.5.Final
+===2018-09-27 17:52:47.419 INFO  com.hsgene.hdas.cmcs.modules.common.datasource.DynamicDataSourceRegister Line:65  - Dynamic DataSource Registry
+===2018-09-27 17:52:49.304 INFO  org.eclipse.jetty.util.log Line:192 - Logging initialized @6954ms to org.eclipse.jetty.util.log.Slf4jLog
+===2018-09-27 17:52:49.740 INFO  org.eclipse.jetty.server.Server Line:372 - jetty-9.4.4.v20170414
+===2018-09-27 17:52:49.874 INFO  org.eclipse.jetty.server.session Line:364 - DefaultSessionIdManager workerName=node0
+===2018-09-27 17:52:49.874 INFO  org.eclipse.jetty.server.session Line:369 - No SessionScavenger set, using defaults
+===2018-09-27 17:52:49.878 INFO  org.eclipse.jetty.server.session Line:149 - Scavenging every 600000ms
+===2018-09-27 17:52:49.886 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring embedded WebApplicationContext
+===2018-09-27 17:52:50.789 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:788 - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@6bd325bc{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.378514153806102318.80/],AVAILABLE}
+===2018-09-27 17:52:50.790 INFO  org.eclipse.jetty.server.Server Line:444 - Started @8441ms
+===2018-09-27 17:52:54.692 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+===2018-09-27 17:52:54.729 INFO  org.eclipse.jetty.server.AbstractConnector Line:280 - Started ServerConnector@2197b1a1{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+===2018-09-27 17:52:54.735 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:57  - Started AdminApplication in 11.307 seconds (JVM running for 12.387)
+===2018-09-27 17:56:12.914 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:48  - Starting AdminApplication on DESKTOP-8RT6NG5 with PID 21984 (D:\github\hdas-cmcs\hdas-cmcs-module-admin\target\classes started by zgh in D:\github\hdas-cmcs)
+===2018-09-27 17:56:12.918 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:641 - The following profiles are active: dev
+===2018-09-27 17:56:13.092 INFO  org.hibernate.validator.internal.util.Version Line:30  - HV000001: Hibernate Validator 5.3.5.Final
+===2018-09-27 17:56:15.017 INFO  com.hsgene.hdas.cmcs.modules.common.datasource.DynamicDataSourceRegister Line:65  - Dynamic DataSource Registry
+===2018-09-27 17:56:16.542 INFO  org.eclipse.jetty.util.log Line:192 - Logging initialized @5393ms to org.eclipse.jetty.util.log.Slf4jLog
+===2018-09-27 17:56:17.016 INFO  org.eclipse.jetty.server.Server Line:372 - jetty-9.4.4.v20170414
+===2018-09-27 17:56:17.137 INFO  org.eclipse.jetty.server.session Line:364 - DefaultSessionIdManager workerName=node0
+===2018-09-27 17:56:17.137 INFO  org.eclipse.jetty.server.session Line:369 - No SessionScavenger set, using defaults
+===2018-09-27 17:56:17.140 INFO  org.eclipse.jetty.server.session Line:149 - Scavenging every 660000ms
+===2018-09-27 17:56:17.146 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring embedded WebApplicationContext
+===2018-09-27 17:56:18.010 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:788 - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@174c039c{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.2992513466608566029.80/],AVAILABLE}
+===2018-09-27 17:56:18.011 INFO  org.eclipse.jetty.server.Server Line:444 - Started @6861ms
+===2018-09-27 17:56:21.994 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+===2018-09-27 17:56:22.031 INFO  org.eclipse.jetty.server.AbstractConnector Line:280 - Started ServerConnector@32b57743{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+===2018-09-27 17:56:22.037 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:57  - Started AdminApplication in 9.75 seconds (JVM running for 10.887)
+===2018-09-27 17:56:29.458 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-1} inited
+===2018-09-27 17:56:29.921 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-1} closed
+===2018-09-27 17:58:09.262 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:48  - Starting AdminApplication on DESKTOP-8RT6NG5 with PID 19820 (D:\github\hdas-cmcs\hdas-cmcs-module-admin\target\classes started by zgh in D:\github\hdas-cmcs)
+===2018-09-27 17:58:09.265 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:641 - The following profiles are active: dev
+===2018-09-27 17:58:09.380 INFO  org.hibernate.validator.internal.util.Version Line:30  - HV000001: Hibernate Validator 5.3.5.Final
+===2018-09-27 17:58:11.205 INFO  com.hsgene.hdas.cmcs.modules.common.datasource.DynamicDataSourceRegister Line:65  - Dynamic DataSource Registry
+===2018-09-27 17:58:12.755 INFO  org.eclipse.jetty.util.log Line:192 - Logging initialized @5314ms to org.eclipse.jetty.util.log.Slf4jLog
+===2018-09-27 17:58:13.243 INFO  org.eclipse.jetty.server.Server Line:372 - jetty-9.4.4.v20170414
+===2018-09-27 17:58:13.370 INFO  org.eclipse.jetty.server.session Line:364 - DefaultSessionIdManager workerName=node0
+===2018-09-27 17:58:13.370 INFO  org.eclipse.jetty.server.session Line:369 - No SessionScavenger set, using defaults
+===2018-09-27 17:58:13.373 INFO  org.eclipse.jetty.server.session Line:149 - Scavenging every 600000ms
+===2018-09-27 17:58:13.379 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring embedded WebApplicationContext
+===2018-09-27 17:58:14.544 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:788 - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@10aa28af{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.1456146187065242970.80/],AVAILABLE}
+===2018-09-27 17:58:14.544 INFO  org.eclipse.jetty.server.Server Line:444 - Started @7103ms
+===2018-09-27 17:58:18.512 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+===2018-09-27 17:58:18.549 INFO  org.eclipse.jetty.server.AbstractConnector Line:280 - Started ServerConnector@3758f600{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+===2018-09-27 17:58:18.556 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:57  - Started AdminApplication in 10.002 seconds (JVM running for 11.116)
+===2018-09-27 17:58:31.326 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-1} inited
+===2018-09-27 17:58:31.665 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-1} closed
+===2018-09-27 17:59:27.156 INFO  org.eclipse.jetty.server.AbstractConnector Line:320 - Stopped ServerConnector@3758f600{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+===2018-09-27 17:59:27.156 INFO  org.eclipse.jetty.server.session Line:167 - Stopped scavenging
+===2018-09-27 17:59:27.161 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Destroying Spring FrameworkServlet 'dispatcherServlet'
+===2018-09-27 17:59:27.162 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:957 - Stopped o.s.b.c.e.j.JettyEmbeddedWebAppContext@10aa28af{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.1456146187065242970.80/],UNAVAILABLE}
+===2018-09-27 17:59:27.563 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:48  - Starting AdminApplication on DESKTOP-8RT6NG5 with PID 19820 (D:\github\hdas-cmcs\hdas-cmcs-module-admin\target\classes started by zgh in D:\github\hdas-cmcs)
+===2018-09-27 17:59:27.563 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:641 - The following profiles are active: dev
+===2018-09-27 17:59:28.957 INFO  com.hsgene.hdas.cmcs.modules.common.datasource.DynamicDataSourceRegister Line:65  - Dynamic DataSource Registry
+===2018-09-27 17:59:30.226 INFO  org.eclipse.jetty.server.Server Line:372 - jetty-9.4.4.v20170414
+===2018-09-27 17:59:30.231 INFO  org.eclipse.jetty.server.session Line:364 - DefaultSessionIdManager workerName=node0
+===2018-09-27 17:59:30.232 INFO  org.eclipse.jetty.server.session Line:369 - No SessionScavenger set, using defaults
+===2018-09-27 17:59:30.232 INFO  org.eclipse.jetty.server.session Line:149 - Scavenging every 660000ms
+===2018-09-27 17:59:30.232 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring embedded WebApplicationContext
+===2018-09-27 17:59:30.419 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:788 - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@c0fcc24{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.3379603025937525821.80/],AVAILABLE}
+===2018-09-27 17:59:30.419 INFO  org.eclipse.jetty.server.Server Line:444 - Started @82979ms
+===2018-09-27 17:59:34.779 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+===2018-09-27 17:59:34.788 INFO  org.eclipse.jetty.server.AbstractConnector Line:280 - Started ServerConnector@61fcc080{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+===2018-09-27 17:59:34.790 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:57  - Started AdminApplication in 7.325 seconds (JVM running for 87.348)
+===2018-09-27 17:59:56.602 INFO  org.eclipse.jetty.server.AbstractConnector Line:320 - Stopped ServerConnector@61fcc080{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+===2018-09-27 17:59:56.603 INFO  org.eclipse.jetty.server.session Line:167 - Stopped scavenging
+===2018-09-27 17:59:56.607 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Destroying Spring FrameworkServlet 'dispatcherServlet'
+===2018-09-27 17:59:56.609 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:957 - Stopped o.s.b.c.e.j.JettyEmbeddedWebAppContext@c0fcc24{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.3379603025937525821.80/],UNAVAILABLE}
+===2018-09-27 17:59:57.002 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:48  - Starting AdminApplication on DESKTOP-8RT6NG5 with PID 19820 (D:\github\hdas-cmcs\hdas-cmcs-module-admin\target\classes started by zgh in D:\github\hdas-cmcs)
+===2018-09-27 17:59:57.002 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:641 - The following profiles are active: dev
+===2018-09-27 17:59:59.394 INFO  com.hsgene.hdas.cmcs.modules.common.datasource.DynamicDataSourceRegister Line:65  - Dynamic DataSource Registry
+===2018-09-27 18:00:00.437 INFO  org.eclipse.jetty.server.Server Line:372 - jetty-9.4.4.v20170414
+===2018-09-27 18:00:00.444 INFO  org.eclipse.jetty.server.session Line:364 - DefaultSessionIdManager workerName=node0
+===2018-09-27 18:00:00.444 INFO  org.eclipse.jetty.server.session Line:369 - No SessionScavenger set, using defaults
+===2018-09-27 18:00:00.445 INFO  org.eclipse.jetty.server.session Line:149 - Scavenging every 600000ms
+===2018-09-27 18:00:00.445 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring embedded WebApplicationContext
+===2018-09-27 18:00:01.328 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:788 - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@1fbf0555{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.5596375915174293798.80/],AVAILABLE}
+===2018-09-27 18:00:01.329 INFO  org.eclipse.jetty.server.Server Line:444 - Started @113889ms
+===2018-09-27 18:00:04.988 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+===2018-09-27 18:00:04.996 INFO  org.eclipse.jetty.server.AbstractConnector Line:280 - Started ServerConnector@3e6197cf{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+===2018-09-27 18:00:05.006 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:57  - Started AdminApplication in 8.101 seconds (JVM running for 117.565)
+===2018-09-27 18:00:23.466 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:48  - Starting AdminApplication on DESKTOP-8RT6NG5 with PID 21240 (D:\github\hdas-cmcs\hdas-cmcs-module-admin\target\classes started by zgh in D:\github\hdas-cmcs)
+===2018-09-27 18:00:23.504 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:641 - The following profiles are active: dev
+===2018-09-27 18:00:23.847 INFO  org.hibernate.validator.internal.util.Version Line:30  - HV000001: Hibernate Validator 5.3.5.Final
+===2018-09-27 18:00:25.888 INFO  com.hsgene.hdas.cmcs.modules.common.datasource.DynamicDataSourceRegister Line:65  - Dynamic DataSource Registry
+===2018-09-27 18:00:27.693 INFO  org.eclipse.jetty.util.log Line:192 - Logging initialized @7149ms to org.eclipse.jetty.util.log.Slf4jLog
+===2018-09-27 18:00:28.300 INFO  org.eclipse.jetty.server.Server Line:372 - jetty-9.4.4.v20170414
+===2018-09-27 18:00:28.452 INFO  org.eclipse.jetty.server.session Line:364 - DefaultSessionIdManager workerName=node0
+===2018-09-27 18:00:28.453 INFO  org.eclipse.jetty.server.session Line:369 - No SessionScavenger set, using defaults
+===2018-09-27 18:00:28.455 INFO  org.eclipse.jetty.server.session Line:149 - Scavenging every 660000ms
+===2018-09-27 18:00:28.460 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring embedded WebApplicationContext
+===2018-09-27 18:00:30.143 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:788 - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@6940fc76{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.4275415192877431526.80/],AVAILABLE}
+===2018-09-27 18:00:30.144 INFO  org.eclipse.jetty.server.Server Line:444 - Started @9599ms
+===2018-09-27 18:00:36.180 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+===2018-09-27 18:00:36.216 INFO  org.eclipse.jetty.server.AbstractConnector Line:280 - Started ServerConnector@632708ff{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+===2018-09-27 18:00:36.222 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:57  - Started AdminApplication in 13.858 seconds (JVM running for 15.678)
+===2018-09-27 18:00:50.952 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-1} inited
+===2018-09-27 18:00:51.314 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-1} closed
+===2018-09-27 18:02:30.960 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:48  - Starting AdminApplication on DESKTOP-8RT6NG5 with PID 22136 (D:\github\hdas-cmcs\hdas-cmcs-module-admin\target\classes started by zgh in D:\github\hdas-cmcs)
+===2018-09-27 18:02:30.963 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:641 - The following profiles are active: dev
+===2018-09-27 18:02:31.163 INFO  org.hibernate.validator.internal.util.Version Line:30  - HV000001: Hibernate Validator 5.3.5.Final
+===2018-09-27 18:02:32.960 INFO  com.hsgene.hdas.cmcs.modules.common.datasource.DynamicDataSourceRegister Line:65  - Dynamic DataSource Registry
+===2018-09-27 18:02:34.509 INFO  org.eclipse.jetty.util.log Line:192 - Logging initialized @5405ms to org.eclipse.jetty.util.log.Slf4jLog
+===2018-09-27 18:02:34.952 INFO  org.eclipse.jetty.server.Server Line:372 - jetty-9.4.4.v20170414
+===2018-09-27 18:02:35.073 INFO  org.eclipse.jetty.server.session Line:364 - DefaultSessionIdManager workerName=node0
+===2018-09-27 18:02:35.073 INFO  org.eclipse.jetty.server.session Line:369 - No SessionScavenger set, using defaults
+===2018-09-27 18:02:35.077 INFO  org.eclipse.jetty.server.session Line:149 - Scavenging every 660000ms
+===2018-09-27 18:02:35.084 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring embedded WebApplicationContext
+===2018-09-27 18:02:35.955 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:788 - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@431800c{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.689116745628207684.80/],AVAILABLE}
+===2018-09-27 18:02:35.955 INFO  org.eclipse.jetty.server.Server Line:444 - Started @6851ms
+===2018-09-27 18:02:40.216 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+===2018-09-27 18:02:40.275 INFO  org.eclipse.jetty.server.AbstractConnector Line:280 - Started ServerConnector@671676cd{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+===2018-09-27 18:02:40.288 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:57  - Started AdminApplication in 10.051 seconds (JVM running for 11.183)
+===2018-09-27 18:02:50.825 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-1} inited
+===2018-09-27 18:02:51.159 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-1} closed
+===2018-09-27 18:03:27.734 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:48  - Starting AdminApplication on DESKTOP-8RT6NG5 with PID 19760 (D:\github\hdas-cmcs\hdas-cmcs-module-admin\target\classes started by zgh in D:\github\hdas-cmcs)
+===2018-09-27 18:03:27.737 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:641 - The following profiles are active: dev
+===2018-09-27 18:03:28.060 INFO  org.hibernate.validator.internal.util.Version Line:30  - HV000001: Hibernate Validator 5.3.5.Final
+===2018-09-27 18:03:29.752 INFO  com.hsgene.hdas.cmcs.modules.common.datasource.DynamicDataSourceRegister Line:65  - Dynamic DataSource Registry
+===2018-09-27 18:03:31.358 INFO  org.eclipse.jetty.util.log Line:192 - Logging initialized @5525ms to org.eclipse.jetty.util.log.Slf4jLog
+===2018-09-27 18:03:31.789 INFO  org.eclipse.jetty.server.Server Line:372 - jetty-9.4.4.v20170414
+===2018-09-27 18:03:31.908 INFO  org.eclipse.jetty.server.session Line:364 - DefaultSessionIdManager workerName=node0
+===2018-09-27 18:03:31.909 INFO  org.eclipse.jetty.server.session Line:369 - No SessionScavenger set, using defaults
+===2018-09-27 18:03:31.912 INFO  org.eclipse.jetty.server.session Line:149 - Scavenging every 600000ms
+===2018-09-27 18:03:31.920 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring embedded WebApplicationContext
+===2018-09-27 18:03:32.811 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:788 - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@a3edf4e{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.1499574391385637032.80/],AVAILABLE}
+===2018-09-27 18:03:32.811 INFO  org.eclipse.jetty.server.Server Line:444 - Started @6978ms
+===2018-09-27 18:03:36.743 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+===2018-09-27 18:03:36.782 INFO  org.eclipse.jetty.server.AbstractConnector Line:280 - Started ServerConnector@6e0265f{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+===2018-09-27 18:03:36.788 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:57  - Started AdminApplication in 9.799 seconds (JVM running for 10.956)
+===2018-09-27 18:03:51.704 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-1} inited
+===2018-09-27 18:03:52.106 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-1} closed
+===2018-09-27 18:04:54.003 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:48  - Starting AdminApplication on DESKTOP-8RT6NG5 with PID 18300 (D:\github\hdas-cmcs\hdas-cmcs-module-admin\target\classes started by zgh in D:\github\hdas-cmcs)
+===2018-09-27 18:04:54.006 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:641 - The following profiles are active: dev
+===2018-09-27 18:04:54.313 INFO  org.hibernate.validator.internal.util.Version Line:30  - HV000001: Hibernate Validator 5.3.5.Final
+===2018-09-27 18:04:56.099 INFO  com.hsgene.hdas.cmcs.modules.common.datasource.DynamicDataSourceRegister Line:65  - Dynamic DataSource Registry
+===2018-09-27 18:04:57.638 INFO  org.eclipse.jetty.util.log Line:192 - Logging initialized @5446ms to org.eclipse.jetty.util.log.Slf4jLog
+===2018-09-27 18:04:58.063 INFO  org.eclipse.jetty.server.Server Line:372 - jetty-9.4.4.v20170414
+===2018-09-27 18:04:58.183 INFO  org.eclipse.jetty.server.session Line:364 - DefaultSessionIdManager workerName=node0
+===2018-09-27 18:04:58.183 INFO  org.eclipse.jetty.server.session Line:369 - No SessionScavenger set, using defaults
+===2018-09-27 18:04:58.187 INFO  org.eclipse.jetty.server.session Line:149 - Scavenging every 660000ms
+===2018-09-27 18:04:58.194 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring embedded WebApplicationContext
+===2018-09-27 18:04:59.099 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:788 - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@b588646{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.4787489424134434257.80/],AVAILABLE}
+===2018-09-27 18:04:59.101 INFO  org.eclipse.jetty.server.Server Line:444 - Started @6909ms
+===2018-09-27 18:05:03.948 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+===2018-09-27 18:05:03.990 INFO  org.eclipse.jetty.server.AbstractConnector Line:280 - Started ServerConnector@683ad209{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+===2018-09-27 18:05:03.998 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:57  - Started AdminApplication in 10.642 seconds (JVM running for 11.806)
+===2018-09-27 18:05:19.644 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-1} inited
+===2018-09-27 18:05:20.057 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-1} closed
+===2018-09-27 18:07:38.728 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:48  - Starting AdminApplication on DESKTOP-8RT6NG5 with PID 21616 (D:\github\hdas-cmcs\hdas-cmcs-module-admin\target\classes started by zgh in D:\github\hdas-cmcs)
+===2018-09-27 18:07:38.731 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:641 - The following profiles are active: dev
+===2018-09-27 18:07:38.956 INFO  org.hibernate.validator.internal.util.Version Line:30  - HV000001: Hibernate Validator 5.3.5.Final
+===2018-09-27 18:07:40.766 INFO  com.hsgene.hdas.cmcs.modules.common.datasource.DynamicDataSourceRegister Line:65  - Dynamic DataSource Registry
+===2018-09-27 18:07:42.397 INFO  org.eclipse.jetty.util.log Line:192 - Logging initialized @5423ms to org.eclipse.jetty.util.log.Slf4jLog
+===2018-09-27 18:07:42.875 INFO  org.eclipse.jetty.server.Server Line:372 - jetty-9.4.4.v20170414
+===2018-09-27 18:07:43.005 INFO  org.eclipse.jetty.server.session Line:364 - DefaultSessionIdManager workerName=node0
+===2018-09-27 18:07:43.006 INFO  org.eclipse.jetty.server.session Line:369 - No SessionScavenger set, using defaults
+===2018-09-27 18:07:43.010 INFO  org.eclipse.jetty.server.session Line:149 - Scavenging every 660000ms
+===2018-09-27 18:07:43.018 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring embedded WebApplicationContext
+===2018-09-27 18:07:43.908 INFO  org.eclipse.jetty.server.handler.ContextHandler Line:788 - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@7416b5d5{/,[file:///C:/Users/zgh/AppData/Local/Temp/jetty-docbase.6991577622875704748.80/],AVAILABLE}
+===2018-09-27 18:07:43.909 INFO  org.eclipse.jetty.server.Server Line:444 - Started @6935ms
+===2018-09-27 18:07:48.052 INFO  org.eclipse.jetty.server.handler.ContextHandler.application Line:2221 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+===2018-09-27 18:07:48.105 INFO  org.eclipse.jetty.server.AbstractConnector Line:280 - Started ServerConnector@89ce23d{HTTP/1.1,[http/1.1]}{0.0.0.0:80}
+===2018-09-27 18:07:48.113 INFO  com.hsgene.hdas.cmcs.modules.admin.AdminApplication Line:57  - Started AdminApplication in 10.042 seconds (JVM running for 11.139)
+===2018-09-27 18:07:51.813 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-1} inited
+===2018-09-27 18:07:52.210 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-1} closed
+===2018-09-27 18:07:52.236 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-2} inited
+===2018-09-27 18:07:52.249 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-2} closed
+===2018-09-27 18:07:57.779 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-3} inited
+===2018-09-27 18:07:57.788 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-3} closed
+===2018-09-27 18:07:58.024 INFO  org.thymeleaf.TemplateEngine Line:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+===2018-09-27 18:07:58.298 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:99  - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+===2018-09-27 18:07:58.298 INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver Line:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+===2018-09-27 18:07:58.299 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:72  - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+===2018-09-27 18:07:58.299 INFO  org.thymeleaf.messageresolver.AbstractMessageResolver Line:78  - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+===2018-09-27 18:07:58.307 INFO  org.thymeleaf.TemplateEngine.CONFIG Line:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * XML
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+===2018-09-27 18:07:58.308 INFO  org.thymeleaf.TemplateEngine Line:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+===2018-09-27 18:07:58.649 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-4} inited
+===2018-09-27 18:07:58.649 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-5} inited
+===2018-09-27 18:07:58.683 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-4} closed
+===2018-09-27 18:07:58.716 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-9} inited
+===2018-09-27 18:07:58.718 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-7} inited
+===2018-09-27 18:07:58.716 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-5} closed
+===2018-09-27 18:07:58.718 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-8} inited
+===2018-09-27 18:07:58.718 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-6} inited
+===2018-09-27 18:07:58.833 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-6} closed
+===2018-09-27 18:07:58.833 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-9} closed
+===2018-09-27 18:07:58.838 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-7} closed
+===2018-09-27 18:07:58.846 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-8} closed
+===2018-09-27 18:07:58.959 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-10} inited
+===2018-09-27 18:07:58.960 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-11} inited
+===2018-09-27 18:07:58.971 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-10} closed
+===2018-09-27 18:07:59.025 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-12} inited
+===2018-09-27 18:07:59.040 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-13} inited
+===2018-09-27 18:07:59.098 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-11} closed
+===2018-09-27 18:07:59.114 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-13} closed
+===2018-09-27 18:07:59.132 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-12} closed
+===2018-09-27 18:07:59.238 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-14} inited
+===2018-09-27 18:07:59.260 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-14} closed
+===2018-09-27 18:07:59.340 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-15} inited
+===2018-09-27 18:07:59.347 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-15} closed
+===2018-09-27 18:08:10.256 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-16} inited
+===2018-09-27 18:08:10.643 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-17} inited
+===2018-09-27 18:08:10.650 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-17} closed
+===2018-09-27 18:08:10.794 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-18} inited
+===2018-09-27 18:08:10.801 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-18} closed
+===2018-09-27 18:08:10.939 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-19} inited
+===2018-09-27 18:08:10.940 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-20} inited
+===2018-09-27 18:08:10.958 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-19} closed
+===2018-09-27 18:08:10.967 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-24} inited
+===2018-09-27 18:08:10.968 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-21} inited
+===2018-09-27 18:08:10.971 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-22} inited
+===2018-09-27 18:08:10.996 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-20} closed
+===2018-09-27 18:08:10.997 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-21} closed
+===2018-09-27 18:08:10.996 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-23} inited
+===2018-09-27 18:08:11.034 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-22} closed
+===2018-09-27 18:08:11.035 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-24} closed
+===2018-09-27 18:08:11.049 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-23} closed
+===2018-09-27 18:08:11.065 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-25} inited
+===2018-09-27 18:08:11.072 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-25} closed
+===2018-09-27 18:08:11.082 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-26} inited
+===2018-09-27 18:08:11.090 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-26} closed
+===2018-09-27 18:08:11.127 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-27} inited
+===2018-09-27 18:08:11.129 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-28} inited
+===2018-09-27 18:08:11.136 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-27} closed
+===2018-09-27 18:08:11.137 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-28} closed
+===2018-09-27 18:08:11.167 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-30} inited
+===2018-09-27 18:08:11.174 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-29} inited
+===2018-09-27 18:08:11.192 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-30} closed
+===2018-09-27 18:08:11.206 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-31} inited
+===2018-09-27 18:08:11.229 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-29} closed
+===2018-09-27 18:08:11.243 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-31} closed
+===2018-09-27 18:08:11.260 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-32} inited
+===2018-09-27 18:08:11.260 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-33} inited
+===2018-09-27 18:08:11.261 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-34} inited
+===2018-09-27 18:08:11.282 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-33} closed
+===2018-09-27 18:08:11.304 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-32} closed
+===2018-09-27 18:08:11.312 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-34} closed
+===2018-09-27 18:08:11.316 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-35} inited
+===2018-09-27 18:08:11.334 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-36} inited
+===2018-09-27 18:08:11.341 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-35} closed
+===2018-09-27 18:08:11.354 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-36} closed
+===2018-09-27 18:08:11.356 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-37} inited
+===2018-09-27 18:08:11.366 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-37} closed
+===2018-09-27 18:08:11.460 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-38} inited
+===2018-09-27 18:08:11.468 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-39} inited
+===2018-09-27 18:08:11.469 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-38} closed
+===2018-09-27 18:08:11.480 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-39} closed
+===2018-09-27 18:08:11.567 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-40} inited
+===2018-09-27 18:08:11.592 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-40} closed
+===2018-09-27 18:08:11.830 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-41} inited
+===2018-09-27 18:08:11.835 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-41} closed
+===2018-09-27 18:08:12.109 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-42} inited
+===2018-09-27 18:08:12.123 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-42} closed
+===2018-09-27 18:08:12.129 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-44} inited
+===2018-09-27 18:08:12.129 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-43} inited
+===2018-09-27 18:08:12.133 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-47} inited
+===2018-09-27 18:08:12.133 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-45} inited
+===2018-09-27 18:08:12.135 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-43} closed
+===2018-09-27 18:08:12.142 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-46} inited
+===2018-09-27 18:08:12.147 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-47} closed
+===2018-09-27 18:08:12.189 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-45} closed
+===2018-09-27 18:08:12.205 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-44} closed
+===2018-09-27 18:08:12.229 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-46} closed
+===2018-09-27 18:08:12.269 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-49} inited
+===2018-09-27 18:08:12.270 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-48} inited
+===2018-09-27 18:08:12.281 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-49} closed
+===2018-09-27 18:08:12.292 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-48} closed
+===2018-09-27 18:08:12.310 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-50} inited
+===2018-09-27 18:08:12.310 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-51} inited
+===2018-09-27 18:08:12.317 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-50} closed
+===2018-09-27 18:08:12.331 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-51} closed
+===2018-09-27 18:08:12.353 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-52} inited
+===2018-09-27 18:08:12.358 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-52} closed
+===2018-09-27 18:08:12.363 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-53} inited
+===2018-09-27 18:08:12.372 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-53} closed
+===2018-09-27 18:08:12.389 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-54} inited
+===2018-09-27 18:08:12.390 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-55} inited
+===2018-09-27 18:08:12.394 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-54} closed
+===2018-09-27 18:08:12.401 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-55} closed
+===2018-09-27 18:08:12.576 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-56} inited
+===2018-09-27 18:08:12.576 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-57} inited
+===2018-09-27 18:08:12.581 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-57} closed
+===2018-09-27 18:08:12.582 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-56} closed
+===2018-09-27 18:08:12.637 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-58} inited
+===2018-09-27 18:08:12.641 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-58} closed
+===2018-09-27 18:08:12.685 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-59} inited
+===2018-09-27 18:08:12.689 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-59} closed
+===2018-09-27 18:08:12.780 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-60} inited
+===2018-09-27 18:08:12.785 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-60} closed
+===2018-09-27 18:08:12.795 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-61} inited
+===2018-09-27 18:08:12.802 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-61} closed
+===2018-09-27 18:08:12.859 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-62} inited
+===2018-09-27 18:08:12.864 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-62} closed
+===2018-09-27 18:08:12.979 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-63} inited
+===2018-09-27 18:08:12.987 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-63} closed
+===2018-09-27 18:08:13.058 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-64} inited
+===2018-09-27 18:08:13.062 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-64} closed
+===2018-09-27 18:08:13.136 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-65} inited
+===2018-09-27 18:08:13.140 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-65} closed
+===2018-09-27 18:08:13.213 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-66} inited
+===2018-09-27 18:08:13.218 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-66} closed
+===2018-09-27 18:08:13.306 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-67} inited
+===2018-09-27 18:08:13.308 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-68} inited
+===2018-09-27 18:08:13.311 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-67} closed
+===2018-09-27 18:08:13.320 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-69} inited
+===2018-09-27 18:08:13.325 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-69} closed
+===2018-09-27 18:08:13.332 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-68} closed
+===2018-09-27 18:08:13.343 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-70} inited
+===2018-09-27 18:08:13.344 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-71} inited
+===2018-09-27 18:08:13.347 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-72} inited
+===2018-09-27 18:08:13.351 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-70} closed
+===2018-09-27 18:08:13.360 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-72} closed
+===2018-09-27 18:08:13.360 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-73} inited
+===2018-09-27 18:08:13.372 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-73} closed
+===2018-09-27 18:08:13.387 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-71} closed
+===2018-09-27 18:08:13.395 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-74} inited
+===2018-09-27 18:08:13.402 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-74} closed
+===2018-09-27 18:08:13.413 INFO  com.alibaba.druid.pool.DruidDataSource Line:928 - {dataSource-75} inited
+===2018-09-27 18:08:13.418 INFO  com.alibaba.druid.pool.DruidDataSource Line:1823 - {dataSource-75} closed
