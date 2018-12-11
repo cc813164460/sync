@@ -1,0 +1,13 @@
+===2018-09-28 09:15:26.063 INFO  com.alibaba.druid.pool.DruidDataSource Line:922 - {dataSource-1} inited
+===2018-09-28 09:15:26.709 INFO  com.alibaba.druid.pool.DruidDataSource Line:1817 - {dataSource-1} closed
+===2018-09-28 09:15:26.711 INFO  com.hsgene.hdas.api.auth.common.Constant Line:31  - accessKey:a-b-a23bd3d6-769c-4f54-9857-1ad62cd7f47c;secretKey:a-b-84025748-4e68-4238-95f6-61e722c77262
+===2018-09-28 09:45:25.958 INFO  com.alibaba.druid.pool.DruidDataSource Line:922 - {dataSource-1} inited
+===2018-09-28 09:45:26.499 INFO  com.alibaba.druid.pool.DruidDataSource Line:1817 - {dataSource-1} closed
+===2018-09-28 09:45:26.500 INFO  com.hsgene.hdas.api.auth.common.Constant Line:31  - accessKey:a-b-913e1191-a380-477b-ad11-eb1b131be938;secretKey:a-b-32ab90fc-8414-4fbf-8ad6-75b324f57303
+===2018-09-28 10:15:35.265 INFO  com.hsgene.hdas.api.auth.common.Constant Line:31  - accessKey:a-b-615372a1-b694-49c6-a2d4-136cb6e298e6;secretKey:a-b-670ec448-0b2b-4568-b9cd-72ea4d1efd77
+===2018-09-28 10:15:35.278 INFO  com.hsgene.hdas.api.auth.common.Constant Line:31  - accessKey:a-b-615372a1-b694-49c6-a2d4-136cb6e298e6;secretKey:a-b-670ec448-0b2b-4568-b9cd-72ea4d1efd77
+===2018-09-28 10:15:35.288 INFO  com.hsgene.hdas.api.auth.common.Constant Line:31  - accessKey:a-b-615372a1-b694-49c6-a2d4-136cb6e298e6;secretKey:a-b-670ec448-0b2b-4568-b9cd-72ea4d1efd77
+===2018-09-28 10:16:32.831 INFO  com.hsgene.hdas.api.auth.common.Constant Line:31  - accessKey:abc-def-5ba2472e-a0dd-4826-880b-f23617d14a7b;secretKey:abc-def-1784f234-760a-4cf2-849f-0a0b0a836219
+===2018-09-28 10:17:58.839 INFO  com.hsgene.hdas.api.auth.common.Constant Line:31  - accessKey:abc-def-5ba2472e-a0dd-4826-880b-f23617d14a7b;secretKey:abc-def-1784f234-760a-4cf2-849f-0a0b0a836219
+===2018-09-28 10:18:16.029 INFO  com.hsgene.hdas.api.auth.common.Constant Line:31  - accessKey:abc-def-5ba2472e-a0dd-4826-880b-f23617d14a7b;secretKey:abc-def-1784f234-760a-4cf2-849f-0a0b0a836219
+===2018-09-28 10:18:54.356 INFO  com.hsgene.hdas.api.auth.common.Constant Line:31  - accessKey:abc-def-5ba2472e-a0dd-4826-880b-f23617d14a7b;secretKey:abc-def-1784f234-760a-4cf2-849f-0a0b0a836219

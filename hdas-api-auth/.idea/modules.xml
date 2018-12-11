@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/hdas-api-auth.iml" filepath="$PROJECT_DIR$/hdas-api-auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hdas-api-auth-allot/hdas-api-auth-allot.iml" filepath="$PROJECT_DIR$/hdas-api-auth-allot/hdas-api-auth-allot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hdas-api-auth-common/hdas-api-auth-common.iml" filepath="$PROJECT_DIR$/hdas-api-auth-common/hdas-api-auth-common.iml" />
+    </modules>
+  </component>
+</project>

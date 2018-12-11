@@ -1,0 +1,44 @@
+<component name="ArtifactManager">
+  <artifact build-on-make="true" name="hdas-api-auth-allot:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/hdas_api_auth_allot_jar</output-path>
+    <root id="root">
+      <element id="archive" name="hdas-api-auth-allot.jar">
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/hdas-api-auth-allot/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="module-output" name="hdas-api-auth-allot" />
+        <element id="module-output" name="hdas-api-auth-common" />
+      </element>
+      <element id="directory" name="lib">
+        <element id="library" level="project" name="Maven: ch.qos.logback:logback-classic:1.1.11" />
+        <element id="library" level="project" name="Maven: ch.qos.logback:logback-core:1.1.11" />
+        <element id="library" level="project" name="Maven: com.alibaba:druid:1.1.6" />
+        <element id="library" level="project" name="Maven: com.alibaba:fastjson:1.2.29" />
+        <element id="library" level="project" name="Maven: com.eclipsesource.minimal-json:minimal-json:0.9.4" />
+        <element id="library" level="project" name="Maven: com.github.wnameless:json-flattener:0.4.0" />
+        <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.10" />
+        <element id="library" level="project" name="Maven: commons-io:commons-io:2.4" />
+        <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:3.1.0" />
+        <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.38" />
+        <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.4" />
+        <element id="library" level="project" name="Maven: org.apache.commons:commons-pool2:2.4.2" />
+        <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.16.10" />
+        <element id="library" level="project" name="Maven: org.slf4j:jcl-over-slf4j:1.7.24" />
+        <element id="library" level="project" name="Maven: org.slf4j:jul-to-slf4j:1.7.24" />
+        <element id="library" level="project" name="Maven: org.slf4j:log4j-over-slf4j:1.7.24" />
+        <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.24" />
+        <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-autoconfigure:1.5.2.RELEASE" />
+        <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-logging:1.5.2.RELEASE" />
+        <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter:1.5.2.RELEASE" />
+        <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot:1.5.2.RELEASE" />
+        <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.3.7.RELEASE" />
+        <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.3.7.RELEASE" />
+        <element id="library" level="project" name="Maven: org.springframework:spring-context:4.3.7.RELEASE" />
+        <element id="library" level="project" name="Maven: org.springframework:spring-core:4.3.7.RELEASE" />
+        <element id="library" level="project" name="Maven: org.springframework:spring-expression:4.3.7.RELEASE" />
+        <element id="library" level="project" name="Maven: org.yaml:snakeyaml:1.17" />
+        <element id="library" level="project" name="Maven: redis.clients:jedis:2.9.0" />
+      </element>
+    </root>
+  </artifact>
+</component>

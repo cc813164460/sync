@@ -1,0 +1,2 @@
+===2018-10-09 16:19:24.924 INFO  com.alibaba.druid.pool.DruidDataSource Line:922 - {dataSource-1} inited
+===2018-10-09 16:19:25.686 INFO  com.hsgene.hdas.api.auth.common.Constant Line:33  - accessKey:a-b-59df56c2-1d88-4e76-a06e-789659e4e4f4;secretKey:a-b-a457e298-d29b-4259-a883-81f43ca8fbee

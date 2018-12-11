@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="allot" />
+        <module name="common" />
+        <module name="hdas-api-auth-allot" />
+        <module name="hdas-api-auth-common" />
+        <module name="use" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="allot" target="1.8" />
+      <module name="common" target="1.8" />
+      <module name="hdas-api-auth" target="1.8" />
+      <module name="hdas-api-auth-allot" target="1.8" />
+      <module name="hdas-api-auth-common" target="1.8" />
+      <module name="hdas-api-auth-use" target="1.8" />
+      <module name="use" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
